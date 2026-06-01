@@ -1,0 +1,2830 @@
+{
+  "prd_title": "PocketToons — Offline Reading Mode",
+  "summary": {
+    "total_requirements": 53,
+    "total_test_cases": 134,
+    "coverage_gaps": 11,
+    "by_priority": {
+      "P0": 83,
+      "P1": 41,
+      "P2": 10
+    },
+    "by_test_type": {
+      "edge": 36,
+      "functional": 50,
+      "negative": 48
+    }
+  },
+  "requirements": [
+    {
+      "req_id": "REQ-001",
+      "description": "The system must allow users to initiate the download of comics for offline access.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-002",
+      "description": "The system must prevent users from downloading paid content they have not purchased.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-003",
+      "description": "The system will not sync user-created content (bookmarks, notes) in offline mode.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-004",
+      "description": "Offline access must only be available on mobile applications (not web).",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-005",
+      "description": "The system must verify a user's subscription status before allowing download of subscriber-only content.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-006",
+      "description": "The system must notify the user when a comic download is complete.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-007",
+      "description": "The system must allow users to download any free comic.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-008",
+      "description": "The system must allow users to download comics if they have an active subscription.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-009",
+      "description": "The system must offer a 'Standard' quality level for comic downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-010",
+      "description": "The system must compress 'Standard' quality comic downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-011",
+      "description": "The system must offer an 'HD' (full resolution) quality level for comic downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-012",
+      "description": "The system must allow users to download individual comic episodes.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-013",
+      "description": "The system must allow users to download an entire comic series.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-014",
+      "description": "The system must limit series downloads to a maximum of 50 episodes per batch.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-015",
+      "description": "The system must display a download progress indicator during active downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-016",
+      "description": "The app must support a maximum of 3 simultaneous comic downloads.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-017",
+      "description": "The system must allow users to pause active downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-018",
+      "description": "The system must allow users to resume paused downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-019",
+      "description": "The system must display a clear error message for failed downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-020",
+      "description": "The system must provide a retry option for failed downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-021",
+      "description": "The app must provide a dedicated 'Downloads' tab.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-022",
+      "description": "The 'Downloads' tab must list all locally saved comics.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-023",
+      "description": "The system must allow users to access and read downloaded comics without any network connection.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-024",
+      "description": "The app must clearly indicate when the user is in offline mode (no connectivity).",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-025",
+      "description": "The app must display the total storage used by downloads.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-026",
+      "description": "The total storage used by downloads must be displayed within the app's Settings section.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-027",
+      "description": "The system must allow users to delete individual downloaded episodes.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-028",
+      "description": "The system must allow users to delete entire downloaded series.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-029",
+      "description": "The system must automatically expire downloaded content.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-030",
+      "description": "Downloaded content must expire 30 days after its download date.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-031",
+      "description": "The system must send an in-app notification to users about content expiry.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-032",
+      "description": "Content expiry notifications must be sent 3 days before the content expires.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-033",
+      "description": "The system must automatically remove all subscription-gated downloads when a user's subscription lapses.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-034",
+      "description": "Removal of subscription-gated downloads upon subscription lapse must occur within 24 hours.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-035",
+      "description": "Downloaded content must be encrypted on the device.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-036",
+      "description": "The encryption method for downloaded content must be AES-256.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-037",
+      "description": "The system must prevent access to downloaded files from outside the PocketToons app.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-038",
+      "description": "The system must prevent the export of downloaded files from the PocketToons app.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-039",
+      "description": "Download operations must run on a background thread.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-040",
+      "description": "Download speed and operations must not degrade overall app performance.",
+      "req_type": "non-functional"
+    },
+    {
+      "req_id": "REQ-041",
+      "description": "The offline reader must load a comic page within 1 second.",
+      "req_type": "non-functional"
+    },
+    {
+      "req_id": "REQ-042",
+      "description": "The offline reader page load performance must be met on mid-range devices.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-043",
+      "description": "The app must handle storage-full scenarios gracefully.",
+      "req_type": "non-functional"
+    },
+    {
+      "req_id": "REQ-044",
+      "description": "The app must not crash when encountering storage-full scenarios.",
+      "req_type": "non-functional"
+    },
+    {
+      "req_id": "REQ-045",
+      "description": "Encrypted content must require a valid active session to be decrypted.",
+      "req_type": "non-functional"
+    },
+    {
+      "req_id": "REQ-046",
+      "description": "A downloaded comic must remain accessible to the user even if it is later removed from the platform.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-047",
+      "description": "Accessibility of downloaded comics removed from the platform must be maintained until the content expires.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-048",
+      "description": "The system must warn the user before starting new downloads if available device storage is below 50 MB.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-049",
+      "description": "The storage threshold for warning the user about low storage before new downloads is 50 MB.",
+      "req_type": "constraint"
+    },
+    {
+      "req_id": "REQ-050",
+      "description": "The system must prevent downloads from starting on metered connections (mobile data) by default.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-051",
+      "description": "The system must provide a setting for the user to enable 'Download on mobile data'.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-052",
+      "description": "The 'Download on mobile data' setting must be located in the app's Settings.",
+      "req_type": "functional"
+    },
+    {
+      "req_id": "REQ-053",
+      "description": "The maximum total offline storage allowed per user is 2 GB.",
+      "req_type": "constraint"
+    }
+  ],
+  "test_cases": [
+    {
+      "test_case_id": "TC-001",
+      "requirement_id": "REQ-001",
+      "scenario": "Happy path: User successfully downloads a comic for offline access.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection (Wi-Fi preferred).",
+        "Sufficient device storage is available (e.g., > 100 MB).",
+        "A free comic episode 'Example Comic A - Episode 1' is available for download."
+      ],
+      "steps": [
+        "1. Navigate to the 'Example Comic A' series page.",
+        "2. Locate 'Episode 1' and tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality for download (if prompted).",
+        "4. Wait for the download to complete (observe progress indicator)."
+      ],
+      "expected_result": "The comic 'Example Comic A - Episode 1' is successfully downloaded and a 'Download Complete' notification is displayed. The episode is listed in the 'Downloads' tab.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-002",
+      "requirement_id": "REQ-001",
+      "scenario": "Edge case: Initiate download with intermittent network connection.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Sufficient device storage is available.",
+        "A free comic 'Example Comic B - Episode 1' is available for download.",
+        "Device is connected to an unstable Wi-Fi network or a network that can be easily toggled on/off."
+      ],
+      "steps": [
+        "1. Navigate to the 'Example Comic B' series page.",
+        "2. Locate 'Episode 1' and tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. While the download is in progress, toggle Wi-Fi off for 5-10 seconds, then toggle it back on.",
+        "5. Observe the download progress indicator and status."
+      ],
+      "expected_result": "The download should pause or show an error, then automatically resume once the network connection is re-established, eventually completing successfully. The app should not crash.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-003",
+      "requirement_id": "REQ-001",
+      "scenario": "Negative case: Attempt to download content when offline.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has no active internet connection (Wi-Fi and mobile data are off).",
+        "A free comic 'Example Comic C - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Ensure device is in airplane mode or all network connections are disabled.",
+        "2. Navigate to the 'Example Comic C' series page.",
+        "3. Attempt to tap the 'Download' icon/button for 'Episode 1'."
+      ],
+      "expected_result": "The system should prevent the download from initiating and display an appropriate error message indicating no network connection (e.g., 'No internet connection. Cannot start download.'). The 'Download' button may be disabled or grayed out.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-004",
+      "requirement_id": "REQ-002",
+      "scenario": "Boundary test: Download a paid comic immediately after purchasing it.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A paid comic 'Paid Comic A - Episode 1' is available.",
+        "User has just successfully purchased 'Paid Comic A - Episode 1'."
+      ],
+      "steps": [
+        "1. Navigate to the 'Paid Comic A' series page.",
+        "2. Locate 'Episode 1' and tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality (if prompted).",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The download should initiate and complete successfully as the user now owns the content. A 'Download Complete' notification should appear.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-005",
+      "requirement_id": "REQ-002",
+      "scenario": "Violation test: Attempt to download paid content that has not been purchased.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A paid comic 'Paid Comic B - Episode 1' is available.",
+        "User has NOT purchased 'Paid Comic B - Episode 1'."
+      ],
+      "steps": [
+        "1. Navigate to the 'Paid Comic B' series page.",
+        "2. Tap the 'Download' icon/button for 'Episode 1'."
+      ],
+      "expected_result": "The system should prevent the download. An informative message should be displayed, prompting the user to purchase the content first (e.g., 'Purchase this comic to download'). The download should not start.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-006",
+      "requirement_id": "REQ-003",
+      "scenario": "Boundary test: Create user content online, then go offline and verify existing content remains.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A free comic 'Offline Test Comic' is available.",
+        "User has not downloaded 'Offline Test Comic'."
+      ],
+      "steps": [
+        "1. Navigate to 'Offline Test Comic - Episode 1' while online.",
+        "2. Add a bookmark to page 5 of 'Episode 1'.",
+        "3. Add a note to page 10 of 'Episode 1'.",
+        "4. Download 'Offline Test Comic - Episode 1'.",
+        "5. Disconnect all network connections (Wi-Fi and mobile data off).",
+        "6. Access the downloaded 'Offline Test Comic - Episode 1'.",
+        "7. Navigate to page 5 and page 10."
+      ],
+      "expected_result": "The bookmark on page 5 and the note on page 10 should be visible and accessible in offline mode, as they were created while online.",
+      "priority": "P1",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-007",
+      "requirement_id": "REQ-003",
+      "scenario": "Violation test: Create user content while offline and verify it does not sync upon reconnect.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Offline Sync Test Comic' is downloaded and available.",
+        "A separate user account or a tool to inspect server-side user data is available to confirm non-sync."
+      ],
+      "steps": [
+        "1. Disconnect all network connections (Wi-Fi and mobile data off).",
+        "2. Access the downloaded 'Offline Sync Test Comic - Episode 1'.",
+        "3. Add a new bookmark to page 3.",
+        "4. Add a new note to page 7.",
+        "5. Reconnect to the internet (Wi-Fi on).",
+        "6. Wait for a few minutes (e.g., 2-5 min) to allow any potential sync attempts.",
+        "7. Log out of the app.",
+        "8. Log in with the same user account on a different device (e.g., web app, or another mobile device).",
+        "9. Navigate to 'Offline Sync Test Comic - Episode 1'."
+      ],
+      "expected_result": "The bookmark on page 3 and the note on page 7 should NOT be visible or synced to the other device/server. This confirms user-created content generated offline does not sync.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-008",
+      "requirement_id": "REQ-004",
+      "scenario": "Boundary test: Access downloaded content on the mobile application while offline.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Mobile Offline Comic' is downloaded and available on the mobile device."
+      ],
+      "steps": [
+        "1. Disconnect all network connections (Wi-Fi and mobile data off).",
+        "2. Open the PocketToons mobile app.",
+        "3. Navigate to the 'Downloads' tab.",
+        "4. Tap on 'Mobile Offline Comic - Episode 1' to open it."
+      ],
+      "expected_result": "The downloaded comic 'Mobile Offline Comic - Episode 1' should open and be fully readable without any network connection.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-009",
+      "requirement_id": "REQ-004",
+      "scenario": "Violation test: Attempt to access or initiate downloads from the web application.",
+      "preconditions": [
+        "User is logged in to the PocketToons web application via a web browser (e.g., Chrome, Safari).",
+        "A comic 'Web Test Comic' is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Web Test Comic' page in the web app.",
+        "2. Look for any download options (e.g., 'Download' button, 'Offline Reading' section).",
+        "3. Attempt to simulate offline access for a comic (e.g., by disabling internet and refreshing)."
+      ],
+      "expected_result": "There should be no 'Download' functionality or 'Offline Reading' section available on the web application. Trying to view content after disconnecting from the internet should result in a 'No Internet' error for streaming content, as no offline content is supported.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-010",
+      "requirement_id": "REQ-005",
+      "scenario": "Happy path: Verified subscriber downloads subscriber-only content.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active, valid subscription.",
+        "Device has an active internet connection.",
+        "A 'Subscriber-Only Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Subscriber-Only Comic' series page.",
+        "2. Tap the 'Download' icon/button for 'Episode 1'.",
+        "3. Select 'Standard' quality (if prompted).",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The 'Subscriber-Only Comic - Episode 1' is successfully downloaded and a 'Download Complete' notification is displayed.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-011",
+      "requirement_id": "REQ-005",
+      "scenario": "Edge case: User's subscription is valid but on the verge of expiring.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active subscription expiring in the next 24 hours.",
+        "Device has an active internet connection.",
+        "A 'Subscriber-Only Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Subscriber-Only Comic' series page.",
+        "2. Tap the 'Download' icon/button for 'Episode 1'.",
+        "3. Select 'Standard' quality (if prompted).",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The download should proceed successfully as the subscription is still active. A 'Download Complete' notification is displayed.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-012",
+      "requirement_id": "REQ-005",
+      "scenario": "Negative case: Non-subscriber attempts to download subscriber-only content.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User does NOT have an active subscription.",
+        "Device has an active internet connection.",
+        "A 'Subscriber-Only Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Subscriber-Only Comic' series page.",
+        "2. Tap the 'Download' icon/button for 'Episode 1'."
+      ],
+      "expected_result": "The system should prevent the download. An informative message should be displayed, prompting the user to subscribe (e.g., 'This is subscriber-only content. Please subscribe to download.'). The download should not start.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-013",
+      "requirement_id": "REQ-006",
+      "scenario": "Happy path: User is notified when a comic download is complete.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Notification Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Navigate to 'Notification Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Wait for the download to finish."
+      ],
+      "expected_result": "An in-app notification (e.g., banner, toast) stating 'Download Complete: Notification Comic - Episode 1' should appear. The downloaded item should also appear in the 'Downloads' tab.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-014",
+      "requirement_id": "REQ-006",
+      "scenario": "Edge case: Download completes while the app is in the background.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Background Comic - Episode 1' is available.",
+        "Ensure app notifications are enabled for PocketToons in device settings."
+      ],
+      "steps": [
+        "1. Navigate to 'Background Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Immediately send the PocketToons app to the background (e.g., by navigating to the device home screen or opening another app).",
+        "4. Wait for the download to complete (monitor from system notification area if available)."
+      ],
+      "expected_result": "A system-level push notification (if supported by OS) or an in-app notification upon returning to the app should inform the user that 'Download Complete: Background Comic - Episode 1'. The downloaded item should be listed in the 'Downloads' tab.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-015",
+      "requirement_id": "REQ-006",
+      "scenario": "Negative case: No download complete notification upon successful download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'No Notification Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Navigate to 'No Notification Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Wait for the download to finish."
+      ],
+      "expected_result": "The download completes, but no 'Download Complete' notification (in-app or system) is displayed. (This is a negative test, so this would be a failure of the feature).",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-016",
+      "requirement_id": "REQ-007",
+      "scenario": "Happy path: User successfully downloads a free comic.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Freebie Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Freebie Comic' series page.",
+        "2. Locate 'Episode 1' (confirm it is marked as 'Free') and tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The comic 'Freebie Comic - Episode 1' is successfully downloaded and appears in the 'Downloads' tab.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-017",
+      "requirement_id": "REQ-007",
+      "scenario": "Edge case: Download a very large free comic.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Ample device storage is available (e.g., > 1 GB).",
+        "A free comic 'Large Free Comic - Episode 1' which is known to be very large (e.g., > 500 MB) is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Large Free Comic' series page.",
+        "2. Locate 'Episode 1' and tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Monitor the download progress.",
+        "5. Wait for the download to complete."
+      ],
+      "expected_result": "The large free comic should download successfully, albeit taking longer. The app should remain responsive during the download, and the progress indicator should update correctly.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-018",
+      "requirement_id": "REQ-007",
+      "scenario": "Negative case: Attempt to download a free comic that has been temporarily delisted.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A free comic 'Delisted Free Comic - Episode 1' has been temporarily removed from the platform (e.g., by an admin, but its entry might still be present in some UI states or cached). This scenario implies the user tries to download something that is no longer 'available'."
+      ],
+      "steps": [
+        "1. Attempt to navigate to 'Delisted Free Comic - Episode 1' (if accessible through direct link/cache).",
+        "2. If a download option is presented, tap the 'Download' icon/button."
+      ],
+      "expected_result": "The system should either not display the 'Download' option for delisted content, or it should immediately present an error message indicating the content is unavailable (e.g., 'Content not found' or 'This comic is no longer available for download'). The download should not start.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-019",
+      "requirement_id": "REQ-008",
+      "scenario": "Happy path: Subscriber downloads a comic when they have an active subscription.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active, valid subscription.",
+        "Device has an active internet connection.",
+        "A comic 'Subscription Comic - Episode 1' (which requires a subscription to download) is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Subscription Comic' series page.",
+        "2. Tap the 'Download' icon/button for 'Episode 1'.",
+        "3. Select 'Standard' quality (if prompted).",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The comic 'Subscription Comic - Episode 1' is successfully downloaded and appears in the 'Downloads' tab.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-020",
+      "requirement_id": "REQ-008",
+      "scenario": "Edge case: User with an active subscription attempts to download content requiring a higher tier subscription (if applicable).",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active 'Basic' subscription (assume there's also a 'Premium' tier).",
+        "Device has an active internet connection.",
+        "A comic 'Premium Comic - Episode 1' which requires a 'Premium' subscription is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Premium Comic' series page.",
+        "2. Tap the 'Download' icon/button for 'Episode 1'."
+      ],
+      "expected_result": "The system should prevent the download and display a message indicating that a higher subscription tier is required (e.g., 'Upgrade to Premium to download this comic').",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-021",
+      "requirement_id": "REQ-008",
+      "scenario": "Negative case: User with a recently lapsed subscription attempts to download subscription-gated content.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User's subscription has recently lapsed (within 24 hours).",
+        "Device has an active internet connection.",
+        "A comic 'Lapsed Sub Comic - Episode 1' (which requires a subscription) is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Lapsed Sub Comic' series page.",
+        "2. Tap the 'Download' icon/button for 'Episode 1'."
+      ],
+      "expected_result": "The system should prevent the download. An informative message should be displayed, prompting the user to renew their subscription (e.g., 'Your subscription has lapsed. Renew to download.'). The download should not start.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-022",
+      "requirement_id": "REQ-009",
+      "scenario": "Happy path: User selects and downloads a comic in 'Standard' quality.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Quality Test Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options."
+      ],
+      "steps": [
+        "1. Navigate to 'Quality Test Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. From the quality selection prompt, select 'Standard'.",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The comic 'Quality Test Comic - Episode 1' is downloaded in 'Standard' quality. A 'Download Complete' notification is displayed, and the episode is listed in 'Downloads'. The estimated file size for 'Standard' should be smaller than 'HD'.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-023",
+      "requirement_id": "REQ-009",
+      "scenario": "Edge case: 'Standard' quality download takes up minimal storage.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A very short free comic 'Short Comic - Episode 1' is available, offering 'Standard' quality download."
+      ],
+      "steps": [
+        "1. Navigate to 'Short Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete.",
+        "5. Check the reported file size of the downloaded comic (e.g., in the 'Downloads' tab or device storage settings).",
+        "6. Open the comic and verify content quality."
+      ],
+      "expected_result": "The comic downloads successfully. The file size should reflect the 'Standard' quality, even if small. The visual quality of the comic pages should be consistent with 'Standard' resolution, not full HD.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-024",
+      "requirement_id": "REQ-009",
+      "scenario": "Negative case: 'Standard' quality option is missing when it should be available.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A free comic 'Missing Standard Comic - Episode 1' is available, which is configured to offer 'Standard' quality download."
+      ],
+      "steps": [
+        "1. Navigate to 'Missing Standard Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button."
+      ],
+      "expected_result": "A quality selection prompt should appear, offering 'Standard' quality as an option. If it's not present, this test fails.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-025",
+      "requirement_id": "REQ-010",
+      "scenario": "Happy path: 'Standard' quality comic downloads are compressed.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Compression Test Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options.",
+        "Knowledge of the uncompressed 'HD' file size or a reference uncompressed 'Standard' file size is available for comparison."
+      ],
+      "steps": [
+        "1. Navigate to 'Compression Test Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete.",
+        "5. Go to the 'Downloads' tab or device settings to check the reported file size of the downloaded comic.",
+        "6. (Optional) Download the same comic in 'HD' quality for direct comparison of file sizes."
+      ],
+      "expected_result": "The downloaded file size for 'Standard' quality should be significantly smaller than its 'HD' counterpart or a known uncompressed version, demonstrating effective compression. The comic pages should still be readable without visual artifacts from over-compression.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-026",
+      "requirement_id": "REQ-010",
+      "scenario": "Edge case: Compression of a very small 'Standard' quality comic.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A very short, simple free comic 'Small Compression Comic - Episode 1' is available, offering 'Standard' quality."
+      ],
+      "steps": [
+        "1. Navigate to 'Small Compression Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete.",
+        "5. Check the reported file size of the downloaded comic.",
+        "6. (Optional) Compare with an uncompressed version or HD version."
+      ],
+      "expected_result": "Even for small comics, 'Standard' quality should show some level of compression compared to its original/HD size, though the absolute difference might be less pronounced.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-027",
+      "requirement_id": "REQ-010",
+      "scenario": "Negative case: 'Standard' quality download is not compressed (file size is too large).",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Uncompressed Standard Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options.",
+        "Knowledge of the expected 'HD' file size and target 'Standard' file size."
+      ],
+      "steps": [
+        "1. Navigate to 'Uncompressed Standard Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete.",
+        "5. Check the reported file size of the downloaded comic."
+      ],
+      "expected_result": "The downloaded file size for 'Standard' quality is nearly identical or too close to the 'HD' quality file size, indicating a failure in compression. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-028",
+      "requirement_id": "REQ-011",
+      "scenario": "Happy path: User selects and downloads a comic in 'HD' quality.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'HD Quality Test Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options."
+      ],
+      "steps": [
+        "1. Navigate to 'HD Quality Test Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. From the quality selection prompt, select 'HD'.",
+        "4. Wait for the download to complete.",
+        "5. Open the downloaded comic and verify image clarity/resolution."
+      ],
+      "expected_result": "The comic 'HD Quality Test Comic - Episode 1' is downloaded in 'HD' (full resolution). The image quality is crisp and clear, consistent with full resolution. The file size should be larger than the 'Standard' quality version.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-029",
+      "requirement_id": "REQ-011",
+      "scenario": "Edge case: Download a very large comic in 'HD' quality.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Ample device storage is available (e.g., > 2 GB).",
+        "A free comic 'Large HD Comic - Episode 1' which is known to be very large (e.g., > 1 GB in HD) is available, offering 'HD' quality."
+      ],
+      "steps": [
+        "1. Navigate to 'Large HD Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'HD' quality.",
+        "4. Monitor the download progress.",
+        "5. Wait for the download to complete."
+      ],
+      "expected_result": "The very large HD comic should download successfully, taking a proportional amount of time. The app should remain responsive during the download, and the progress indicator should update correctly. The downloaded file size should be accurate for HD quality.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-030",
+      "requirement_id": "REQ-011",
+      "scenario": "Negative case: 'HD' quality option is missing when it should be available.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A free comic 'Missing HD Comic - Episode 1' is available, which is configured to offer 'HD' quality download."
+      ],
+      "steps": [
+        "1. Navigate to 'Missing HD Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button."
+      ],
+      "expected_result": "A quality selection prompt should appear, offering 'HD' quality as an option. If it's not present, this test fails.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-031",
+      "requirement_id": "REQ-012",
+      "scenario": "Happy path: User successfully downloads an individual comic episode.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic series 'Individual Episode Series' with multiple episodes (e.g., Episode 1, 2, 3) is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Individual Episode Series' page.",
+        "2. Locate 'Episode 2' (not the first or last) and tap the 'Download' icon/button next to it.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "Only 'Individual Episode Series - Episode 2' is downloaded. It appears in the 'Downloads' tab, and other episodes of the series are not downloaded.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-032",
+      "requirement_id": "REQ-012",
+      "scenario": "Edge case: Download the first or last episode of a very long series.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic series 'Long Series' with many episodes (e.g., 100+ episodes) is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Long Series' page.",
+        "2. Scroll to the bottom and tap the 'Download' icon/button for the very last episode (e.g., Episode 100).",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete.",
+        "5. Verify only that specific episode is downloaded."
+      ],
+      "expected_result": "The chosen individual episode (e.g., Episode 100) downloads successfully. No other episodes from the series are downloaded. The navigation within the app for selecting individual episodes works correctly for edge positions.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-033",
+      "requirement_id": "REQ-012",
+      "scenario": "Negative case: Attempt to download a non-existent or inaccessible episode.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A comic series 'Non-existent Episode Series' is available, but 'Episode 999' does not exist or is marked as unavailable/corrupted on the server."
+      ],
+      "steps": [
+        "1. Attempt to navigate to 'Non-existent Episode Series - Episode 999' (if a direct link or search allows).",
+        "2. If a download option is presented for it, tap the 'Download' icon/button."
+      ],
+      "expected_result": "The system should either not allow navigation to a non-existent episode, or if a download attempt is made, it should immediately fail with a clear error message (e.g., 'Episode not found' or 'Download failed: Content unavailable'). The download should not start or should terminate quickly.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-034",
+      "requirement_id": "REQ-013",
+      "scenario": "Happy path: User successfully downloads an entire comic series (within limits).",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available (e.g., > 500 MB).",
+        "A free comic series 'Full Series Download' with 5 episodes is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Full Series Download' series page.",
+        "2. Locate and tap the 'Download Series' button/option.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for all episodes to download (observe progress for multiple items)."
+      ],
+      "expected_result": "All 5 episodes of 'Full Series Download' are successfully downloaded and listed under the series in the 'Downloads' tab. A notification for each completed download or a single notification for series completion should appear.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-035",
+      "requirement_id": "REQ-013",
+      "scenario": "Edge case: Download a series with a single episode.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic series 'Single Episode Series' with only 1 episode is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Single Episode Series' page.",
+        "2. Locate and tap the 'Download Series' button/option.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The single episode series downloads successfully. The 'Download Series' option should correctly handle a series of one, effectively downloading just that one episode.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-036",
+      "requirement_id": "REQ-013",
+      "scenario": "Negative case: Attempt to download an empty series.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A comic series 'Empty Series' exists but contains no episodes."
+      ],
+      "steps": [
+        "1. Navigate to the 'Empty Series' page.",
+        "2. Attempt to tap the 'Download Series' button/option (if available)."
+      ],
+      "expected_result": "The 'Download Series' button/option should be disabled or absent for an empty series. If tapped, a message like 'This series has no episodes to download' should appear. No download should initiate.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-037",
+      "requirement_id": "REQ-014",
+      "scenario": "Boundary test: Download a series with exactly 50 episodes.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available (e.g., > 2 GB).",
+        "A free comic series 'Series 50 Episodes' with exactly 50 episodes is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Series 50 Episodes' page.",
+        "2. Tap the 'Download Series' button/option.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "All 50 episodes of 'Series 50 Episodes' are downloaded successfully without any warning or error regarding the limit. The download progress should indicate all episodes are being processed.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-038",
+      "requirement_id": "REQ-014",
+      "scenario": "Boundary test: Download a series with 49 episodes.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic series 'Series 49 Episodes' with exactly 49 episodes is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Series 49 Episodes' page.",
+        "2. Tap the 'Download Series' button/option.",
+        "3. Select 'Standard' quality.",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "All 49 episodes of 'Series 49 Episodes' are downloaded successfully.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-039",
+      "requirement_id": "REQ-014",
+      "scenario": "Violation test: Attempt to download a series with more than 50 episodes.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic series 'Series 51 Episodes' with 51 or more episodes is available."
+      ],
+      "steps": [
+        "1. Navigate to the 'Series 51 Episodes' page.",
+        "2. Tap the 'Download Series' button/option."
+      ],
+      "expected_result": "The system should present a warning or an error message indicating that only a maximum of 50 episodes can be downloaded per batch, or offer to download the first 50. It should not automatically download all 51+ episodes. For example, 'Series downloads are limited to 50 episodes. Do you want to download the first 50?'",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-040",
+      "requirement_id": "REQ-015",
+      "scenario": "Happy path: Download progress indicator is displayed during active download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Progress Indicator Comic - Episode 1' is available, large enough to take noticeable time to download (e.g., > 50 MB)."
+      ],
+      "steps": [
+        "1. Navigate to 'Progress Indicator Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Observe the UI during the download process (e.g., on the comic page, in the 'Downloads' tab, or via a system notification)."
+      ],
+      "expected_result": "A visual progress indicator (e.g., a progress bar, percentage, or animated icon) is clearly displayed and actively updates to reflect the download status and progress (e.g., 10%, 25%, 50%).",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-041",
+      "requirement_id": "REQ-015",
+      "scenario": "Edge case: Progress indicator for a very fast download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has a very fast internet connection (e.g., high-speed Wi-Fi).",
+        "Sufficient device storage is available.",
+        "A very small free comic 'Fast Download Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Navigate to 'Fast Download Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Observe the UI closely during the download process."
+      ],
+      "expected_result": "Even if very brief, the progress indicator should appear, show some progress (e.g., quickly jump from 0% to 100%), and then disappear, replaced by a 'Download Complete' status or notification.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-042",
+      "requirement_id": "REQ-015",
+      "scenario": "Negative case: Download is active but no progress indicator is displayed.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'No Progress Comic - Episode 1' is available, large enough to take noticeable time to download."
+      ],
+      "steps": [
+        "1. Navigate to 'No Progress Comic - Episode 1'.",
+        "2. Tap the 'Download' icon/button.",
+        "3. Select 'Standard' quality.",
+        "4. Actively monitor the UI (comic page, downloads tab) for any progress indicator."
+      ],
+      "expected_result": "The download starts, but no visual progress indicator is displayed, or it remains static at 0% throughout the download process. (This would be a failure of the feature).",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-043",
+      "requirement_id": "REQ-016",
+      "scenario": "Boundary test: Initiate 3 simultaneous comic downloads.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "Three distinct free comic episodes 'Simul-Download A', 'Simul-Download B', 'Simul-Download C' are available, each large enough to take a few seconds to download."
+      ],
+      "steps": [
+        "1. Initiate download for 'Simul-Download A - Episode 1'.",
+        "2. Immediately after, initiate download for 'Simul-Download B - Episode 1'.",
+        "3. Immediately after, initiate download for 'Simul-Download C - Episode 1'.",
+        "4. Observe the 'Downloads' tab or download progress indicators for all three items."
+      ],
+      "expected_result": "All three downloads ('Simul-Download A', 'B', and 'C') should initiate and progress concurrently. They should all eventually complete successfully.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-044",
+      "requirement_id": "REQ-016",
+      "scenario": "Violation test: Attempt to initiate a 4th simultaneous comic download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "Four distinct free comic episodes 'Simul-Download D', 'Simul-Download E', 'Simul-Download F', 'Simul-Download G' are available, each large enough to take a few seconds to download."
+      ],
+      "steps": [
+        "1. Initiate download for 'Simul-Download D - Episode 1'.",
+        "2. Initiate download for 'Simul-Download E - Episode 1'.",
+        "3. Initiate download for 'Simul-Download F - Episode 1'.",
+        "4. Immediately after, initiate download for 'Simul-Download G - Episode 1'.",
+        "5. Observe the 'Downloads' tab or download progress indicators."
+      ],
+      "expected_result": "Downloads D, E, and F should start immediately and progress concurrently. Download G should be placed in a 'queued' state, waiting for one of the active downloads to complete before it begins. A message or indicator should show it's queued.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-045",
+      "requirement_id": "REQ-017",
+      "scenario": "Happy path: User successfully pauses an active download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Pause Comic - Episode 1' is available, large enough to take noticeable time to download."
+      ],
+      "steps": [
+        "1. Initiate download for 'Pause Comic - Episode 1'.",
+        "2. While the download is in progress (e.g., at 20-50% progress), locate the download in the 'Downloads' tab or on the comic page.",
+        "3. Tap the 'Pause' button/icon for the download."
+      ],
+      "expected_result": "The download immediately ceases its progress. The progress indicator should stop, and the status should change to 'Paused'. No further data should be downloaded.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-046",
+      "requirement_id": "REQ-017",
+      "scenario": "Edge case: Pause a download that is almost complete.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Almost Done Comic - Episode 1' is available, large enough to take noticeable time to download."
+      ],
+      "steps": [
+        "1. Initiate download for 'Almost Done Comic - Episode 1'.",
+        "2. Wait until the download progress is very high (e.g., 90-95%).",
+        "3. Tap the 'Pause' button/icon."
+      ],
+      "expected_result": "The download should pause successfully, even at near completion. The status should reflect 'Paused' at its current progress percentage.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-047",
+      "requirement_id": "REQ-017",
+      "scenario": "Negative case: Attempt to pause a completed download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Completed Comic - Episode 1' has been fully downloaded and is in the 'Downloads' tab."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate 'Completed Comic - Episode 1'.",
+        "3. Attempt to find and tap a 'Pause' button/icon associated with this completed download."
+      ],
+      "expected_result": "There should be no 'Pause' option available for a completed download. The download status should clearly show 'Complete'.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-048",
+      "requirement_id": "REQ-018",
+      "scenario": "Happy path: User successfully resumes a paused download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Resume Comic - Episode 1' has been initiated and successfully paused (e.g., at 30% progress)."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate 'Resume Comic - Episode 1' which should be in a 'Paused' state.",
+        "3. Tap the 'Resume' button/icon for the download."
+      ],
+      "expected_result": "The download should resume from where it left off (e.g., from 30% progress). The progress indicator should start updating again, and the download should eventually complete successfully.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-049",
+      "requirement_id": "REQ-018",
+      "scenario": "Edge case: Resume a paused download after closing and reopening the app.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'App Restart Comic - Episode 1' has been initiated and successfully paused."
+      ],
+      "steps": [
+        "1. Initiate download for 'App Restart Comic - Episode 1' and pause it at ~50% progress.",
+        "2. Force close the PocketToons app (from device's app switcher/settings).",
+        "3. Reopen the PocketToons app.",
+        "4. Navigate to the 'Downloads' tab.",
+        "5. Locate 'App Restart Comic - Episode 1' (should still be 'Paused').",
+        "6. Tap the 'Resume' button/icon."
+      ],
+      "expected_result": "The download should successfully resume from its paused state (e.g., 50%) after the app restart and eventually complete.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-050",
+      "requirement_id": "REQ-018",
+      "scenario": "Negative case: Attempt to resume a download when the network connection is absent.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Offline Resume Comic - Episode 1' has been initiated and successfully paused.",
+        "Device has no active internet connection (Wi-Fi and mobile data off)."
+      ],
+      "steps": [
+        "1. Disconnect all network connections.",
+        "2. Navigate to the 'Downloads' tab.",
+        "3. Locate 'Offline Resume Comic - Episode 1' (should be 'Paused').",
+        "4. Tap the 'Resume' button/icon."
+      ],
+      "expected_result": "The system should prevent the download from resuming and display an appropriate error message (e.g., 'No internet connection. Cannot resume download.'). The status should remain 'Paused'.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-051",
+      "requirement_id": "REQ-019",
+      "scenario": "Happy path: A clear error message is displayed for a failed download due to network loss.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Sufficient device storage is available.",
+        "A free comic 'Network Fail Comic - Episode 1' is available, large enough to take noticeable time to download."
+      ],
+      "steps": [
+        "1. Initiate download for 'Network Fail Comic - Episode 1'.",
+        "2. While the download is in progress, disconnect all network connections (Wi-Fi and mobile data off).",
+        "3. Wait for a few seconds."
+      ],
+      "expected_result": "The download should stop, and a clear, user-friendly error message should be displayed (e.g., 'Download Failed: No internet connection'). The download status should change to 'Failed'.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-052",
+      "requirement_id": "REQ-019",
+      "scenario": "Edge case: Multiple simultaneous downloads fail.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Sufficient device storage is available.",
+        "Three distinct free comic episodes 'Multi-Fail A', 'Multi-Fail B', 'Multi-Fail C' are available, each large enough to take a few seconds to download."
+      ],
+      "steps": [
+        "1. Initiate downloads for 'Multi-Fail A', 'Multi-Fail B', and 'Multi-Fail C' simultaneously.",
+        "2. While all three downloads are in progress, disconnect all network connections.",
+        "3. Observe the 'Downloads' tab."
+      ],
+      "expected_result": "All three downloads should fail. Each failed download should clearly display its own 'Failed' status and an associated error message (e.g., 'Download Failed: No internet connection'). The app should remain stable.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-053",
+      "requirement_id": "REQ-019",
+      "scenario": "Negative case: Download fails, but no error message or a cryptic one is displayed.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Sufficient device storage is available.",
+        "A free comic 'Cryptic Fail Comic - Episode 1' is available.",
+        "A mechanism to intentionally cause a download to fail without a specific error message (e.g., corrupt server asset, invalid URL response, or a test hook) is in place."
+      ],
+      "steps": [
+        "1. Initiate download for 'Cryptic Fail Comic - Episode 1' using the intentional failure mechanism.",
+        "2. Observe the download status and any messages displayed."
+      ],
+      "expected_result": "The download fails, but either no error message is displayed, or the message is technical/cryptic (e.g., 'Error 500', 'Data Stream Corrupted') and unhelpful to an end-user. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-054",
+      "requirement_id": "REQ-020",
+      "scenario": "Happy path: User successfully retries a failed download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Retry Comic - Episode 1' has failed to download (e.g., due to temporary network loss) and is showing a 'Failed' status with a retry option.",
+        "Device has an active internet connection re-established."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate 'Retry Comic - Episode 1' which is in a 'Failed' state.",
+        "3. Tap the 'Retry' button/icon displayed next to the failed download.",
+        "4. Wait for the download to complete."
+      ],
+      "expected_result": "The download should restart (or resume) successfully and complete without further issues. The status should change from 'Failed' to 'Downloading' and then 'Complete'.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-055",
+      "requirement_id": "REQ-020",
+      "scenario": "Edge case: Retry a download multiple times after intermittent failures.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Multi-Retry Comic - Episode 1' is available.",
+        "A mechanism to cause intermittent download failures (e.g., toggling network on/off).",
+        "Sufficient device storage."
+      ],
+      "steps": [
+        "1. Initiate download for 'Multi-Retry Comic - Episode 1'.",
+        "2. Force it to fail (e.g., disconnect network for a moment).",
+        "3. Reconnect network.",
+        "4. Tap 'Retry'.",
+        "5. Force it to fail again.",
+        "6. Reconnect network.",
+        "7. Tap 'Retry' again.",
+        "8. Allow the download to complete."
+      ],
+      "expected_result": "The download should successfully retry and eventually complete, even after multiple intermediate failures. The retry mechanism should be robust.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-056",
+      "requirement_id": "REQ-020",
+      "scenario": "Negative case: Download fails, but no retry option is provided.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'No Retry Comic - Episode 1' has failed to download (e.g., due to network loss) and is showing a 'Failed' status."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate 'No Retry Comic - Episode 1' which is in a 'Failed' state.",
+        "3. Look for a 'Retry' button or similar option."
+      ],
+      "expected_result": "The download shows a 'Failed' status, but there is no visible or accessible 'Retry' option. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-057",
+      "requirement_id": "REQ-021",
+      "scenario": "Happy path: The dedicated 'Downloads' tab is present and accessible.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "The app's main navigation UI is loaded."
+      ],
+      "steps": [
+        "1. Observe the main navigation elements (e.g., bottom bar, side menu)."
+      ],
+      "expected_result": "A clearly labeled 'Downloads' tab or button is visible and accessible in the main navigation (e.g., as a distinct icon/text in a bottom navigation bar or side menu).",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-058",
+      "requirement_id": "REQ-021",
+      "scenario": "Edge case: 'Downloads' tab content is empty.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "No comics have been downloaded yet."
+      ],
+      "steps": [
+        "1. Tap the 'Downloads' tab.",
+        "2. Observe the content of the tab."
+      ],
+      "expected_result": "The 'Downloads' tab is accessible and displays a message indicating that no comics have been downloaded yet (e.g., 'No downloads yet! Start downloading your favorite comics for offline reading.'). It should not be blank or display an error.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-059",
+      "requirement_id": "REQ-021",
+      "scenario": "Negative case: The 'Downloads' tab is missing or inaccessible.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app."
+      ],
+      "steps": [
+        "1. Look for a 'Downloads' tab or similar feature in the app's main navigation."
+      ],
+      "expected_result": "No 'Downloads' tab or dedicated section for managing downloads is present or easily accessible in the main navigation. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-060",
+      "requirement_id": "REQ-022",
+      "scenario": "Happy path: 'Downloads' tab lists all locally saved comics.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Two free comic episodes 'Listed Comic 1 - Episode 1' and 'Listed Comic 2 - Episode 1' have been successfully downloaded."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Observe the list of items displayed."
+      ],
+      "expected_result": "Both 'Listed Comic 1 - Episode 1' and 'Listed Comic 2 - Episode 1' are clearly listed in the 'Downloads' tab. Each entry should show the comic title, episode number, and potentially cover art.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-061",
+      "requirement_id": "REQ-022",
+      "scenario": "Edge case: 'Downloads' tab lists a large number of locally saved comics.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "At least 20 different comic episodes have been successfully downloaded."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Scroll through the list of downloaded comics."
+      ],
+      "expected_result": "All 20+ downloaded comics are listed. The list should be scrollable, performant, and correctly display all entries without truncation or loading issues.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-062",
+      "requirement_id": "REQ-022",
+      "scenario": "Negative case: Downloaded comic is not listed in the 'Downloads' tab.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Missing Listed Comic - Episode 1' has been successfully downloaded (verify via device storage if possible).",
+        "Assume a bug where the UI listing is not updated."
+      ],
+      "steps": [
+        "1. Ensure 'Missing Listed Comic - Episode 1' is downloaded.",
+        "2. Navigate to the 'Downloads' tab.",
+        "3. Search for 'Missing Listed Comic - Episode 1' in the list."
+      ],
+      "expected_result": "'Missing Listed Comic - Episode 1' is NOT displayed in the list of downloaded comics in the 'Downloads' tab, despite being downloaded on the device. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-063",
+      "requirement_id": "REQ-023",
+      "scenario": "Happy path: Access and read downloaded comics without network.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Offline Reading Comic - Episode 1' has been successfully downloaded."
+      ],
+      "steps": [
+        "1. Disconnect all network connections (Wi-Fi and mobile data off).",
+        "2. Open the PocketToons app.",
+        "3. Navigate to the 'Downloads' tab.",
+        "4. Tap on 'Offline Reading Comic - Episode 1' to open it.",
+        "5. Swipe through all pages of the comic."
+      ],
+      "expected_result": "The comic opens quickly and all pages can be viewed and navigated through seamlessly without any network connection. No 'No internet' errors or loading spinners appear while reading.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-064",
+      "requirement_id": "REQ-023",
+      "scenario": "Edge case: Read a downloaded comic when network is flaky/intermittent.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Flaky Network Comic - Episode 1' has been successfully downloaded.",
+        "Device is connected to an unstable network that frequently drops connectivity."
+      ],
+      "steps": [
+        "1. Open the PocketToons app.",
+        "2. Navigate to the 'Downloads' tab.",
+        "3. Tap on 'Flaky Network Comic - Episode 1' to open it.",
+        "4. While reading, observe the network connection repeatedly drop and reconnect (simulated or real)."
+      ],
+      "expected_result": "The downloaded comic should remain fully accessible and readable without interruption, as it's being read from local storage. The network fluctuations should not affect the reading experience.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-065",
+      "requirement_id": "REQ-023",
+      "scenario": "Negative case: Attempt to read a downloaded comic offline, but it requires network.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Network Required Comic - Episode 1' has been successfully downloaded."
+      ],
+      "steps": [
+        "1. Disconnect all network connections (Wi-Fi and mobile data off).",
+        "2. Open the PocketToons app.",
+        "3. Navigate to the 'Downloads' tab.",
+        "4. Tap on 'Network Required Comic - Episode 1' to open it."
+      ],
+      "expected_result": "The comic fails to open or displays an error message stating that an internet connection is required. (This would be a critical failure of the core offline reading feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-066",
+      "requirement_id": "REQ-024",
+      "scenario": "Happy path: App clearly indicates offline mode when no connectivity.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app."
+      ],
+      "steps": [
+        "1. Ensure device has an active internet connection (Wi-Fi).",
+        "2. Open the PocketToons app and observe the UI.",
+        "3. Disconnect all network connections (Wi-Fi and mobile data off).",
+        "4. Observe the PocketToons app UI again."
+      ],
+      "expected_result": "Upon losing network connectivity, the app should display a clear visual indicator (e.g., a banner at the top, an icon, or a persistent message) stating that the user is offline or has no internet connection.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-067",
+      "requirement_id": "REQ-024",
+      "scenario": "Edge case: Offline indicator behavior during rapid network changes.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device connected to a network that can be quickly toggled."
+      ],
+      "steps": [
+        "1. Keep the PocketToons app open.",
+        "2. Rapidly toggle Wi-Fi on and off several times (e.g., every 2-3 seconds).",
+        "3. Observe the offline indicator in the app."
+      ],
+      "expected_result": "The offline indicator should appear and disappear promptly in response to network status changes without flickering excessively or getting stuck in an incorrect state. The app should remain stable.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-068",
+      "requirement_id": "REQ-024",
+      "scenario": "Negative case: No offline mode indicator when connectivity is lost.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app."
+      ],
+      "steps": [
+        "1. Disconnect all network connections (Wi-Fi and mobile data off).",
+        "2. Open or switch to the PocketToons app.",
+        "3. Observe the app's UI for any indication of offline status."
+      ],
+      "expected_result": "The app remains silent about the network status; no banner, icon, or message indicates that the user is currently offline. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-069",
+      "requirement_id": "REQ-025",
+      "scenario": "Happy path: App displays total storage used by downloads correctly.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Storage Comic - Episode 1' (e.g., 50 MB) has been downloaded.",
+        "Another free comic 'Storage Comic - Episode 2' (e.g., 30 MB) has been downloaded."
+      ],
+      "steps": [
+        "1. Navigate to the 'Settings' section (as per REQ-026).",
+        "2. Locate the 'Total Storage Used by Downloads' display."
+      ],
+      "expected_result": "The displayed storage usage is approximately 80 MB (50 MB + 30 MB). The value should be accurate and reflect the sum of all downloaded content.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-070",
+      "requirement_id": "REQ-025",
+      "scenario": "Edge case: Storage used by downloads updates after deletion.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Delete Storage Comic - Episode 1' (e.g., 50 MB) and 'Delete Storage Comic - Episode 2' (e.g., 30 MB) have been downloaded, showing a total of ~80 MB.",
+        "The total storage used is displayed in Settings."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Delete 'Delete Storage Comic - Episode 1'.",
+        "3. Navigate back to the 'Settings' section.",
+        "4. Observe the 'Total Storage Used by Downloads' display."
+      ],
+      "expected_result": "The displayed storage usage immediately updates from ~80 MB to ~30 MB after 'Delete Storage Comic - Episode 1' is removed.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-071",
+      "requirement_id": "REQ-025",
+      "scenario": "Negative case: Storage usage displayed is incorrect or not updated.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Incorrect Storage Comic - Episode 1' (e.g., 50 MB) has been downloaded.",
+        "The total storage used is displayed in Settings (assume it shows 0 MB or an arbitrary wrong value)."
+      ],
+      "steps": [
+        "1. Download 'Incorrect Storage Comic - Episode 1'.",
+        "2. Navigate to the 'Settings' section.",
+        "3. Observe the 'Total Storage Used by Downloads' display."
+      ],
+      "expected_result": "The displayed storage usage shows 0 MB or an incorrect value (e.g., 10 MB) instead of the expected 50 MB. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-072",
+      "requirement_id": "REQ-026",
+      "scenario": "Happy path: Total storage used by downloads is displayed within Settings.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "At least one comic has been downloaded."
+      ],
+      "steps": [
+        "1. Tap on the 'Settings' icon/menu item in the app's main navigation.",
+        "2. Navigate through the settings options."
+      ],
+      "expected_result": "A clear entry titled 'Storage Used by Downloads', 'Offline Storage', or similar is found within the app's 'Settings' section, displaying the current total storage used by downloaded comics.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-073",
+      "requirement_id": "REQ-026",
+      "scenario": "Edge case: Displayed storage when no comics are downloaded.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "No comics have been downloaded, or all have been deleted."
+      ],
+      "steps": [
+        "1. Navigate to the 'Settings' section.",
+        "2. Locate the 'Total Storage Used by Downloads' display."
+      ],
+      "expected_result": "The 'Total Storage Used by Downloads' display should show '0 MB' or 'No downloads' rather than being absent or showing an error.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-074",
+      "requirement_id": "REQ-026",
+      "scenario": "Negative case: Storage display is not located in Settings.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "At least one comic has been downloaded."
+      ],
+      "steps": [
+        "1. Navigate through all available sections within the app's 'Settings'.",
+        "2. Look for any display of 'Total Storage Used by Downloads'."
+      ],
+      "expected_result": "No 'Total Storage Used by Downloads' display or similar information is found within the entire 'Settings' section. (This would be a failure of the feature).",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-075",
+      "requirement_id": "REQ-027",
+      "scenario": "Happy path: User successfully deletes an individual downloaded episode.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Individual Delete Comic - Episode 1' and 'Individual Delete Comic - Episode 2' are downloaded and listed in the 'Downloads' tab."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate 'Individual Delete Comic - Episode 1'.",
+        "3. Tap the 'Delete' option/icon associated with 'Individual Delete Comic - Episode 1'.",
+        "4. Confirm the deletion if prompted."
+      ],
+      "expected_result": "'Individual Delete Comic - Episode 1' is removed from the 'Downloads' tab. 'Individual Delete Comic - Episode 2' remains untouched. The total storage used by downloads should decrease accordingly.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-076",
+      "requirement_id": "REQ-027",
+      "scenario": "Edge case: Delete the only downloaded episode.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Only one free comic 'Only Episode Comic - Episode 1' is downloaded and listed in the 'Downloads' tab."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate 'Only Episode Comic - Episode 1'.",
+        "3. Tap the 'Delete' option/icon.",
+        "4. Confirm the deletion if prompted."
+      ],
+      "expected_result": "'Only Episode Comic - Episode 1' is removed from the 'Downloads' tab. The 'Downloads' tab should now display a message indicating no downloads (e.g., 'No downloads yet!'). Total storage used should become 0 MB.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-077",
+      "requirement_id": "REQ-027",
+      "scenario": "Negative case: Attempt to delete an episode that is currently being read.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Reading Comic - Episode 1' is downloaded and available."
+      ],
+      "steps": [
+        "1. Open 'Reading Comic - Episode 1' and navigate to a page.",
+        "2. While reading, attempt to navigate to the 'Downloads' tab (or exit the reader temporarily).",
+        "3. Locate 'Reading Comic - Episode 1' and tap the 'Delete' option/icon."
+      ],
+      "expected_result": "The system should either prevent deletion while the comic is open or warn the user that closing the comic is required for deletion. If deleted successfully, the comic reader should close or navigate back to the downloads list, and the comic should no longer be accessible.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-078",
+      "requirement_id": "REQ-028",
+      "scenario": "Happy path: User successfully deletes an entire downloaded series.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic series 'Full Series Delete' with multiple episodes (e.g., 3 episodes) is downloaded and listed in the 'Downloads' tab as a series."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate the 'Full Series Delete' series entry.",
+        "3. Tap the 'Delete Series' option/icon associated with the series.",
+        "4. Confirm the deletion if prompted."
+      ],
+      "expected_result": "The entire 'Full Series Delete' series, including all its episodes, is removed from the 'Downloads' tab. The total storage used by downloads should decrease by the collective size of all deleted episodes.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-079",
+      "requirement_id": "REQ-028",
+      "scenario": "Edge case: Delete a series with many episodes (e.g., 50 episodes).",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic series 'Large Series Delete' with 50 episodes is downloaded."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate the 'Large Series Delete' series entry.",
+        "3. Tap the 'Delete Series' option/icon.",
+        "4. Confirm the deletion."
+      ],
+      "expected_result": "All 50 episodes of 'Large Series Delete' are successfully and completely removed. The process should be efficient, and the app should not freeze or crash.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-080",
+      "requirement_id": "REQ-028",
+      "scenario": "Negative case: Attempt to delete a series that is partially downloaded or corrupted.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic series 'Partial Series Delete' has some episodes downloaded, and others are pending or failed, or one of the downloaded episodes is corrupted (simulated)."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab.",
+        "2. Locate the 'Partial Series Delete' series entry.",
+        "3. Tap the 'Delete Series' option/icon.",
+        "4. Confirm the deletion."
+      ],
+      "expected_result": "The system should still successfully delete all available downloaded episodes and remove the series entry, even if some parts were incomplete or corrupted. It should not cause an error or crash. Any related storage should be freed.",
+      "priority": "P1",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-081",
+      "requirement_id": "REQ-029",
+      "scenario": "Happy path: Downloaded content automatically expires and is removed.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Expiry Comic - Episode 1' is downloaded.",
+        "System clock on the device or server-side time can be manipulated for testing purposes."
+      ],
+      "steps": [
+        "1. Download 'Expiry Comic - Episode 1'. Note the download date/time.",
+        "2. Advance the system clock (or mock server time) by 31 days.",
+        "3. Open the PocketToons app and navigate to the 'Downloads' tab.",
+        "4. Look for 'Expiry Comic - Episode 1'."
+      ],
+      "expected_result": "'Expiry Comic - Episode 1' is no longer listed in the 'Downloads' tab and cannot be accessed. The storage used by this comic is freed.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-082",
+      "requirement_id": "REQ-029",
+      "scenario": "Edge case: Multiple downloaded items expire at different times.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Downloaded 'Expiry Multi-A - Episode 1' (Day 0) and 'Expiry Multi-B - Episode 1' (Day 10).",
+        "Time manipulation is possible."
+      ],
+      "steps": [
+        "1. Advance system clock by 31 days from 'Expiry Multi-A' download. Verify 'Expiry Multi-A' is gone.",
+        "2. 'Expiry Multi-B' should still be present.",
+        "3. Advance system clock by another 10 days (total 41 from 'Expiry Multi-A' / 31 from 'Expiry Multi-B').",
+        "4. Verify 'Expiry Multi-B' is also gone."
+      ],
+      "expected_result": "Each downloaded item expires and is removed independently based on its individual download date, freeing up storage.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-083",
+      "requirement_id": "REQ-029",
+      "scenario": "Negative case: Downloaded content does not expire automatically.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'No Expiry Comic - Episode 1' is downloaded.",
+        "Time manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'No Expiry Comic - Episode 1'.",
+        "2. Advance the system clock (or mock server time) by 35 days (past the 30-day expiry).",
+        "3. Open the PocketToons app and navigate to the 'Downloads' tab.",
+        "4. Look for 'No Expiry Comic - Episode 1'."
+      ],
+      "expected_result": "'No Expiry Comic - Episode 1' is still listed in the 'Downloads' tab and can be accessed, indicating that automatic expiry failed. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-084",
+      "requirement_id": "REQ-030",
+      "scenario": "Boundary test: Downloaded content accessible at 29 days, removed at 30 days.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Boundary Expiry Comic - Episode 1' is downloaded.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Boundary Expiry Comic - Episode 1'.",
+        "2. Advance system clock by 29 days.",
+        "3. Verify 'Boundary Expiry Comic - Episode 1' is still accessible in 'Downloads'.",
+        "4. Advance system clock by 1 more day (total 30 days).",
+        "5. Reopen the app and verify 'Boundary Expiry Comic - Episode 1' is no longer accessible."
+      ],
+      "expected_result": "The comic is accessible on day 29, but automatically removed and inaccessible on day 30 or shortly after app launch/refresh on day 30.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-085",
+      "requirement_id": "REQ-030",
+      "scenario": "Boundary test: Content remains accessible exactly 30 days.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Exact Expiry Comic - Episode 1' is downloaded.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Exact Expiry Comic - Episode 1'.",
+        "2. Advance system clock to precisely 30 days after download.",
+        "3. Open the PocketToons app.",
+        "4. Verify 'Exact Expiry Comic - Episode 1' is removed or becomes inaccessible.",
+        "5. (Optional) Check device file system or app data to confirm file removal."
+      ],
+      "expected_result": "The comic should be removed/inaccessible at or immediately after the 30-day mark from its download date.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-086",
+      "requirement_id": "REQ-030",
+      "scenario": "Violation test: Content expires before or after 30 days.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Violation Expiry Comic - Episode 1' is downloaded.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Violation Expiry Comic - Episode 1'.",
+        "2. Advance system clock by 29 days.",
+        "3. Verify comic is still accessible (if it's not, it's a violation).",
+        "4. Advance system clock by 31 days from download date.",
+        "5. Verify comic is removed (if it's still accessible, it's a violation)."
+      ],
+      "expected_result": "If the comic expires before 30 days (e.g., at 29 days) or remains accessible significantly beyond 30 days (e.g., at 31 days or more), it's a violation of the requirement. This test passes if it *finds* such a violation.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-087",
+      "requirement_id": "REQ-031",
+      "scenario": "Happy path: User receives an in-app notification about content expiry.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Expiry Notification Comic - Episode 1' is downloaded.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Expiry Notification Comic - Episode 1'.",
+        "2. Advance the system clock (or mock server time) to 3 days before the content is due to expire (i.e., 27 days after download).",
+        "3. Open the PocketToons app and ensure it's active.",
+        "4. Observe for in-app notifications."
+      ],
+      "expected_result": "An in-app notification (e.g., banner, toast) is displayed, warning the user that 'Expiry Notification Comic - Episode 1' will expire soon (e.g., 'Your downloaded comic 'Expiry Notification Comic - Episode 1' will expire in 3 days.').",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-088",
+      "requirement_id": "REQ-031",
+      "scenario": "Edge case: Multiple downloaded items are about to expire, triggering multiple notifications.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Downloaded 'Multi-Expiry A - Episode 1' (expires in 3 days) and 'Multi-Expiry B - Episode 1' (expires in 3 days, same time).",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Advance system clock to 3 days before expiry for both items.",
+        "2. Open the app and observe notifications."
+      ],
+      "expected_result": "Notifications for both 'Multi-Expiry A' and 'Multi-Expiry B' are displayed, either as separate notifications or a combined notification summarizing multiple expiries.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-089",
+      "requirement_id": "REQ-031",
+      "scenario": "Negative case: No in-app notification is sent for expiring content.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'No Notif Expiry Comic - Episode 1' is downloaded.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'No Notif Expiry Comic - Episode 1'.",
+        "2. Advance the system clock (or mock server time) to 27 days after download.",
+        "3. Open the PocketToons app and ensure it's active.",
+        "4. Observe for in-app notifications."
+      ],
+      "expected_result": "No in-app notification is displayed, even though the content is 3 days from expiry. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-090",
+      "requirement_id": "REQ-032",
+      "scenario": "Boundary test: Expiry notification sent exactly 3 days before expiry.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Notif Timing Comic - Episode 1' is downloaded.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Notif Timing Comic - Episode 1'.",
+        "2. Advance system clock to 26 days after download (4 days before expiry).",
+        "3. Open the app, verify no notification yet.",
+        "4. Advance system clock by 1 more day (total 27 days after download - 3 days before expiry).",
+        "5. Open the app, verify notification appears."
+      ],
+      "expected_result": "No expiry notification is received on day 26 (4 days before expiry). An in-app notification for expiry is received on day 27 (exactly 3 days before expiry).",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-091",
+      "requirement_id": "REQ-032",
+      "scenario": "Violation test: Expiry notification sent 2 days before or 4 days before expiry.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Notif Violation Comic - Episode 1' is downloaded.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Notif Violation Comic - Episode 1'.",
+        "2. Advance system clock to 26 days after download (4 days before expiry).",
+        "3. Open the app, check for notification (violation if it appears).",
+        "4. Advance system clock to 28 days after download (2 days before expiry).",
+        "5. Open the app, check for notification (violation if this is the *first* time it appears, implying it was missed on day 27)."
+      ],
+      "expected_result": "If a notification appears on day 26 (4 days before) or if no notification appears on day 27 and it only appears on day 28 (2 days before), it's a violation. This test passes if it *finds* such a violation.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-092",
+      "requirement_id": "REQ-033",
+      "scenario": "Happy path: All subscription-gated downloads are removed when subscription lapses.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active subscription.",
+        "Two subscription-gated comics 'Sub Lapse Comic A' and 'Sub Lapse Comic B' are downloaded.",
+        "One free comic 'Free Comic C' is downloaded.",
+        "A mechanism to lapse the user's subscription (e.g., test account with controlled expiry)."
+      ],
+      "steps": [
+        "1. Ensure 'Sub Lapse Comic A', 'Sub Lapse Comic B', and 'Free Comic C' are downloaded.",
+        "2. Lapse the user's subscription (via admin tool or expiry of test account).",
+        "3. Re-open the PocketToons app and/or wait for a brief period (e.g., 5 minutes) for sync to occur.",
+        "4. Navigate to the 'Downloads' tab."
+      ],
+      "expected_result": "'Sub Lapse Comic A' and 'Sub Lapse Comic B' are removed from the 'Downloads' tab and are no longer accessible. 'Free Comic C' (non-subscription content) remains in the 'Downloads' tab and is accessible. Total storage used decreases accordingly.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-093",
+      "requirement_id": "REQ-033",
+      "scenario": "Edge case: Subscription lapses while the user is offline.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active subscription.",
+        "A subscription-gated comic 'Offline Lapse Comic' is downloaded.",
+        "A mechanism to lapse the user's subscription.",
+        "Device has no active internet connection."
+      ],
+      "steps": [
+        "1. Ensure 'Offline Lapse Comic' is downloaded.",
+        "2. Disconnect all network connections.",
+        "3. Lapse the user's subscription (this would be server-side).",
+        "4. Attempt to access 'Offline Lapse Comic' while still offline.",
+        "5. Reconnect to the internet.",
+        "6. Re-open the PocketToons app and wait for sync.",
+        "7. Navigate to the 'Downloads' tab."
+      ],
+      "expected_result": "While offline, 'Offline Lapse Comic' might still be accessible temporarily. Upon re-establishing network connection and app sync, 'Offline Lapse Comic' should be removed from the 'Downloads' tab and become inaccessible. The system processes the lapse when online.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-094",
+      "requirement_id": "REQ-033",
+      "scenario": "Negative case: Subscription lapses, but subscription-gated content is NOT removed.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active subscription.",
+        "A subscription-gated comic 'No Removal Comic' is downloaded.",
+        "A mechanism to lapse the user's subscription."
+      ],
+      "steps": [
+        "1. Ensure 'No Removal Comic' is downloaded.",
+        "2. Lapse the user's subscription.",
+        "3. Re-open the PocketToons app and wait for 24 hours (as per REQ-034).",
+        "4. Navigate to the 'Downloads' tab."
+      ],
+      "expected_result": "'No Removal Comic' is still listed in the 'Downloads' tab and remains accessible despite the subscription having lapsed. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-095",
+      "requirement_id": "REQ-034",
+      "scenario": "Boundary test: Subscription-gated downloads removed within 24 hours of lapse.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active subscription.",
+        "A subscription-gated comic 'Removal Timing Comic - Episode 1' is downloaded.",
+        "A mechanism to lapse the user's subscription and measure time precisely."
+      ],
+      "steps": [
+        "1. Download 'Removal Timing Comic - Episode 1'.",
+        "2. Lapse the user's subscription. Note the precise time of lapse (T0).",
+        "3. Keep the app in the foreground or open periodically.",
+        "4. At T0 + 23 hours 59 minutes, verify the comic is still accessible (it might be, depending on implementation/sync interval).",
+        "5. At T0 + 24 hours 1 minute, open the app.",
+        "6. Navigate to the 'Downloads' tab and look for 'Removal Timing Comic - Episode 1'."
+      ],
+      "expected_result": "The comic 'Removal Timing Comic - Episode 1' should be removed from the 'Downloads' tab and be inaccessible at or shortly after the 24-hour mark from the subscription lapse.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-096",
+      "requirement_id": "REQ-034",
+      "scenario": "Violation test: Subscription-gated downloads remain accessible after 24 hours of lapse.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "User has an active subscription.",
+        "A subscription-gated comic 'Violation Removal Comic - Episode 1' is downloaded.",
+        "A mechanism to lapse the user's subscription and measure time precisely."
+      ],
+      "steps": [
+        "1. Download 'Violation Removal Comic - Episode 1'.",
+        "2. Lapse the user's subscription. Note the precise time of lapse (T0).",
+        "3. At T0 + 24 hours 30 minutes, open the PocketToons app.",
+        "4. Navigate to the 'Downloads' tab and look for 'Violation Removal Comic - Episode 1'."
+      ],
+      "expected_result": "The comic 'Violation Removal Comic - Episode 1' is still listed in the 'Downloads' tab and is accessible, indicating it was not removed within the 24-hour window. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-097",
+      "requirement_id": "REQ-035",
+      "scenario": "Happy path: Downloaded content is encrypted on the device.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Encrypted Comic - Episode 1' is downloaded.",
+        "Access to device's file system (e.g., via a connected computer, file manager, or specific testing tools for inspecting app data)."
+      ],
+      "steps": [
+        "1. Download 'Encrypted Comic - Episode 1'.",
+        "2. Connect the device to a computer or use a file manager app to navigate to the PocketToons app's data directory where downloaded content is stored.",
+        "3. Attempt to open or view the downloaded comic's files (e.g., image files, data files) using standard image viewers or text editors."
+      ],
+      "expected_result": "The downloaded files are not immediately recognizable as image files or readable text; they appear as garbled or unreadable data, consistent with encryption. Standard tools cannot open or interpret them correctly.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-098",
+      "requirement_id": "REQ-035",
+      "scenario": "Edge case: Very small downloaded content is also encrypted.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A very small free comic 'Small Encrypted Comic - Episode 1' (e.g., one page, minimal size) is downloaded.",
+        "Access to device's file system."
+      ],
+      "steps": [
+        "1. Download 'Small Encrypted Comic - Episode 1'.",
+        "2. Access the downloaded file on the device file system.",
+        "3. Attempt to view the file content."
+      ],
+      "expected_result": "Despite its small size, the downloaded file should still appear encrypted/unreadable outside the app.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-099",
+      "requirement_id": "REQ-035",
+      "scenario": "Negative case: Downloaded content is stored unencrypted (plaintext).",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Unencrypted Comic - Episode 1' is downloaded.",
+        "Access to device's file system."
+      ],
+      "steps": [
+        "1. Download 'Unencrypted Comic - Episode 1'.",
+        "2. Access the downloaded file on the device file system.",
+        "3. Attempt to open the files using a standard image viewer or text editor."
+      ],
+      "expected_result": "The downloaded comic pages or content files are directly viewable and readable as plain images or text files (e.g., '.jpg', '.png') outside the app without any decryption. (This would be a critical security failure).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-100",
+      "requirement_id": "REQ-036",
+      "scenario": "Boundary test: Verify AES-256 encryption is used.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'AES-256 Test Comic - Episode 1' is downloaded.",
+        "Developer access or a specific security testing tool capable of inspecting the encryption headers/metadata of the downloaded files or the encryption logic within the app's code."
+      ],
+      "steps": [
+        "1. Download 'AES-256 Test Comic - Episode 1'.",
+        "2. Using the appropriate tools, inspect the encryption details of the downloaded content files.",
+        "3. (If white-box testing) Review the cryptographic implementation in the source code."
+      ],
+      "expected_result": "The encryption applied to the downloaded content files is confirmed to be AES-256. This requires technical validation beyond typical black-box testing.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-101",
+      "requirement_id": "REQ-036",
+      "scenario": "Violation test: Encryption method is not AES-256.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Non-AES256 Comic - Episode 1' is downloaded.",
+        "Developer access or a specific security testing tool capable of inspecting encryption details."
+      ],
+      "steps": [
+        "1. Download 'Non-AES256 Comic - Episode 1'.",
+        "2. Using appropriate tools, inspect the encryption details of the downloaded content files."
+      ],
+      "expected_result": "The encryption method used for the downloaded content is identified as something other than AES-256 (e.g., AES-128, DES, or a custom algorithm). (This would be a security failure).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-102",
+      "requirement_id": "REQ-037",
+      "scenario": "Happy path: Prevent access to downloaded files from outside the PocketToons app.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'External Access Comic - Episode 1' is downloaded.",
+        "Device is connected to a computer, or a third-party file manager app is installed on the device."
+      ],
+      "steps": [
+        "1. Download 'External Access Comic - Episode 1'.",
+        "2. Use a computer to browse the device's file system or a file manager app on the device.",
+        "3. Navigate to the PocketToons app's private data directory (e.g., Android/data/com.pockettoons.app/files/downloads or iOS equivalent).",
+        "4. Attempt to open any downloaded comic file (e.g., image asset) directly using external software (e.g., image viewer, text editor)."
+      ],
+      "expected_result": "The downloaded files cannot be opened, viewed, or interpreted by external applications. They appear as encrypted, corrupted, or simply inaccessible/unsupported files.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-103",
+      "requirement_id": "REQ-037",
+      "scenario": "Edge case: Attempt to access files from a rooted/jailbroken device.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Rooted Device Comic - Episode 1' is downloaded.",
+        "A rooted Android device or jailbroken iOS device with developer tools/file system access."
+      ],
+      "steps": [
+        "1. Download 'Rooted Device Comic - Episode 1'.",
+        "2. Using root access, navigate to the app's data directories.",
+        "3. Attempt to copy or open the downloaded files."
+      ],
+      "expected_result": "Even with elevated privileges on a rooted/jailbroken device, the downloaded files should remain encrypted and unreadable when accessed directly, preventing unauthorized access to the content itself.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-104",
+      "requirement_id": "REQ-037",
+      "scenario": "Negative case: Downloaded files are accessible from outside the app.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Accessible File Comic - Episode 1' is downloaded.",
+        "Device is connected to a computer, or a third-party file manager app is installed."
+      ],
+      "steps": [
+        "1. Download 'Accessible File Comic - Episode 1'.",
+        "2. Access the device's file system and navigate to the app's download directory.",
+        "3. Attempt to open a downloaded comic file with a standard image viewer."
+      ],
+      "expected_result": "The downloaded comic pages open directly and are viewable in an external application (e.g., gallery app, image viewer) without needing to use the PocketToons app. (This would be a critical security failure).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-105",
+      "requirement_id": "REQ-038",
+      "scenario": "Happy path: Prevent export of downloaded files from the PocketToons app.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'No Export Comic - Episode 1' is downloaded."
+      ],
+      "steps": [
+        "1. Navigate to the 'Downloads' tab or open 'No Export Comic - Episode 1' for reading.",
+        "2. Look for any 'Share', 'Export', 'Save As', or 'Print' options within the app's UI (e.g., context menus, share sheets, settings).",
+        "3. If any such options exist, attempt to use them on the downloaded content."
+      ],
+      "expected_result": "There should be no visible or functional options within the PocketToons app to share, export, save, or otherwise transfer the downloaded comic content to other applications or outside the app's controlled environment.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-106",
+      "requirement_id": "REQ-038",
+      "scenario": "Edge case: Attempt to screenshot downloaded content (device-level control).",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Screenshot Comic - Episode 1' is downloaded.",
+        "Device has standard screenshot functionality."
+      ],
+      "steps": [
+        "1. Open 'Screenshot Comic - Episode 1' for reading.",
+        "2. Attempt to take a screenshot of the comic page using the device's native screenshot function."
+      ],
+      "expected_result": "The screenshot either should be prevented (e.g., 'Cannot take screenshot due to security policy') or, if taken, the image should appear blank, black, or contain a DRM watermark instead of the comic content itself. (Prevention is ideal if technically feasible).",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-107",
+      "requirement_id": "REQ-038",
+      "scenario": "Negative case: User can export downloaded content from the app.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Exportable Comic - Episode 1' is downloaded."
+      ],
+      "steps": [
+        "1. Open 'Exportable Comic - Episode 1'.",
+        "2. Locate a 'Share' or 'Export' option (e.g., in a menu, long-press context).",
+        "3. Use this option to attempt to share or save the comic (e.g., to Photos/Gallery, email, another app)."
+      ],
+      "expected_result": "The app allows the user to export, share, or save the downloaded comic pages (e.g., as image files) to external locations or other applications. (This would be a critical security failure).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-108",
+      "requirement_id": "REQ-039",
+      "scenario": "Happy path: Download operations run on a background thread, maintaining UI responsiveness.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Background Thread Comic - Episode 1' is available, large enough to take noticeable time to download (e.g., > 100 MB)."
+      ],
+      "steps": [
+        "1. Initiate download for 'Background Thread Comic - Episode 1'.",
+        "2. While the download is in progress, actively interact with other parts of the app (e.g., browse other comic series, navigate through settings, scroll lists, open other non-downloaded comics for viewing).",
+        "3. Observe UI fluidity and responsiveness."
+      ],
+      "expected_result": "The app's UI remains fully responsive, smooth, and interactive while the download proceeds in the background. There should be no noticeable lag, freezing, or stuttering in the UI interactions.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-109",
+      "requirement_id": "REQ-039",
+      "scenario": "Edge case: Multiple simultaneous downloads running on background threads.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "Three distinct free comic episodes 'Multi-Thread A', 'Multi-Thread B', 'Multi-Thread C' are available, each large enough to take a few seconds to download."
+      ],
+      "steps": [
+        "1. Initiate downloads for 'Multi-Thread A', 'Multi-Thread B', and 'Multi-Thread C' simultaneously.",
+        "2. While all three downloads are in progress, navigate through various sections of the app.",
+        "3. Observe UI responsiveness."
+      ],
+      "expected_result": "The app's UI remains responsive and fluid, even with multiple downloads running concurrently in the background. UI interactions should not be significantly degraded.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-110",
+      "requirement_id": "REQ-039",
+      "scenario": "Negative case: Download operations block the UI thread, causing unresponsiveness.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Sufficient device storage is available.",
+        "A free comic 'Blocking Thread Comic - Episode 1' is available, large enough to take noticeable time to download."
+      ],
+      "steps": [
+        "1. Initiate download for 'Blocking Thread Comic - Episode 1'.",
+        "2. Immediately try to scroll through lists, tap buttons, or navigate to other screens within the app."
+      ],
+      "expected_result": "The app's UI becomes unresponsive, freezes, or exhibits significant lag and stuttering immediately after initiating the download, making interaction difficult or impossible until the download completes. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-113",
+      "requirement_id": "REQ-042",
+      "scenario": "Boundary test: Offline reader page load performance on a mid-range device.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Mid-Range Test Comic - Episode 1' is fully downloaded.",
+        "Device is offline (Wi-Fi and mobile data off).",
+        "Test device is a pre-approved 'mid-range' device model (e.g., Google Pixel A series, Samsung Galaxy A series, specific older iPhone model).",
+        "Performance measurement tools are available."
+      ],
+      "steps": [
+        "1. Perform steps similar to TC-112 on the designated mid-range device.",
+        "2. Record page load times for multiple pages."
+      ],
+      "expected_result": "On the mid-range test device, each comic page in the offline reader should consistently load and render within 1 second. If any page takes longer, it's a boundary violation.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-114",
+      "requirement_id": "REQ-042",
+      "scenario": "Violation test: Offline reader page load exceeds 1 second on a mid-range device.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Mid-Range Slow Comic - Episode 1' is fully downloaded.",
+        "Device is offline (Wi-Fi and mobile data off).",
+        "Test device is a pre-approved 'mid-range' device model.",
+        "Performance measurement tools are available."
+      ],
+      "steps": [
+        "1. Perform steps similar to TC-112 on the designated mid-range device.",
+        "2. Record page load times for multiple pages."
+      ],
+      "expected_result": "One or more comic pages take longer than 1 second to load and render on the mid-range test device. (This would be a failure of the performance requirement).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-118",
+      "requirement_id": "REQ-046",
+      "scenario": "Happy path: A downloaded comic remains accessible even if removed from the platform.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Platform Removed Comic - Episode 1' is downloaded.",
+        "Admin access to remove 'Platform Removed Comic - Episode 1' from the platform's content catalog without deleting it from local devices."
+      ],
+      "steps": [
+        "1. Download 'Platform Removed Comic - Episode 1'.",
+        "2. Use admin tools to remove 'Platform Removed Comic - Episode 1' from the online content catalog.",
+        "3. Ensure device is online so app can sync with server for content catalog updates.",
+        "4. Open the PocketToons app.",
+        "5. Navigate to the 'Downloads' tab.",
+        "6. Attempt to open and read 'Platform Removed Comic - Episode 1'."
+      ],
+      "expected_result": "'Platform Removed Comic - Episode 1' is still listed in the 'Downloads' tab and can be fully opened and read, despite no longer being available on the online platform. No error messages about content unavailability should appear when reading the downloaded version.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-119",
+      "requirement_id": "REQ-046",
+      "scenario": "Edge case: Comic removed from platform while user is offline.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Offline Platform Removed Comic - Episode 1' is downloaded.",
+        "Admin access to remove it from the platform.",
+        "Device is offline."
+      ],
+      "steps": [
+        "1. Download 'Offline Platform Removed Comic - Episode 1'.",
+        "2. Disconnect network connections.",
+        "3. Use admin tools to remove the comic from the online platform.",
+        "4. While still offline, open the app and access the downloaded comic.",
+        "5. Reconnect to the internet and restart the app.",
+        "6. Access the downloaded comic again."
+      ],
+      "expected_result": "The downloaded comic should remain accessible both before and after reconnecting to the internet and syncing, until its natural expiry.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-120",
+      "requirement_id": "REQ-046",
+      "scenario": "Negative case: Downloaded comic becomes inaccessible after being removed from the platform.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Inaccessible Removed Comic - Episode 1' is downloaded.",
+        "Admin access to remove it from the platform."
+      ],
+      "steps": [
+        "1. Download 'Inaccessible Removed Comic - Episode 1'.",
+        "2. Use admin tools to remove it from the online platform.",
+        "3. Ensure device is online and app has synced.",
+        "4. Open the PocketToons app and navigate to the 'Downloads' tab.",
+        "5. Attempt to open 'Inaccessible Removed Comic - Episode 1'."
+      ],
+      "expected_result": "The downloaded comic is either removed from the 'Downloads' tab or attempting to open it results in an error (e.g., 'Content no longer available'). (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-121",
+      "requirement_id": "REQ-047",
+      "scenario": "Boundary test: Removed content remains accessible up to its 30-day expiry.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Removed Accessible Comic - Episode 1' is downloaded.",
+        "Admin access to remove the comic from the platform.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Removed Accessible Comic - Episode 1'. Note download date (T0).",
+        "2. On T0 + 5 days, remove the comic from the platform via admin tools.",
+        "3. Verify accessibility in app (should still be accessible).",
+        "4. Advance system clock to T0 + 29 days.",
+        "5. Verify the comic is still accessible in 'Downloads'.",
+        "6. Advance system clock to T0 + 30 days.",
+        "7. Verify the comic is no longer accessible/removed from 'Downloads'."
+      ],
+      "expected_result": "The downloaded comic, even after being removed from the platform, remains fully accessible until its 30-day expiry from the initial download date. It is then automatically removed.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-122",
+      "requirement_id": "REQ-047",
+      "scenario": "Violation test: Removed content becomes inaccessible before its 30-day expiry.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "A free comic 'Violation Removed Comic - Episode 1' is downloaded.",
+        "Admin access to remove the comic from the platform.",
+        "System clock manipulation is possible."
+      ],
+      "steps": [
+        "1. Download 'Violation Removed Comic - Episode 1'. Note download date (T0).",
+        "2. On T0 + 5 days, remove the comic from the platform via admin tools.",
+        "3. Advance system clock to T0 + 20 days (well within 30 days).",
+        "4. Open the app and attempt to access 'Violation Removed Comic - Episode 1'."
+      ],
+      "expected_result": "The downloaded comic is found to be inaccessible or removed from the 'Downloads' tab, despite not having reached its 30-day expiry. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-123",
+      "requirement_id": "REQ-048",
+      "scenario": "Happy path: User is warned before starting new downloads if available device storage is below 50 MB.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Device's available storage is 49 MB.",
+        "A free comic 'Low Storage Warn Comic - Episode 1' is available for download."
+      ],
+      "steps": [
+        "1. Manipulate device storage to be 49 MB (below 50 MB threshold).",
+        "2. Attempt to initiate download for 'Low Storage Warn Comic - Episode 1'."
+      ],
+      "expected_result": "Before the download starts, a warning message is displayed (e.g., 'Low Storage: Your device storage is low. Downloads may fail. Proceed anyway?'). The user is given an option to proceed or cancel.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-124",
+      "requirement_id": "REQ-048",
+      "scenario": "Edge case: Warning persists across multiple download attempts when storage remains low.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Device's available storage is 30 MB.",
+        "Two free comics 'Persistent Warn A' and 'Persistent Warn B' are available."
+      ],
+      "steps": [
+        "1. Manipulate device storage to 30 MB.",
+        "2. Attempt to download 'Persistent Warn A', observe warning. Cancel.",
+        "3. Attempt to download 'Persistent Warn B'."
+      ],
+      "expected_result": "The low storage warning is displayed again for the second download attempt, confirming consistent behavior when storage remains below the threshold.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-125",
+      "requirement_id": "REQ-048",
+      "scenario": "Negative case: Device storage below 50 MB, but no warning appears.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Device's available storage is 40 MB.",
+        "A free comic 'No Warn Comic - Episode 1' is available for download."
+      ],
+      "steps": [
+        "1. Manipulate device storage to 40 MB.",
+        "2. Attempt to initiate download for 'No Warn Comic - Episode 1'."
+      ],
+      "expected_result": "The download starts without any warning message regarding low storage. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-126",
+      "requirement_id": "REQ-049",
+      "scenario": "Boundary test: Storage warning threshold at 50 MB - No warning at 51 MB.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Device's available storage is 51 MB.",
+        "A free comic 'Threshold Test Comic 1 - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Manipulate device storage to 51 MB.",
+        "2. Attempt to initiate download for 'Threshold Test Comic 1 - Episode 1'."
+      ],
+      "expected_result": "The download starts immediately without any low storage warning. (This passes the 'no warning' side of the boundary).",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-127",
+      "requirement_id": "REQ-049",
+      "scenario": "Boundary test: Storage warning threshold at 50 MB - Warning at 49 MB.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "Device's available storage is 49 MB.",
+        "A free comic 'Threshold Test Comic 2 - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Manipulate device storage to 49 MB.",
+        "2. Attempt to initiate download for 'Threshold Test Comic 2 - Episode 1'."
+      ],
+      "expected_result": "A low storage warning message is displayed before the download proceeds. (This passes the 'warning' side of the boundary).",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-128",
+      "requirement_id": "REQ-049",
+      "scenario": "Violation test: Storage warning appears at > 50 MB or doesn't appear at < 50 MB.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "A free comic 'Violation Threshold Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Manipulate device storage to 60 MB.",
+        "2. Attempt to download 'Violation Threshold Comic - Episode 1'. (Violation if warning appears).",
+        "3. Manipulate device storage to 40 MB.",
+        "4. Attempt to download 'Violation Threshold Comic - Episode 1'. (Violation if no warning appears)."
+      ],
+      "expected_result": "If a warning appears at 60 MB or no warning appears at 40 MB, it indicates a violation of the 50 MB threshold. This test passes if it *finds* such a violation.",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-129",
+      "requirement_id": "REQ-050",
+      "scenario": "Happy path: Downloads are prevented on metered connections by default.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device is connected to mobile data (Wi-Fi off).",
+        "The 'Download on mobile data' setting is OFF (default state).",
+        "A free comic 'Metered Connection Comic - Episode 1' is available for download."
+      ],
+      "steps": [
+        "1. Ensure Wi-Fi is off and device is using mobile data.",
+        "2. Navigate to 'Metered Connection Comic - Episode 1'.",
+        "3. Tap the 'Download' icon/button."
+      ],
+      "expected_result": "The system prevents the download from starting and displays a message informing the user that downloads on mobile data are disabled by default (e.g., 'Downloads on mobile data are disabled. Please connect to Wi-Fi or enable downloads in settings.'). The download should not begin.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-130",
+      "requirement_id": "REQ-050",
+      "scenario": "Edge case: Switching from Wi-Fi to mobile data mid-download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device is connected to Wi-Fi.",
+        "The 'Download on mobile data' setting is OFF.",
+        "A large free comic 'Mid-Download Metered Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Initiate download for 'Mid-Download Metered Comic - Episode 1' while on Wi-Fi.",
+        "2. While download is in progress, disable Wi-Fi (forcing device onto mobile data).",
+        "3. Observe download status."
+      ],
+      "expected_result": "The download should immediately pause or stop upon switching to mobile data. A message indicating that downloads on mobile data are disabled should appear, prompting the user to resume on Wi-Fi or enable the setting. The download should not continue on mobile data.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-131",
+      "requirement_id": "REQ-050",
+      "scenario": "Negative case: Downloads start on metered connections by default.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device is connected to mobile data (Wi-Fi off).",
+        "The 'Download on mobile data' setting is OFF (default).",
+        "A free comic 'Auto-Metered Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Ensure Wi-Fi is off and device is using mobile data.",
+        "2. Navigate to 'Auto-Metered Comic - Episode 1'.",
+        "3. Tap the 'Download' icon/button."
+      ],
+      "expected_result": "The download initiates and progresses on mobile data without any warning or prevention mechanism. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-132",
+      "requirement_id": "REQ-051",
+      "scenario": "Happy path: User enables 'Download on mobile data' and downloads successfully.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device is connected to mobile data (Wi-Fi off).",
+        "The 'Download on mobile data' setting is OFF by default.",
+        "A free comic 'Mobile Data Enable Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Ensure Wi-Fi is off and device is using mobile data.",
+        "2. Navigate to Settings and enable the 'Download on mobile data' setting.",
+        "3. Navigate to 'Mobile Data Enable Comic - Episode 1'.",
+        "4. Tap the 'Download' icon/button."
+      ],
+      "expected_result": "The download successfully initiates and proceeds using mobile data. No warning or prevention message about metered connection appears.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-133",
+      "requirement_id": "REQ-051",
+      "scenario": "Edge case: Disable 'Download on mobile data' setting during an active mobile data download.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device is connected to mobile data (Wi-Fi off).",
+        "The 'Download on mobile data' setting is ON.",
+        "A large free comic 'Disable Mobile Data Comic - Episode 1' is actively downloading on mobile data."
+      ],
+      "steps": [
+        "1. Initiate download for 'Disable Mobile Data Comic - Episode 1' (it should be downloading on mobile data).",
+        "2. While the download is in progress, navigate to Settings and disable the 'Download on mobile data' setting.",
+        "3. Observe the download status."
+      ],
+      "expected_result": "The download should immediately pause or stop upon disabling the setting. A message indicating the download stopped due to settings change should appear. The download should not continue on mobile data.",
+      "priority": "P1",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-134",
+      "requirement_id": "REQ-051",
+      "scenario": "Negative case: 'Download on mobile data' setting is enabled but doesn't work.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device is connected to mobile data (Wi-Fi off).",
+        "The 'Download on mobile data' setting is ON.",
+        "A free comic 'Broken Mobile Data Comic - Episode 1' is available."
+      ],
+      "steps": [
+        "1. Ensure Wi-Fi is off and device is using mobile data.",
+        "2. Navigate to Settings and enable the 'Download on mobile data' setting.",
+        "3. Navigate to 'Broken Mobile Data Comic - Episode 1'.",
+        "4. Tap the 'Download' icon/button."
+      ],
+      "expected_result": "Despite the setting being enabled, the download is still prevented, or an error message incorrectly states that downloads on mobile data are disabled. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-135",
+      "requirement_id": "REQ-052",
+      "scenario": "Happy path: 'Download on mobile data' setting is located in the app's Settings.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app."
+      ],
+      "steps": [
+        "1. Tap on the 'Settings' icon/menu item in the app's main navigation.",
+        "2. Browse through the settings options."
+      ],
+      "expected_result": "A clear toggle or checkbox labeled 'Download on mobile data' or similar is found within the app's 'Settings' section, allowing the user to enable or disable this functionality.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-136",
+      "requirement_id": "REQ-052",
+      "scenario": "Edge case: Settings category for downloads is appropriately named.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app."
+      ],
+      "steps": [
+        "1. Navigate to the app's 'Settings'.",
+        "2. Observe the organization of settings, specifically categories related to downloads or storage."
+      ],
+      "expected_result": "The 'Download on mobile data' setting is logically grouped under a category like 'Downloads', 'Storage', or 'Network Preferences' within the Settings menu, making it easy to find.",
+      "priority": "P2",
+      "test_type": "edge"
+    },
+    {
+      "test_case_id": "TC-137",
+      "requirement_id": "REQ-052",
+      "scenario": "Negative case: 'Download on mobile data' setting is not found in Settings.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app."
+      ],
+      "steps": [
+        "1. Navigate through all available sections within the app's 'Settings'.",
+        "2. Look for any option to control mobile data downloads."
+      ],
+      "expected_result": "No setting for 'Download on mobile data' or equivalent functionality is found anywhere within the app's 'Settings' section. (This would be a failure of the feature).",
+      "priority": "P0",
+      "test_type": "negative"
+    },
+    {
+      "test_case_id": "TC-138",
+      "requirement_id": "REQ-053",
+      "scenario": "Boundary test: User downloads content bringing total storage to exactly 2 GB.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "User has 1.9 GB of content already downloaded.",
+        "A free comic '2GB Boundary Comic - Episode 1' is available, with a size of exactly 100 MB."
+      ],
+      "steps": [
+        "1. Ensure total downloaded content is 1.9 GB.",
+        "2. Attempt to download '2GB Boundary Comic - Episode 1' (100 MB).",
+        "3. Observe download progress and final status.",
+        "4. Check total storage used by downloads in Settings."
+      ],
+      "expected_result": "The download of '2GB Boundary Comic - Episode 1' completes successfully. The total storage used by downloads in Settings should display exactly 2 GB. No warnings about exceeding limit should appear during or after this download.",
+      "priority": "P0",
+      "test_type": "functional"
+    },
+    {
+      "test_case_id": "TC-139",
+      "requirement_id": "REQ-053",
+      "scenario": "Violation test: User attempts to download content exceeding the 2 GB total offline storage limit.",
+      "preconditions": [
+        "User is logged in to the PocketToons mobile app.",
+        "Device has an active internet connection.",
+        "User has 1.95 GB of content already downloaded.",
+        "A free comic 'Over Limit Comic - Episode 1' is available, with a size of 100 MB."
+      ],
+      "steps": [
+        "1. Ensure total downloaded content is 1.95 GB.",
+        "2. Attempt to download 'Over Limit Comic - Episode 1' (100 MB, which would bring total to 2.05 GB).",
+        "3. Observe the outcome."
+      ],
+      "expected_result": "The system prevents the download from starting. A clear error message is displayed (e.g., 'Download failed: Maximum offline storage limit (2 GB) reached. Please delete existing downloads to make space.'). The existing 1.95 GB of content remains, and no additional content is downloaded.",
+      "priority": "P0",
+      "test_type": "negative"
+    }
+  ],
+  "coverage_gaps": [
+    "REQ-035: Downloaded content must be encrypted on the device. - Verification of encryption requires white-box testing, access to the application's internal file structure, or specialized security tools to confirm the content is truly encrypted and not just obfuscated. Black-box testing can only confirm inaccessibility from outside the app (covered by REQ-037).",
+    "REQ-036: The encryption method for downloaded content must be AES-256. - Direct verification of the specific AES-256 encryption algorithm typically requires security audits, code reviews, or specific tooling to analyze the cryptographic implementation, which is beyond standard black-box QA capabilities.",
+    "REQ-042: The offline reader page load performance must be met on mid-range devices. - The definition of 'mid-range devices' can be subjective. While specific models can be chosen for testing, ensuring coverage across the full spectrum of 'mid-range' might be challenging without a comprehensive device lab and explicit device specifications from product/engineering.",
+    "REQ-030: Downloaded content must expire 30 days after its download date. - Testing this requirement manually is time-consuming as it requires waiting for 30 days or manipulating device/server time, which may not always be feasible or reliable across all test environments. This is better handled with automated tests or dedicated test environments with time-warp capabilities.",
+    "REQ-032: Content expiry notifications must be sent 3 days before the content expires. - Similar to REQ-030, this requires precise time manipulation or dedicated long-running tests, making full manual coverage challenging for specific timing checks.",
+    "REQ-034: Removal of subscription-gated downloads upon subscription lapse must occur within 24 hours. - This is a time-sensitive background process. Manual verification requires waiting 24 hours (or time manipulation), and ensuring the removal happens *within* the window is hard to pinpoint without precise logging or controlled test environments.",
+    "REQ-040: No test cases generated — 'Download speed and operations must not degrade overall app performance.'",
+    "REQ-041: No test cases generated — 'The offline reader must load a comic page within 1 second.'",
+    "REQ-043: No test cases generated — 'The app must handle storage-full scenarios gracefully.'",
+    "REQ-044: No test cases generated — 'The app must not crash when encountering storage-full scenarios.'",
+    "REQ-045: No test cases generated — 'Encrypted content must require a valid active session to be decrypted.'"
+  ]
+}

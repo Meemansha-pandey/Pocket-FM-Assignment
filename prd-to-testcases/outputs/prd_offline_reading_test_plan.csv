@@ -1,0 +1,789 @@
+test_case_id,requirement_id,scenario,preconditions,steps,expected_result,priority,test_type
+TC-001,REQ-001,Happy path: User successfully downloads a comic for offline access.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection (Wi-Fi preferred).
+Sufficient device storage is available (e.g., > 100 MB).
+A free comic episode 'Example Comic A - Episode 1' is available for download.","1. Navigate to the 'Example Comic A' series page.
+2. Locate 'Episode 1' and tap the 'Download' icon/button.
+3. Select 'Standard' quality for download (if prompted).
+4. Wait for the download to complete (observe progress indicator).",The comic 'Example Comic A - Episode 1' is successfully downloaded and a 'Download Complete' notification is displayed. The episode is listed in the 'Downloads' tab.,P0,functional
+TC-002,REQ-001,Edge case: Initiate download with intermittent network connection.,"User is logged in to the PocketToons mobile app.
+Sufficient device storage is available.
+A free comic 'Example Comic B - Episode 1' is available for download.
+Device is connected to an unstable Wi-Fi network or a network that can be easily toggled on/off.","1. Navigate to the 'Example Comic B' series page.
+2. Locate 'Episode 1' and tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. While the download is in progress, toggle Wi-Fi off for 5-10 seconds, then toggle it back on.
+5. Observe the download progress indicator and status.","The download should pause or show an error, then automatically resume once the network connection is re-established, eventually completing successfully. The app should not crash.",P1,edge
+TC-003,REQ-001,Negative case: Attempt to download content when offline.,"User is logged in to the PocketToons mobile app.
+Device has no active internet connection (Wi-Fi and mobile data are off).
+A free comic 'Example Comic C - Episode 1' is available.","1. Ensure device is in airplane mode or all network connections are disabled.
+2. Navigate to the 'Example Comic C' series page.
+3. Attempt to tap the 'Download' icon/button for 'Episode 1'.","The system should prevent the download from initiating and display an appropriate error message indicating no network connection (e.g., 'No internet connection. Cannot start download.'). The 'Download' button may be disabled or grayed out.",P1,negative
+TC-004,REQ-002,Boundary test: Download a paid comic immediately after purchasing it.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A paid comic 'Paid Comic A - Episode 1' is available.
+User has just successfully purchased 'Paid Comic A - Episode 1'.","1. Navigate to the 'Paid Comic A' series page.
+2. Locate 'Episode 1' and tap the 'Download' icon/button.
+3. Select 'Standard' quality (if prompted).
+4. Wait for the download to complete.",The download should initiate and complete successfully as the user now owns the content. A 'Download Complete' notification should appear.,P0,functional
+TC-005,REQ-002,Violation test: Attempt to download paid content that has not been purchased.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A paid comic 'Paid Comic B - Episode 1' is available.
+User has NOT purchased 'Paid Comic B - Episode 1'.","1. Navigate to the 'Paid Comic B' series page.
+2. Tap the 'Download' icon/button for 'Episode 1'.","The system should prevent the download. An informative message should be displayed, prompting the user to purchase the content first (e.g., 'Purchase this comic to download'). The download should not start.",P0,negative
+TC-006,REQ-003,"Boundary test: Create user content online, then go offline and verify existing content remains.","User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A free comic 'Offline Test Comic' is available.
+User has not downloaded 'Offline Test Comic'.","1. Navigate to 'Offline Test Comic - Episode 1' while online.
+2. Add a bookmark to page 5 of 'Episode 1'.
+3. Add a note to page 10 of 'Episode 1'.
+4. Download 'Offline Test Comic - Episode 1'.
+5. Disconnect all network connections (Wi-Fi and mobile data off).
+6. Access the downloaded 'Offline Test Comic - Episode 1'.
+7. Navigate to page 5 and page 10.","The bookmark on page 5 and the note on page 10 should be visible and accessible in offline mode, as they were created while online.",P1,functional
+TC-007,REQ-003,Violation test: Create user content while offline and verify it does not sync upon reconnect.,"User is logged in to the PocketToons mobile app.
+A free comic 'Offline Sync Test Comic' is downloaded and available.
+A separate user account or a tool to inspect server-side user data is available to confirm non-sync.","1. Disconnect all network connections (Wi-Fi and mobile data off).
+2. Access the downloaded 'Offline Sync Test Comic - Episode 1'.
+3. Add a new bookmark to page 3.
+4. Add a new note to page 7.
+5. Reconnect to the internet (Wi-Fi on).
+6. Wait for a few minutes (e.g., 2-5 min) to allow any potential sync attempts.
+7. Log out of the app.
+8. Log in with the same user account on a different device (e.g., web app, or another mobile device).
+9. Navigate to 'Offline Sync Test Comic - Episode 1'.",The bookmark on page 3 and the note on page 7 should NOT be visible or synced to the other device/server. This confirms user-created content generated offline does not sync.,P1,negative
+TC-008,REQ-004,Boundary test: Access downloaded content on the mobile application while offline.,"User is logged in to the PocketToons mobile app.
+A free comic 'Mobile Offline Comic' is downloaded and available on the mobile device.","1. Disconnect all network connections (Wi-Fi and mobile data off).
+2. Open the PocketToons mobile app.
+3. Navigate to the 'Downloads' tab.
+4. Tap on 'Mobile Offline Comic - Episode 1' to open it.",The downloaded comic 'Mobile Offline Comic - Episode 1' should open and be fully readable without any network connection.,P0,functional
+TC-009,REQ-004,Violation test: Attempt to access or initiate downloads from the web application.,"User is logged in to the PocketToons web application via a web browser (e.g., Chrome, Safari).
+A comic 'Web Test Comic' is available.","1. Navigate to the 'Web Test Comic' page in the web app.
+2. Look for any download options (e.g., 'Download' button, 'Offline Reading' section).
+3. Attempt to simulate offline access for a comic (e.g., by disabling internet and refreshing).","There should be no 'Download' functionality or 'Offline Reading' section available on the web application. Trying to view content after disconnecting from the internet should result in a 'No Internet' error for streaming content, as no offline content is supported.",P0,negative
+TC-010,REQ-005,Happy path: Verified subscriber downloads subscriber-only content.,"User is logged in to the PocketToons mobile app.
+User has an active, valid subscription.
+Device has an active internet connection.
+A 'Subscriber-Only Comic - Episode 1' is available.","1. Navigate to the 'Subscriber-Only Comic' series page.
+2. Tap the 'Download' icon/button for 'Episode 1'.
+3. Select 'Standard' quality (if prompted).
+4. Wait for the download to complete.",The 'Subscriber-Only Comic - Episode 1' is successfully downloaded and a 'Download Complete' notification is displayed.,P0,functional
+TC-011,REQ-005,Edge case: User's subscription is valid but on the verge of expiring.,"User is logged in to the PocketToons mobile app.
+User has an active subscription expiring in the next 24 hours.
+Device has an active internet connection.
+A 'Subscriber-Only Comic - Episode 1' is available.","1. Navigate to the 'Subscriber-Only Comic' series page.
+2. Tap the 'Download' icon/button for 'Episode 1'.
+3. Select 'Standard' quality (if prompted).
+4. Wait for the download to complete.",The download should proceed successfully as the subscription is still active. A 'Download Complete' notification is displayed.,P1,edge
+TC-012,REQ-005,Negative case: Non-subscriber attempts to download subscriber-only content.,"User is logged in to the PocketToons mobile app.
+User does NOT have an active subscription.
+Device has an active internet connection.
+A 'Subscriber-Only Comic - Episode 1' is available.","1. Navigate to the 'Subscriber-Only Comic' series page.
+2. Tap the 'Download' icon/button for 'Episode 1'.","The system should prevent the download. An informative message should be displayed, prompting the user to subscribe (e.g., 'This is subscriber-only content. Please subscribe to download.'). The download should not start.",P0,negative
+TC-013,REQ-006,Happy path: User is notified when a comic download is complete.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Notification Comic - Episode 1' is available.","1. Navigate to 'Notification Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Wait for the download to finish.","An in-app notification (e.g., banner, toast) stating 'Download Complete: Notification Comic - Episode 1' should appear. The downloaded item should also appear in the 'Downloads' tab.",P0,functional
+TC-014,REQ-006,Edge case: Download completes while the app is in the background.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Background Comic - Episode 1' is available.
+Ensure app notifications are enabled for PocketToons in device settings.","1. Navigate to 'Background Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Immediately send the PocketToons app to the background (e.g., by navigating to the device home screen or opening another app).
+4. Wait for the download to complete (monitor from system notification area if available).",A system-level push notification (if supported by OS) or an in-app notification upon returning to the app should inform the user that 'Download Complete: Background Comic - Episode 1'. The downloaded item should be listed in the 'Downloads' tab.,P1,edge
+TC-015,REQ-006,Negative case: No download complete notification upon successful download.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'No Notification Comic - Episode 1' is available.","1. Navigate to 'No Notification Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Wait for the download to finish.","The download completes, but no 'Download Complete' notification (in-app or system) is displayed. (This is a negative test, so this would be a failure of the feature).",P1,negative
+TC-016,REQ-007,Happy path: User successfully downloads a free comic.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Freebie Comic - Episode 1' is available.","1. Navigate to the 'Freebie Comic' series page.
+2. Locate 'Episode 1' (confirm it is marked as 'Free') and tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.",The comic 'Freebie Comic - Episode 1' is successfully downloaded and appears in the 'Downloads' tab.,P0,functional
+TC-017,REQ-007,Edge case: Download a very large free comic.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Ample device storage is available (e.g., > 1 GB).
+A free comic 'Large Free Comic - Episode 1' which is known to be very large (e.g., > 500 MB) is available.","1. Navigate to the 'Large Free Comic' series page.
+2. Locate 'Episode 1' and tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Monitor the download progress.
+5. Wait for the download to complete.","The large free comic should download successfully, albeit taking longer. The app should remain responsive during the download, and the progress indicator should update correctly.",P1,edge
+TC-018,REQ-007,Negative case: Attempt to download a free comic that has been temporarily delisted.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A free comic 'Delisted Free Comic - Episode 1' has been temporarily removed from the platform (e.g., by an admin, but its entry might still be present in some UI states or cached). This scenario implies the user tries to download something that is no longer 'available'.","1. Attempt to navigate to 'Delisted Free Comic - Episode 1' (if accessible through direct link/cache).
+2. If a download option is presented, tap the 'Download' icon/button.","The system should either not display the 'Download' option for delisted content, or it should immediately present an error message indicating the content is unavailable (e.g., 'Content not found' or 'This comic is no longer available for download'). The download should not start.",P1,negative
+TC-019,REQ-008,Happy path: Subscriber downloads a comic when they have an active subscription.,"User is logged in to the PocketToons mobile app.
+User has an active, valid subscription.
+Device has an active internet connection.
+A comic 'Subscription Comic - Episode 1' (which requires a subscription to download) is available.","1. Navigate to the 'Subscription Comic' series page.
+2. Tap the 'Download' icon/button for 'Episode 1'.
+3. Select 'Standard' quality (if prompted).
+4. Wait for the download to complete.",The comic 'Subscription Comic - Episode 1' is successfully downloaded and appears in the 'Downloads' tab.,P0,functional
+TC-020,REQ-008,Edge case: User with an active subscription attempts to download content requiring a higher tier subscription (if applicable).,"User is logged in to the PocketToons mobile app.
+User has an active 'Basic' subscription (assume there's also a 'Premium' tier).
+Device has an active internet connection.
+A comic 'Premium Comic - Episode 1' which requires a 'Premium' subscription is available.","1. Navigate to the 'Premium Comic' series page.
+2. Tap the 'Download' icon/button for 'Episode 1'.","The system should prevent the download and display a message indicating that a higher subscription tier is required (e.g., 'Upgrade to Premium to download this comic').",P1,edge
+TC-021,REQ-008,Negative case: User with a recently lapsed subscription attempts to download subscription-gated content.,"User is logged in to the PocketToons mobile app.
+User's subscription has recently lapsed (within 24 hours).
+Device has an active internet connection.
+A comic 'Lapsed Sub Comic - Episode 1' (which requires a subscription) is available.","1. Navigate to the 'Lapsed Sub Comic' series page.
+2. Tap the 'Download' icon/button for 'Episode 1'.","The system should prevent the download. An informative message should be displayed, prompting the user to renew their subscription (e.g., 'Your subscription has lapsed. Renew to download.'). The download should not start.",P0,negative
+TC-022,REQ-009,Happy path: User selects and downloads a comic in 'Standard' quality.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Quality Test Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options.","1. Navigate to 'Quality Test Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. From the quality selection prompt, select 'Standard'.
+4. Wait for the download to complete.","The comic 'Quality Test Comic - Episode 1' is downloaded in 'Standard' quality. A 'Download Complete' notification is displayed, and the episode is listed in 'Downloads'. The estimated file size for 'Standard' should be smaller than 'HD'.",P0,functional
+TC-023,REQ-009,Edge case: 'Standard' quality download takes up minimal storage.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A very short free comic 'Short Comic - Episode 1' is available, offering 'Standard' quality download.","1. Navigate to 'Short Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.
+5. Check the reported file size of the downloaded comic (e.g., in the 'Downloads' tab or device storage settings).
+6. Open the comic and verify content quality.","The comic downloads successfully. The file size should reflect the 'Standard' quality, even if small. The visual quality of the comic pages should be consistent with 'Standard' resolution, not full HD.",P2,edge
+TC-024,REQ-009,Negative case: 'Standard' quality option is missing when it should be available.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A free comic 'Missing Standard Comic - Episode 1' is available, which is configured to offer 'Standard' quality download.","1. Navigate to 'Missing Standard Comic - Episode 1'.
+2. Tap the 'Download' icon/button.","A quality selection prompt should appear, offering 'Standard' quality as an option. If it's not present, this test fails.",P1,negative
+TC-025,REQ-010,Happy path: 'Standard' quality comic downloads are compressed.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Compression Test Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options.
+Knowledge of the uncompressed 'HD' file size or a reference uncompressed 'Standard' file size is available for comparison.","1. Navigate to 'Compression Test Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.
+5. Go to the 'Downloads' tab or device settings to check the reported file size of the downloaded comic.
+6. (Optional) Download the same comic in 'HD' quality for direct comparison of file sizes.","The downloaded file size for 'Standard' quality should be significantly smaller than its 'HD' counterpart or a known uncompressed version, demonstrating effective compression. The comic pages should still be readable without visual artifacts from over-compression.",P0,functional
+TC-026,REQ-010,Edge case: Compression of a very small 'Standard' quality comic.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A very short, simple free comic 'Small Compression Comic - Episode 1' is available, offering 'Standard' quality.","1. Navigate to 'Small Compression Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.
+5. Check the reported file size of the downloaded comic.
+6. (Optional) Compare with an uncompressed version or HD version.","Even for small comics, 'Standard' quality should show some level of compression compared to its original/HD size, though the absolute difference might be less pronounced.",P2,edge
+TC-027,REQ-010,Negative case: 'Standard' quality download is not compressed (file size is too large).,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Uncompressed Standard Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options.
+Knowledge of the expected 'HD' file size and target 'Standard' file size.","1. Navigate to 'Uncompressed Standard Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.
+5. Check the reported file size of the downloaded comic.","The downloaded file size for 'Standard' quality is nearly identical or too close to the 'HD' quality file size, indicating a failure in compression. (This would be a failure of the feature).",P0,negative
+TC-028,REQ-011,Happy path: User selects and downloads a comic in 'HD' quality.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'HD Quality Test Comic - Episode 1' is available, offering both 'Standard' and 'HD' download options.","1. Navigate to 'HD Quality Test Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. From the quality selection prompt, select 'HD'.
+4. Wait for the download to complete.
+5. Open the downloaded comic and verify image clarity/resolution.","The comic 'HD Quality Test Comic - Episode 1' is downloaded in 'HD' (full resolution). The image quality is crisp and clear, consistent with full resolution. The file size should be larger than the 'Standard' quality version.",P0,functional
+TC-029,REQ-011,Edge case: Download a very large comic in 'HD' quality.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Ample device storage is available (e.g., > 2 GB).
+A free comic 'Large HD Comic - Episode 1' which is known to be very large (e.g., > 1 GB in HD) is available, offering 'HD' quality.","1. Navigate to 'Large HD Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'HD' quality.
+4. Monitor the download progress.
+5. Wait for the download to complete.","The very large HD comic should download successfully, taking a proportional amount of time. The app should remain responsive during the download, and the progress indicator should update correctly. The downloaded file size should be accurate for HD quality.",P1,edge
+TC-030,REQ-011,Negative case: 'HD' quality option is missing when it should be available.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A free comic 'Missing HD Comic - Episode 1' is available, which is configured to offer 'HD' quality download.","1. Navigate to 'Missing HD Comic - Episode 1'.
+2. Tap the 'Download' icon/button.","A quality selection prompt should appear, offering 'HD' quality as an option. If it's not present, this test fails.",P1,negative
+TC-031,REQ-012,Happy path: User successfully downloads an individual comic episode.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic series 'Individual Episode Series' with multiple episodes (e.g., Episode 1, 2, 3) is available.","1. Navigate to the 'Individual Episode Series' page.
+2. Locate 'Episode 2' (not the first or last) and tap the 'Download' icon/button next to it.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.","Only 'Individual Episode Series - Episode 2' is downloaded. It appears in the 'Downloads' tab, and other episodes of the series are not downloaded.",P0,functional
+TC-032,REQ-012,Edge case: Download the first or last episode of a very long series.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic series 'Long Series' with many episodes (e.g., 100+ episodes) is available.","1. Navigate to the 'Long Series' page.
+2. Scroll to the bottom and tap the 'Download' icon/button for the very last episode (e.g., Episode 100).
+3. Select 'Standard' quality.
+4. Wait for the download to complete.
+5. Verify only that specific episode is downloaded.","The chosen individual episode (e.g., Episode 100) downloads successfully. No other episodes from the series are downloaded. The navigation within the app for selecting individual episodes works correctly for edge positions.",P1,edge
+TC-033,REQ-012,Negative case: Attempt to download a non-existent or inaccessible episode.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A comic series 'Non-existent Episode Series' is available, but 'Episode 999' does not exist or is marked as unavailable/corrupted on the server.","1. Attempt to navigate to 'Non-existent Episode Series - Episode 999' (if a direct link or search allows).
+2. If a download option is presented for it, tap the 'Download' icon/button.","The system should either not allow navigation to a non-existent episode, or if a download attempt is made, it should immediately fail with a clear error message (e.g., 'Episode not found' or 'Download failed: Content unavailable'). The download should not start or should terminate quickly.",P1,negative
+TC-034,REQ-013,Happy path: User successfully downloads an entire comic series (within limits).,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available (e.g., > 500 MB).
+A free comic series 'Full Series Download' with 5 episodes is available.","1. Navigate to the 'Full Series Download' series page.
+2. Locate and tap the 'Download Series' button/option.
+3. Select 'Standard' quality.
+4. Wait for all episodes to download (observe progress for multiple items).",All 5 episodes of 'Full Series Download' are successfully downloaded and listed under the series in the 'Downloads' tab. A notification for each completed download or a single notification for series completion should appear.,P0,functional
+TC-035,REQ-013,Edge case: Download a series with a single episode.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic series 'Single Episode Series' with only 1 episode is available.","1. Navigate to the 'Single Episode Series' page.
+2. Locate and tap the 'Download Series' button/option.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.","The single episode series downloads successfully. The 'Download Series' option should correctly handle a series of one, effectively downloading just that one episode.",P2,edge
+TC-036,REQ-013,Negative case: Attempt to download an empty series.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A comic series 'Empty Series' exists but contains no episodes.","1. Navigate to the 'Empty Series' page.
+2. Attempt to tap the 'Download Series' button/option (if available).","The 'Download Series' button/option should be disabled or absent for an empty series. If tapped, a message like 'This series has no episodes to download' should appear. No download should initiate.",P1,negative
+TC-037,REQ-014,Boundary test: Download a series with exactly 50 episodes.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available (e.g., > 2 GB).
+A free comic series 'Series 50 Episodes' with exactly 50 episodes is available.","1. Navigate to the 'Series 50 Episodes' page.
+2. Tap the 'Download Series' button/option.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.",All 50 episodes of 'Series 50 Episodes' are downloaded successfully without any warning or error regarding the limit. The download progress should indicate all episodes are being processed.,P0,functional
+TC-038,REQ-014,Boundary test: Download a series with 49 episodes.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic series 'Series 49 Episodes' with exactly 49 episodes is available.","1. Navigate to the 'Series 49 Episodes' page.
+2. Tap the 'Download Series' button/option.
+3. Select 'Standard' quality.
+4. Wait for the download to complete.",All 49 episodes of 'Series 49 Episodes' are downloaded successfully.,P2,edge
+TC-039,REQ-014,Violation test: Attempt to download a series with more than 50 episodes.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic series 'Series 51 Episodes' with 51 or more episodes is available.","1. Navigate to the 'Series 51 Episodes' page.
+2. Tap the 'Download Series' button/option.","The system should present a warning or an error message indicating that only a maximum of 50 episodes can be downloaded per batch, or offer to download the first 50. It should not automatically download all 51+ episodes. For example, 'Series downloads are limited to 50 episodes. Do you want to download the first 50?'",P0,negative
+TC-040,REQ-015,Happy path: Download progress indicator is displayed during active download.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Progress Indicator Comic - Episode 1' is available, large enough to take noticeable time to download (e.g., > 50 MB).","1. Navigate to 'Progress Indicator Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Observe the UI during the download process (e.g., on the comic page, in the 'Downloads' tab, or via a system notification).","A visual progress indicator (e.g., a progress bar, percentage, or animated icon) is clearly displayed and actively updates to reflect the download status and progress (e.g., 10%, 25%, 50%).",P0,functional
+TC-041,REQ-015,Edge case: Progress indicator for a very fast download.,"User is logged in to the PocketToons mobile app.
+Device has a very fast internet connection (e.g., high-speed Wi-Fi).
+Sufficient device storage is available.
+A very small free comic 'Fast Download Comic - Episode 1' is available.","1. Navigate to 'Fast Download Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Observe the UI closely during the download process.","Even if very brief, the progress indicator should appear, show some progress (e.g., quickly jump from 0% to 100%), and then disappear, replaced by a 'Download Complete' status or notification.",P2,edge
+TC-042,REQ-015,Negative case: Download is active but no progress indicator is displayed.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'No Progress Comic - Episode 1' is available, large enough to take noticeable time to download.","1. Navigate to 'No Progress Comic - Episode 1'.
+2. Tap the 'Download' icon/button.
+3. Select 'Standard' quality.
+4. Actively monitor the UI (comic page, downloads tab) for any progress indicator.","The download starts, but no visual progress indicator is displayed, or it remains static at 0% throughout the download process. (This would be a failure of the feature).",P1,negative
+TC-043,REQ-016,Boundary test: Initiate 3 simultaneous comic downloads.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+Three distinct free comic episodes 'Simul-Download A', 'Simul-Download B', 'Simul-Download C' are available, each large enough to take a few seconds to download.","1. Initiate download for 'Simul-Download A - Episode 1'.
+2. Immediately after, initiate download for 'Simul-Download B - Episode 1'.
+3. Immediately after, initiate download for 'Simul-Download C - Episode 1'.
+4. Observe the 'Downloads' tab or download progress indicators for all three items.","All three downloads ('Simul-Download A', 'B', and 'C') should initiate and progress concurrently. They should all eventually complete successfully.",P0,functional
+TC-044,REQ-016,Violation test: Attempt to initiate a 4th simultaneous comic download.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+Four distinct free comic episodes 'Simul-Download D', 'Simul-Download E', 'Simul-Download F', 'Simul-Download G' are available, each large enough to take a few seconds to download.","1. Initiate download for 'Simul-Download D - Episode 1'.
+2. Initiate download for 'Simul-Download E - Episode 1'.
+3. Initiate download for 'Simul-Download F - Episode 1'.
+4. Immediately after, initiate download for 'Simul-Download G - Episode 1'.
+5. Observe the 'Downloads' tab or download progress indicators.","Downloads D, E, and F should start immediately and progress concurrently. Download G should be placed in a 'queued' state, waiting for one of the active downloads to complete before it begins. A message or indicator should show it's queued.",P0,negative
+TC-045,REQ-017,Happy path: User successfully pauses an active download.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Pause Comic - Episode 1' is available, large enough to take noticeable time to download.","1. Initiate download for 'Pause Comic - Episode 1'.
+2. While the download is in progress (e.g., at 20-50% progress), locate the download in the 'Downloads' tab or on the comic page.
+3. Tap the 'Pause' button/icon for the download.","The download immediately ceases its progress. The progress indicator should stop, and the status should change to 'Paused'. No further data should be downloaded.",P0,functional
+TC-046,REQ-017,Edge case: Pause a download that is almost complete.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Almost Done Comic - Episode 1' is available, large enough to take noticeable time to download.","1. Initiate download for 'Almost Done Comic - Episode 1'.
+2. Wait until the download progress is very high (e.g., 90-95%).
+3. Tap the 'Pause' button/icon.","The download should pause successfully, even at near completion. The status should reflect 'Paused' at its current progress percentage.",P2,edge
+TC-047,REQ-017,Negative case: Attempt to pause a completed download.,"User is logged in to the PocketToons mobile app.
+A free comic 'Completed Comic - Episode 1' has been fully downloaded and is in the 'Downloads' tab.","1. Navigate to the 'Downloads' tab.
+2. Locate 'Completed Comic - Episode 1'.
+3. Attempt to find and tap a 'Pause' button/icon associated with this completed download.",There should be no 'Pause' option available for a completed download. The download status should clearly show 'Complete'.,P1,negative
+TC-048,REQ-018,Happy path: User successfully resumes a paused download.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Resume Comic - Episode 1' has been initiated and successfully paused (e.g., at 30% progress).","1. Navigate to the 'Downloads' tab.
+2. Locate 'Resume Comic - Episode 1' which should be in a 'Paused' state.
+3. Tap the 'Resume' button/icon for the download.","The download should resume from where it left off (e.g., from 30% progress). The progress indicator should start updating again, and the download should eventually complete successfully.",P0,functional
+TC-049,REQ-018,Edge case: Resume a paused download after closing and reopening the app.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'App Restart Comic - Episode 1' has been initiated and successfully paused.","1. Initiate download for 'App Restart Comic - Episode 1' and pause it at ~50% progress.
+2. Force close the PocketToons app (from device's app switcher/settings).
+3. Reopen the PocketToons app.
+4. Navigate to the 'Downloads' tab.
+5. Locate 'App Restart Comic - Episode 1' (should still be 'Paused').
+6. Tap the 'Resume' button/icon.","The download should successfully resume from its paused state (e.g., 50%) after the app restart and eventually complete.",P1,edge
+TC-050,REQ-018,Negative case: Attempt to resume a download when the network connection is absent.,"User is logged in to the PocketToons mobile app.
+A free comic 'Offline Resume Comic - Episode 1' has been initiated and successfully paused.
+Device has no active internet connection (Wi-Fi and mobile data off).","1. Disconnect all network connections.
+2. Navigate to the 'Downloads' tab.
+3. Locate 'Offline Resume Comic - Episode 1' (should be 'Paused').
+4. Tap the 'Resume' button/icon.","The system should prevent the download from resuming and display an appropriate error message (e.g., 'No internet connection. Cannot resume download.'). The status should remain 'Paused'.",P1,negative
+TC-051,REQ-019,Happy path: A clear error message is displayed for a failed download due to network loss.,"User is logged in to the PocketToons mobile app.
+Sufficient device storage is available.
+A free comic 'Network Fail Comic - Episode 1' is available, large enough to take noticeable time to download.","1. Initiate download for 'Network Fail Comic - Episode 1'.
+2. While the download is in progress, disconnect all network connections (Wi-Fi and mobile data off).
+3. Wait for a few seconds.","The download should stop, and a clear, user-friendly error message should be displayed (e.g., 'Download Failed: No internet connection'). The download status should change to 'Failed'.",P0,functional
+TC-052,REQ-019,Edge case: Multiple simultaneous downloads fail.,"User is logged in to the PocketToons mobile app.
+Sufficient device storage is available.
+Three distinct free comic episodes 'Multi-Fail A', 'Multi-Fail B', 'Multi-Fail C' are available, each large enough to take a few seconds to download.","1. Initiate downloads for 'Multi-Fail A', 'Multi-Fail B', and 'Multi-Fail C' simultaneously.
+2. While all three downloads are in progress, disconnect all network connections.
+3. Observe the 'Downloads' tab.","All three downloads should fail. Each failed download should clearly display its own 'Failed' status and an associated error message (e.g., 'Download Failed: No internet connection'). The app should remain stable.",P1,edge
+TC-053,REQ-019,"Negative case: Download fails, but no error message or a cryptic one is displayed.","User is logged in to the PocketToons mobile app.
+Sufficient device storage is available.
+A free comic 'Cryptic Fail Comic - Episode 1' is available.
+A mechanism to intentionally cause a download to fail without a specific error message (e.g., corrupt server asset, invalid URL response, or a test hook) is in place.","1. Initiate download for 'Cryptic Fail Comic - Episode 1' using the intentional failure mechanism.
+2. Observe the download status and any messages displayed.","The download fails, but either no error message is displayed, or the message is technical/cryptic (e.g., 'Error 500', 'Data Stream Corrupted') and unhelpful to an end-user. (This would be a failure of the feature).",P0,negative
+TC-054,REQ-020,Happy path: User successfully retries a failed download.,"User is logged in to the PocketToons mobile app.
+A free comic 'Retry Comic - Episode 1' has failed to download (e.g., due to temporary network loss) and is showing a 'Failed' status with a retry option.
+Device has an active internet connection re-established.","1. Navigate to the 'Downloads' tab.
+2. Locate 'Retry Comic - Episode 1' which is in a 'Failed' state.
+3. Tap the 'Retry' button/icon displayed next to the failed download.
+4. Wait for the download to complete.",The download should restart (or resume) successfully and complete without further issues. The status should change from 'Failed' to 'Downloading' and then 'Complete'.,P0,functional
+TC-055,REQ-020,Edge case: Retry a download multiple times after intermittent failures.,"User is logged in to the PocketToons mobile app.
+A free comic 'Multi-Retry Comic - Episode 1' is available.
+A mechanism to cause intermittent download failures (e.g., toggling network on/off).
+Sufficient device storage.","1. Initiate download for 'Multi-Retry Comic - Episode 1'.
+2. Force it to fail (e.g., disconnect network for a moment).
+3. Reconnect network.
+4. Tap 'Retry'.
+5. Force it to fail again.
+6. Reconnect network.
+7. Tap 'Retry' again.
+8. Allow the download to complete.","The download should successfully retry and eventually complete, even after multiple intermediate failures. The retry mechanism should be robust.",P1,edge
+TC-056,REQ-020,"Negative case: Download fails, but no retry option is provided.","User is logged in to the PocketToons mobile app.
+A free comic 'No Retry Comic - Episode 1' has failed to download (e.g., due to network loss) and is showing a 'Failed' status.","1. Navigate to the 'Downloads' tab.
+2. Locate 'No Retry Comic - Episode 1' which is in a 'Failed' state.
+3. Look for a 'Retry' button or similar option.","The download shows a 'Failed' status, but there is no visible or accessible 'Retry' option. (This would be a failure of the feature).",P0,negative
+TC-057,REQ-021,Happy path: The dedicated 'Downloads' tab is present and accessible.,"User is logged in to the PocketToons mobile app.
+The app's main navigation UI is loaded.","1. Observe the main navigation elements (e.g., bottom bar, side menu).","A clearly labeled 'Downloads' tab or button is visible and accessible in the main navigation (e.g., as a distinct icon/text in a bottom navigation bar or side menu).",P0,functional
+TC-058,REQ-021,Edge case: 'Downloads' tab content is empty.,"User is logged in to the PocketToons mobile app.
+No comics have been downloaded yet.","1. Tap the 'Downloads' tab.
+2. Observe the content of the tab.","The 'Downloads' tab is accessible and displays a message indicating that no comics have been downloaded yet (e.g., 'No downloads yet! Start downloading your favorite comics for offline reading.'). It should not be blank or display an error.",P2,edge
+TC-059,REQ-021,Negative case: The 'Downloads' tab is missing or inaccessible.,User is logged in to the PocketToons mobile app.,1. Look for a 'Downloads' tab or similar feature in the app's main navigation.,No 'Downloads' tab or dedicated section for managing downloads is present or easily accessible in the main navigation. (This would be a failure of the feature).,P0,negative
+TC-060,REQ-022,Happy path: 'Downloads' tab lists all locally saved comics.,"User is logged in to the PocketToons mobile app.
+Two free comic episodes 'Listed Comic 1 - Episode 1' and 'Listed Comic 2 - Episode 1' have been successfully downloaded.","1. Navigate to the 'Downloads' tab.
+2. Observe the list of items displayed.","Both 'Listed Comic 1 - Episode 1' and 'Listed Comic 2 - Episode 1' are clearly listed in the 'Downloads' tab. Each entry should show the comic title, episode number, and potentially cover art.",P0,functional
+TC-061,REQ-022,Edge case: 'Downloads' tab lists a large number of locally saved comics.,"User is logged in to the PocketToons mobile app.
+At least 20 different comic episodes have been successfully downloaded.","1. Navigate to the 'Downloads' tab.
+2. Scroll through the list of downloaded comics.","All 20+ downloaded comics are listed. The list should be scrollable, performant, and correctly display all entries without truncation or loading issues.",P1,edge
+TC-062,REQ-022,Negative case: Downloaded comic is not listed in the 'Downloads' tab.,"User is logged in to the PocketToons mobile app.
+A free comic 'Missing Listed Comic - Episode 1' has been successfully downloaded (verify via device storage if possible).
+Assume a bug where the UI listing is not updated.","1. Ensure 'Missing Listed Comic - Episode 1' is downloaded.
+2. Navigate to the 'Downloads' tab.
+3. Search for 'Missing Listed Comic - Episode 1' in the list.","'Missing Listed Comic - Episode 1' is NOT displayed in the list of downloaded comics in the 'Downloads' tab, despite being downloaded on the device. (This would be a failure of the feature).",P0,negative
+TC-063,REQ-023,Happy path: Access and read downloaded comics without network.,"User is logged in to the PocketToons mobile app.
+A free comic 'Offline Reading Comic - Episode 1' has been successfully downloaded.","1. Disconnect all network connections (Wi-Fi and mobile data off).
+2. Open the PocketToons app.
+3. Navigate to the 'Downloads' tab.
+4. Tap on 'Offline Reading Comic - Episode 1' to open it.
+5. Swipe through all pages of the comic.",The comic opens quickly and all pages can be viewed and navigated through seamlessly without any network connection. No 'No internet' errors or loading spinners appear while reading.,P0,functional
+TC-064,REQ-023,Edge case: Read a downloaded comic when network is flaky/intermittent.,"User is logged in to the PocketToons mobile app.
+A free comic 'Flaky Network Comic - Episode 1' has been successfully downloaded.
+Device is connected to an unstable network that frequently drops connectivity.","1. Open the PocketToons app.
+2. Navigate to the 'Downloads' tab.
+3. Tap on 'Flaky Network Comic - Episode 1' to open it.
+4. While reading, observe the network connection repeatedly drop and reconnect (simulated or real).","The downloaded comic should remain fully accessible and readable without interruption, as it's being read from local storage. The network fluctuations should not affect the reading experience.",P1,edge
+TC-065,REQ-023,"Negative case: Attempt to read a downloaded comic offline, but it requires network.","User is logged in to the PocketToons mobile app.
+A free comic 'Network Required Comic - Episode 1' has been successfully downloaded.","1. Disconnect all network connections (Wi-Fi and mobile data off).
+2. Open the PocketToons app.
+3. Navigate to the 'Downloads' tab.
+4. Tap on 'Network Required Comic - Episode 1' to open it.",The comic fails to open or displays an error message stating that an internet connection is required. (This would be a critical failure of the core offline reading feature).,P0,negative
+TC-066,REQ-024,Happy path: App clearly indicates offline mode when no connectivity.,User is logged in to the PocketToons mobile app.,"1. Ensure device has an active internet connection (Wi-Fi).
+2. Open the PocketToons app and observe the UI.
+3. Disconnect all network connections (Wi-Fi and mobile data off).
+4. Observe the PocketToons app UI again.","Upon losing network connectivity, the app should display a clear visual indicator (e.g., a banner at the top, an icon, or a persistent message) stating that the user is offline or has no internet connection.",P0,functional
+TC-067,REQ-024,Edge case: Offline indicator behavior during rapid network changes.,"User is logged in to the PocketToons mobile app.
+Device connected to a network that can be quickly toggled.","1. Keep the PocketToons app open.
+2. Rapidly toggle Wi-Fi on and off several times (e.g., every 2-3 seconds).
+3. Observe the offline indicator in the app.",The offline indicator should appear and disappear promptly in response to network status changes without flickering excessively or getting stuck in an incorrect state. The app should remain stable.,P1,edge
+TC-068,REQ-024,Negative case: No offline mode indicator when connectivity is lost.,User is logged in to the PocketToons mobile app.,"1. Disconnect all network connections (Wi-Fi and mobile data off).
+2. Open or switch to the PocketToons app.
+3. Observe the app's UI for any indication of offline status.","The app remains silent about the network status; no banner, icon, or message indicates that the user is currently offline. (This would be a failure of the feature).",P0,negative
+TC-069,REQ-025,Happy path: App displays total storage used by downloads correctly.,"User is logged in to the PocketToons mobile app.
+A free comic 'Storage Comic - Episode 1' (e.g., 50 MB) has been downloaded.
+Another free comic 'Storage Comic - Episode 2' (e.g., 30 MB) has been downloaded.","1. Navigate to the 'Settings' section (as per REQ-026).
+2. Locate the 'Total Storage Used by Downloads' display.",The displayed storage usage is approximately 80 MB (50 MB + 30 MB). The value should be accurate and reflect the sum of all downloaded content.,P0,functional
+TC-070,REQ-025,Edge case: Storage used by downloads updates after deletion.,"User is logged in to the PocketToons mobile app.
+A free comic 'Delete Storage Comic - Episode 1' (e.g., 50 MB) and 'Delete Storage Comic - Episode 2' (e.g., 30 MB) have been downloaded, showing a total of ~80 MB.
+The total storage used is displayed in Settings.","1. Navigate to the 'Downloads' tab.
+2. Delete 'Delete Storage Comic - Episode 1'.
+3. Navigate back to the 'Settings' section.
+4. Observe the 'Total Storage Used by Downloads' display.",The displayed storage usage immediately updates from ~80 MB to ~30 MB after 'Delete Storage Comic - Episode 1' is removed.,P1,edge
+TC-071,REQ-025,Negative case: Storage usage displayed is incorrect or not updated.,"User is logged in to the PocketToons mobile app.
+A free comic 'Incorrect Storage Comic - Episode 1' (e.g., 50 MB) has been downloaded.
+The total storage used is displayed in Settings (assume it shows 0 MB or an arbitrary wrong value).","1. Download 'Incorrect Storage Comic - Episode 1'.
+2. Navigate to the 'Settings' section.
+3. Observe the 'Total Storage Used by Downloads' display.","The displayed storage usage shows 0 MB or an incorrect value (e.g., 10 MB) instead of the expected 50 MB. (This would be a failure of the feature).",P0,negative
+TC-072,REQ-026,Happy path: Total storage used by downloads is displayed within Settings.,"User is logged in to the PocketToons mobile app.
+At least one comic has been downloaded.","1. Tap on the 'Settings' icon/menu item in the app's main navigation.
+2. Navigate through the settings options.","A clear entry titled 'Storage Used by Downloads', 'Offline Storage', or similar is found within the app's 'Settings' section, displaying the current total storage used by downloaded comics.",P0,functional
+TC-073,REQ-026,Edge case: Displayed storage when no comics are downloaded.,"User is logged in to the PocketToons mobile app.
+No comics have been downloaded, or all have been deleted.","1. Navigate to the 'Settings' section.
+2. Locate the 'Total Storage Used by Downloads' display.",The 'Total Storage Used by Downloads' display should show '0 MB' or 'No downloads' rather than being absent or showing an error.,P2,edge
+TC-074,REQ-026,Negative case: Storage display is not located in Settings.,"User is logged in to the PocketToons mobile app.
+At least one comic has been downloaded.","1. Navigate through all available sections within the app's 'Settings'.
+2. Look for any display of 'Total Storage Used by Downloads'.",No 'Total Storage Used by Downloads' display or similar information is found within the entire 'Settings' section. (This would be a failure of the feature).,P1,negative
+TC-075,REQ-027,Happy path: User successfully deletes an individual downloaded episode.,"User is logged in to the PocketToons mobile app.
+A free comic 'Individual Delete Comic - Episode 1' and 'Individual Delete Comic - Episode 2' are downloaded and listed in the 'Downloads' tab.","1. Navigate to the 'Downloads' tab.
+2. Locate 'Individual Delete Comic - Episode 1'.
+3. Tap the 'Delete' option/icon associated with 'Individual Delete Comic - Episode 1'.
+4. Confirm the deletion if prompted.",'Individual Delete Comic - Episode 1' is removed from the 'Downloads' tab. 'Individual Delete Comic - Episode 2' remains untouched. The total storage used by downloads should decrease accordingly.,P0,functional
+TC-076,REQ-027,Edge case: Delete the only downloaded episode.,"User is logged in to the PocketToons mobile app.
+Only one free comic 'Only Episode Comic - Episode 1' is downloaded and listed in the 'Downloads' tab.","1. Navigate to the 'Downloads' tab.
+2. Locate 'Only Episode Comic - Episode 1'.
+3. Tap the 'Delete' option/icon.
+4. Confirm the deletion if prompted.","'Only Episode Comic - Episode 1' is removed from the 'Downloads' tab. The 'Downloads' tab should now display a message indicating no downloads (e.g., 'No downloads yet!'). Total storage used should become 0 MB.",P2,edge
+TC-077,REQ-027,Negative case: Attempt to delete an episode that is currently being read.,"User is logged in to the PocketToons mobile app.
+A free comic 'Reading Comic - Episode 1' is downloaded and available.","1. Open 'Reading Comic - Episode 1' and navigate to a page.
+2. While reading, attempt to navigate to the 'Downloads' tab (or exit the reader temporarily).
+3. Locate 'Reading Comic - Episode 1' and tap the 'Delete' option/icon.","The system should either prevent deletion while the comic is open or warn the user that closing the comic is required for deletion. If deleted successfully, the comic reader should close or navigate back to the downloads list, and the comic should no longer be accessible.",P1,negative
+TC-078,REQ-028,Happy path: User successfully deletes an entire downloaded series.,"User is logged in to the PocketToons mobile app.
+A free comic series 'Full Series Delete' with multiple episodes (e.g., 3 episodes) is downloaded and listed in the 'Downloads' tab as a series.","1. Navigate to the 'Downloads' tab.
+2. Locate the 'Full Series Delete' series entry.
+3. Tap the 'Delete Series' option/icon associated with the series.
+4. Confirm the deletion if prompted.","The entire 'Full Series Delete' series, including all its episodes, is removed from the 'Downloads' tab. The total storage used by downloads should decrease by the collective size of all deleted episodes.",P0,functional
+TC-079,REQ-028,"Edge case: Delete a series with many episodes (e.g., 50 episodes).","User is logged in to the PocketToons mobile app.
+A free comic series 'Large Series Delete' with 50 episodes is downloaded.","1. Navigate to the 'Downloads' tab.
+2. Locate the 'Large Series Delete' series entry.
+3. Tap the 'Delete Series' option/icon.
+4. Confirm the deletion.","All 50 episodes of 'Large Series Delete' are successfully and completely removed. The process should be efficient, and the app should not freeze or crash.",P1,edge
+TC-080,REQ-028,Negative case: Attempt to delete a series that is partially downloaded or corrupted.,"User is logged in to the PocketToons mobile app.
+A free comic series 'Partial Series Delete' has some episodes downloaded, and others are pending or failed, or one of the downloaded episodes is corrupted (simulated).","1. Navigate to the 'Downloads' tab.
+2. Locate the 'Partial Series Delete' series entry.
+3. Tap the 'Delete Series' option/icon.
+4. Confirm the deletion.","The system should still successfully delete all available downloaded episodes and remove the series entry, even if some parts were incomplete or corrupted. It should not cause an error or crash. Any related storage should be freed.",P1,negative
+TC-081,REQ-029,Happy path: Downloaded content automatically expires and is removed.,"User is logged in to the PocketToons mobile app.
+A free comic 'Expiry Comic - Episode 1' is downloaded.
+System clock on the device or server-side time can be manipulated for testing purposes.","1. Download 'Expiry Comic - Episode 1'. Note the download date/time.
+2. Advance the system clock (or mock server time) by 31 days.
+3. Open the PocketToons app and navigate to the 'Downloads' tab.
+4. Look for 'Expiry Comic - Episode 1'.",'Expiry Comic - Episode 1' is no longer listed in the 'Downloads' tab and cannot be accessed. The storage used by this comic is freed.,P0,functional
+TC-082,REQ-029,Edge case: Multiple downloaded items expire at different times.,"User is logged in to the PocketToons mobile app.
+Downloaded 'Expiry Multi-A - Episode 1' (Day 0) and 'Expiry Multi-B - Episode 1' (Day 10).
+Time manipulation is possible.","1. Advance system clock by 31 days from 'Expiry Multi-A' download. Verify 'Expiry Multi-A' is gone.
+2. 'Expiry Multi-B' should still be present.
+3. Advance system clock by another 10 days (total 41 from 'Expiry Multi-A' / 31 from 'Expiry Multi-B').
+4. Verify 'Expiry Multi-B' is also gone.","Each downloaded item expires and is removed independently based on its individual download date, freeing up storage.",P1,edge
+TC-083,REQ-029,Negative case: Downloaded content does not expire automatically.,"User is logged in to the PocketToons mobile app.
+A free comic 'No Expiry Comic - Episode 1' is downloaded.
+Time manipulation is possible.","1. Download 'No Expiry Comic - Episode 1'.
+2. Advance the system clock (or mock server time) by 35 days (past the 30-day expiry).
+3. Open the PocketToons app and navigate to the 'Downloads' tab.
+4. Look for 'No Expiry Comic - Episode 1'.","'No Expiry Comic - Episode 1' is still listed in the 'Downloads' tab and can be accessed, indicating that automatic expiry failed. (This would be a failure of the feature).",P0,negative
+TC-084,REQ-030,"Boundary test: Downloaded content accessible at 29 days, removed at 30 days.","User is logged in to the PocketToons mobile app.
+A free comic 'Boundary Expiry Comic - Episode 1' is downloaded.
+System clock manipulation is possible.","1. Download 'Boundary Expiry Comic - Episode 1'.
+2. Advance system clock by 29 days.
+3. Verify 'Boundary Expiry Comic - Episode 1' is still accessible in 'Downloads'.
+4. Advance system clock by 1 more day (total 30 days).
+5. Reopen the app and verify 'Boundary Expiry Comic - Episode 1' is no longer accessible.","The comic is accessible on day 29, but automatically removed and inaccessible on day 30 or shortly after app launch/refresh on day 30.",P0,functional
+TC-085,REQ-030,Boundary test: Content remains accessible exactly 30 days.,"User is logged in to the PocketToons mobile app.
+A free comic 'Exact Expiry Comic - Episode 1' is downloaded.
+System clock manipulation is possible.","1. Download 'Exact Expiry Comic - Episode 1'.
+2. Advance system clock to precisely 30 days after download.
+3. Open the PocketToons app.
+4. Verify 'Exact Expiry Comic - Episode 1' is removed or becomes inaccessible.
+5. (Optional) Check device file system or app data to confirm file removal.",The comic should be removed/inaccessible at or immediately after the 30-day mark from its download date.,P0,functional
+TC-086,REQ-030,Violation test: Content expires before or after 30 days.,"User is logged in to the PocketToons mobile app.
+A free comic 'Violation Expiry Comic - Episode 1' is downloaded.
+System clock manipulation is possible.","1. Download 'Violation Expiry Comic - Episode 1'.
+2. Advance system clock by 29 days.
+3. Verify comic is still accessible (if it's not, it's a violation).
+4. Advance system clock by 31 days from download date.
+5. Verify comic is removed (if it's still accessible, it's a violation).","If the comic expires before 30 days (e.g., at 29 days) or remains accessible significantly beyond 30 days (e.g., at 31 days or more), it's a violation of the requirement. This test passes if it *finds* such a violation.",P0,negative
+TC-087,REQ-031,Happy path: User receives an in-app notification about content expiry.,"User is logged in to the PocketToons mobile app.
+A free comic 'Expiry Notification Comic - Episode 1' is downloaded.
+System clock manipulation is possible.","1. Download 'Expiry Notification Comic - Episode 1'.
+2. Advance the system clock (or mock server time) to 3 days before the content is due to expire (i.e., 27 days after download).
+3. Open the PocketToons app and ensure it's active.
+4. Observe for in-app notifications.","An in-app notification (e.g., banner, toast) is displayed, warning the user that 'Expiry Notification Comic - Episode 1' will expire soon (e.g., 'Your downloaded comic 'Expiry Notification Comic - Episode 1' will expire in 3 days.').",P0,functional
+TC-088,REQ-031,"Edge case: Multiple downloaded items are about to expire, triggering multiple notifications.","User is logged in to the PocketToons mobile app.
+Downloaded 'Multi-Expiry A - Episode 1' (expires in 3 days) and 'Multi-Expiry B - Episode 1' (expires in 3 days, same time).
+System clock manipulation is possible.","1. Advance system clock to 3 days before expiry for both items.
+2. Open the app and observe notifications.","Notifications for both 'Multi-Expiry A' and 'Multi-Expiry B' are displayed, either as separate notifications or a combined notification summarizing multiple expiries.",P1,edge
+TC-089,REQ-031,Negative case: No in-app notification is sent for expiring content.,"User is logged in to the PocketToons mobile app.
+A free comic 'No Notif Expiry Comic - Episode 1' is downloaded.
+System clock manipulation is possible.","1. Download 'No Notif Expiry Comic - Episode 1'.
+2. Advance the system clock (or mock server time) to 27 days after download.
+3. Open the PocketToons app and ensure it's active.
+4. Observe for in-app notifications.","No in-app notification is displayed, even though the content is 3 days from expiry. (This would be a failure of the feature).",P0,negative
+TC-090,REQ-032,Boundary test: Expiry notification sent exactly 3 days before expiry.,"User is logged in to the PocketToons mobile app.
+A free comic 'Notif Timing Comic - Episode 1' is downloaded.
+System clock manipulation is possible.","1. Download 'Notif Timing Comic - Episode 1'.
+2. Advance system clock to 26 days after download (4 days before expiry).
+3. Open the app, verify no notification yet.
+4. Advance system clock by 1 more day (total 27 days after download - 3 days before expiry).
+5. Open the app, verify notification appears.",No expiry notification is received on day 26 (4 days before expiry). An in-app notification for expiry is received on day 27 (exactly 3 days before expiry).,P0,functional
+TC-091,REQ-032,Violation test: Expiry notification sent 2 days before or 4 days before expiry.,"User is logged in to the PocketToons mobile app.
+A free comic 'Notif Violation Comic - Episode 1' is downloaded.
+System clock manipulation is possible.","1. Download 'Notif Violation Comic - Episode 1'.
+2. Advance system clock to 26 days after download (4 days before expiry).
+3. Open the app, check for notification (violation if it appears).
+4. Advance system clock to 28 days after download (2 days before expiry).
+5. Open the app, check for notification (violation if this is the *first* time it appears, implying it was missed on day 27).","If a notification appears on day 26 (4 days before) or if no notification appears on day 27 and it only appears on day 28 (2 days before), it's a violation. This test passes if it *finds* such a violation.",P0,negative
+TC-092,REQ-033,Happy path: All subscription-gated downloads are removed when subscription lapses.,"User is logged in to the PocketToons mobile app.
+User has an active subscription.
+Two subscription-gated comics 'Sub Lapse Comic A' and 'Sub Lapse Comic B' are downloaded.
+One free comic 'Free Comic C' is downloaded.
+A mechanism to lapse the user's subscription (e.g., test account with controlled expiry).","1. Ensure 'Sub Lapse Comic A', 'Sub Lapse Comic B', and 'Free Comic C' are downloaded.
+2. Lapse the user's subscription (via admin tool or expiry of test account).
+3. Re-open the PocketToons app and/or wait for a brief period (e.g., 5 minutes) for sync to occur.
+4. Navigate to the 'Downloads' tab.",'Sub Lapse Comic A' and 'Sub Lapse Comic B' are removed from the 'Downloads' tab and are no longer accessible. 'Free Comic C' (non-subscription content) remains in the 'Downloads' tab and is accessible. Total storage used decreases accordingly.,P0,functional
+TC-093,REQ-033,Edge case: Subscription lapses while the user is offline.,"User is logged in to the PocketToons mobile app.
+User has an active subscription.
+A subscription-gated comic 'Offline Lapse Comic' is downloaded.
+A mechanism to lapse the user's subscription.
+Device has no active internet connection.","1. Ensure 'Offline Lapse Comic' is downloaded.
+2. Disconnect all network connections.
+3. Lapse the user's subscription (this would be server-side).
+4. Attempt to access 'Offline Lapse Comic' while still offline.
+5. Reconnect to the internet.
+6. Re-open the PocketToons app and wait for sync.
+7. Navigate to the 'Downloads' tab.","While offline, 'Offline Lapse Comic' might still be accessible temporarily. Upon re-establishing network connection and app sync, 'Offline Lapse Comic' should be removed from the 'Downloads' tab and become inaccessible. The system processes the lapse when online.",P1,edge
+TC-094,REQ-033,"Negative case: Subscription lapses, but subscription-gated content is NOT removed.","User is logged in to the PocketToons mobile app.
+User has an active subscription.
+A subscription-gated comic 'No Removal Comic' is downloaded.
+A mechanism to lapse the user's subscription.","1. Ensure 'No Removal Comic' is downloaded.
+2. Lapse the user's subscription.
+3. Re-open the PocketToons app and wait for 24 hours (as per REQ-034).
+4. Navigate to the 'Downloads' tab.",'No Removal Comic' is still listed in the 'Downloads' tab and remains accessible despite the subscription having lapsed. (This would be a failure of the feature).,P0,negative
+TC-095,REQ-034,Boundary test: Subscription-gated downloads removed within 24 hours of lapse.,"User is logged in to the PocketToons mobile app.
+User has an active subscription.
+A subscription-gated comic 'Removal Timing Comic - Episode 1' is downloaded.
+A mechanism to lapse the user's subscription and measure time precisely.","1. Download 'Removal Timing Comic - Episode 1'.
+2. Lapse the user's subscription. Note the precise time of lapse (T0).
+3. Keep the app in the foreground or open periodically.
+4. At T0 + 23 hours 59 minutes, verify the comic is still accessible (it might be, depending on implementation/sync interval).
+5. At T0 + 24 hours 1 minute, open the app.
+6. Navigate to the 'Downloads' tab and look for 'Removal Timing Comic - Episode 1'.",The comic 'Removal Timing Comic - Episode 1' should be removed from the 'Downloads' tab and be inaccessible at or shortly after the 24-hour mark from the subscription lapse.,P0,functional
+TC-096,REQ-034,Violation test: Subscription-gated downloads remain accessible after 24 hours of lapse.,"User is logged in to the PocketToons mobile app.
+User has an active subscription.
+A subscription-gated comic 'Violation Removal Comic - Episode 1' is downloaded.
+A mechanism to lapse the user's subscription and measure time precisely.","1. Download 'Violation Removal Comic - Episode 1'.
+2. Lapse the user's subscription. Note the precise time of lapse (T0).
+3. At T0 + 24 hours 30 minutes, open the PocketToons app.
+4. Navigate to the 'Downloads' tab and look for 'Violation Removal Comic - Episode 1'.","The comic 'Violation Removal Comic - Episode 1' is still listed in the 'Downloads' tab and is accessible, indicating it was not removed within the 24-hour window. (This would be a failure of the feature).",P0,negative
+TC-097,REQ-035,Happy path: Downloaded content is encrypted on the device.,"User is logged in to the PocketToons mobile app.
+A free comic 'Encrypted Comic - Episode 1' is downloaded.
+Access to device's file system (e.g., via a connected computer, file manager, or specific testing tools for inspecting app data).","1. Download 'Encrypted Comic - Episode 1'.
+2. Connect the device to a computer or use a file manager app to navigate to the PocketToons app's data directory where downloaded content is stored.
+3. Attempt to open or view the downloaded comic's files (e.g., image files, data files) using standard image viewers or text editors.","The downloaded files are not immediately recognizable as image files or readable text; they appear as garbled or unreadable data, consistent with encryption. Standard tools cannot open or interpret them correctly.",P0,functional
+TC-098,REQ-035,Edge case: Very small downloaded content is also encrypted.,"User is logged in to the PocketToons mobile app.
+A very small free comic 'Small Encrypted Comic - Episode 1' (e.g., one page, minimal size) is downloaded.
+Access to device's file system.","1. Download 'Small Encrypted Comic - Episode 1'.
+2. Access the downloaded file on the device file system.
+3. Attempt to view the file content.","Despite its small size, the downloaded file should still appear encrypted/unreadable outside the app.",P1,edge
+TC-099,REQ-035,Negative case: Downloaded content is stored unencrypted (plaintext).,"User is logged in to the PocketToons mobile app.
+A free comic 'Unencrypted Comic - Episode 1' is downloaded.
+Access to device's file system.","1. Download 'Unencrypted Comic - Episode 1'.
+2. Access the downloaded file on the device file system.
+3. Attempt to open the files using a standard image viewer or text editor.","The downloaded comic pages or content files are directly viewable and readable as plain images or text files (e.g., '.jpg', '.png') outside the app without any decryption. (This would be a critical security failure).",P0,negative
+TC-100,REQ-036,Boundary test: Verify AES-256 encryption is used.,"User is logged in to the PocketToons mobile app.
+A free comic 'AES-256 Test Comic - Episode 1' is downloaded.
+Developer access or a specific security testing tool capable of inspecting the encryption headers/metadata of the downloaded files or the encryption logic within the app's code.","1. Download 'AES-256 Test Comic - Episode 1'.
+2. Using the appropriate tools, inspect the encryption details of the downloaded content files.
+3. (If white-box testing) Review the cryptographic implementation in the source code.",The encryption applied to the downloaded content files is confirmed to be AES-256. This requires technical validation beyond typical black-box testing.,P0,functional
+TC-101,REQ-036,Violation test: Encryption method is not AES-256.,"User is logged in to the PocketToons mobile app.
+A free comic 'Non-AES256 Comic - Episode 1' is downloaded.
+Developer access or a specific security testing tool capable of inspecting encryption details.","1. Download 'Non-AES256 Comic - Episode 1'.
+2. Using appropriate tools, inspect the encryption details of the downloaded content files.","The encryption method used for the downloaded content is identified as something other than AES-256 (e.g., AES-128, DES, or a custom algorithm). (This would be a security failure).",P0,negative
+TC-102,REQ-037,Happy path: Prevent access to downloaded files from outside the PocketToons app.,"User is logged in to the PocketToons mobile app.
+A free comic 'External Access Comic - Episode 1' is downloaded.
+Device is connected to a computer, or a third-party file manager app is installed on the device.","1. Download 'External Access Comic - Episode 1'.
+2. Use a computer to browse the device's file system or a file manager app on the device.
+3. Navigate to the PocketToons app's private data directory (e.g., Android/data/com.pockettoons.app/files/downloads or iOS equivalent).
+4. Attempt to open any downloaded comic file (e.g., image asset) directly using external software (e.g., image viewer, text editor).","The downloaded files cannot be opened, viewed, or interpreted by external applications. They appear as encrypted, corrupted, or simply inaccessible/unsupported files.",P0,functional
+TC-103,REQ-037,Edge case: Attempt to access files from a rooted/jailbroken device.,"User is logged in to the PocketToons mobile app.
+A free comic 'Rooted Device Comic - Episode 1' is downloaded.
+A rooted Android device or jailbroken iOS device with developer tools/file system access.","1. Download 'Rooted Device Comic - Episode 1'.
+2. Using root access, navigate to the app's data directories.
+3. Attempt to copy or open the downloaded files.","Even with elevated privileges on a rooted/jailbroken device, the downloaded files should remain encrypted and unreadable when accessed directly, preventing unauthorized access to the content itself.",P1,edge
+TC-104,REQ-037,Negative case: Downloaded files are accessible from outside the app.,"User is logged in to the PocketToons mobile app.
+A free comic 'Accessible File Comic - Episode 1' is downloaded.
+Device is connected to a computer, or a third-party file manager app is installed.","1. Download 'Accessible File Comic - Episode 1'.
+2. Access the device's file system and navigate to the app's download directory.
+3. Attempt to open a downloaded comic file with a standard image viewer.","The downloaded comic pages open directly and are viewable in an external application (e.g., gallery app, image viewer) without needing to use the PocketToons app. (This would be a critical security failure).",P0,negative
+TC-105,REQ-038,Happy path: Prevent export of downloaded files from the PocketToons app.,"User is logged in to the PocketToons mobile app.
+A free comic 'No Export Comic - Episode 1' is downloaded.","1. Navigate to the 'Downloads' tab or open 'No Export Comic - Episode 1' for reading.
+2. Look for any 'Share', 'Export', 'Save As', or 'Print' options within the app's UI (e.g., context menus, share sheets, settings).
+3. If any such options exist, attempt to use them on the downloaded content.","There should be no visible or functional options within the PocketToons app to share, export, save, or otherwise transfer the downloaded comic content to other applications or outside the app's controlled environment.",P0,functional
+TC-106,REQ-038,Edge case: Attempt to screenshot downloaded content (device-level control).,"User is logged in to the PocketToons mobile app.
+A free comic 'Screenshot Comic - Episode 1' is downloaded.
+Device has standard screenshot functionality.","1. Open 'Screenshot Comic - Episode 1' for reading.
+2. Attempt to take a screenshot of the comic page using the device's native screenshot function.","The screenshot either should be prevented (e.g., 'Cannot take screenshot due to security policy') or, if taken, the image should appear blank, black, or contain a DRM watermark instead of the comic content itself. (Prevention is ideal if technically feasible).",P1,edge
+TC-107,REQ-038,Negative case: User can export downloaded content from the app.,"User is logged in to the PocketToons mobile app.
+A free comic 'Exportable Comic - Episode 1' is downloaded.","1. Open 'Exportable Comic - Episode 1'.
+2. Locate a 'Share' or 'Export' option (e.g., in a menu, long-press context).
+3. Use this option to attempt to share or save the comic (e.g., to Photos/Gallery, email, another app).","The app allows the user to export, share, or save the downloaded comic pages (e.g., as image files) to external locations or other applications. (This would be a critical security failure).",P0,negative
+TC-108,REQ-039,"Happy path: Download operations run on a background thread, maintaining UI responsiveness.","User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Background Thread Comic - Episode 1' is available, large enough to take noticeable time to download (e.g., > 100 MB).","1. Initiate download for 'Background Thread Comic - Episode 1'.
+2. While the download is in progress, actively interact with other parts of the app (e.g., browse other comic series, navigate through settings, scroll lists, open other non-downloaded comics for viewing).
+3. Observe UI fluidity and responsiveness.","The app's UI remains fully responsive, smooth, and interactive while the download proceeds in the background. There should be no noticeable lag, freezing, or stuttering in the UI interactions.",P0,functional
+TC-109,REQ-039,Edge case: Multiple simultaneous downloads running on background threads.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+Three distinct free comic episodes 'Multi-Thread A', 'Multi-Thread B', 'Multi-Thread C' are available, each large enough to take a few seconds to download.","1. Initiate downloads for 'Multi-Thread A', 'Multi-Thread B', and 'Multi-Thread C' simultaneously.
+2. While all three downloads are in progress, navigate through various sections of the app.
+3. Observe UI responsiveness.","The app's UI remains responsive and fluid, even with multiple downloads running concurrently in the background. UI interactions should not be significantly degraded.",P1,edge
+TC-110,REQ-039,"Negative case: Download operations block the UI thread, causing unresponsiveness.","User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Sufficient device storage is available.
+A free comic 'Blocking Thread Comic - Episode 1' is available, large enough to take noticeable time to download.","1. Initiate download for 'Blocking Thread Comic - Episode 1'.
+2. Immediately try to scroll through lists, tap buttons, or navigate to other screens within the app.","The app's UI becomes unresponsive, freezes, or exhibits significant lag and stuttering immediately after initiating the download, making interaction difficult or impossible until the download completes. (This would be a failure of the feature).",P0,negative
+TC-113,REQ-042,Boundary test: Offline reader page load performance on a mid-range device.,"User is logged in to the PocketToons mobile app.
+A free comic 'Mid-Range Test Comic - Episode 1' is fully downloaded.
+Device is offline (Wi-Fi and mobile data off).
+Test device is a pre-approved 'mid-range' device model (e.g., Google Pixel A series, Samsung Galaxy A series, specific older iPhone model).
+Performance measurement tools are available.","1. Perform steps similar to TC-112 on the designated mid-range device.
+2. Record page load times for multiple pages.","On the mid-range test device, each comic page in the offline reader should consistently load and render within 1 second. If any page takes longer, it's a boundary violation.",P0,functional
+TC-114,REQ-042,Violation test: Offline reader page load exceeds 1 second on a mid-range device.,"User is logged in to the PocketToons mobile app.
+A free comic 'Mid-Range Slow Comic - Episode 1' is fully downloaded.
+Device is offline (Wi-Fi and mobile data off).
+Test device is a pre-approved 'mid-range' device model.
+Performance measurement tools are available.","1. Perform steps similar to TC-112 on the designated mid-range device.
+2. Record page load times for multiple pages.",One or more comic pages take longer than 1 second to load and render on the mid-range test device. (This would be a failure of the performance requirement).,P0,negative
+TC-118,REQ-046,Happy path: A downloaded comic remains accessible even if removed from the platform.,"User is logged in to the PocketToons mobile app.
+A free comic 'Platform Removed Comic - Episode 1' is downloaded.
+Admin access to remove 'Platform Removed Comic - Episode 1' from the platform's content catalog without deleting it from local devices.","1. Download 'Platform Removed Comic - Episode 1'.
+2. Use admin tools to remove 'Platform Removed Comic - Episode 1' from the online content catalog.
+3. Ensure device is online so app can sync with server for content catalog updates.
+4. Open the PocketToons app.
+5. Navigate to the 'Downloads' tab.
+6. Attempt to open and read 'Platform Removed Comic - Episode 1'.","'Platform Removed Comic - Episode 1' is still listed in the 'Downloads' tab and can be fully opened and read, despite no longer being available on the online platform. No error messages about content unavailability should appear when reading the downloaded version.",P0,functional
+TC-119,REQ-046,Edge case: Comic removed from platform while user is offline.,"User is logged in to the PocketToons mobile app.
+A free comic 'Offline Platform Removed Comic - Episode 1' is downloaded.
+Admin access to remove it from the platform.
+Device is offline.","1. Download 'Offline Platform Removed Comic - Episode 1'.
+2. Disconnect network connections.
+3. Use admin tools to remove the comic from the online platform.
+4. While still offline, open the app and access the downloaded comic.
+5. Reconnect to the internet and restart the app.
+6. Access the downloaded comic again.","The downloaded comic should remain accessible both before and after reconnecting to the internet and syncing, until its natural expiry.",P1,edge
+TC-120,REQ-046,Negative case: Downloaded comic becomes inaccessible after being removed from the platform.,"User is logged in to the PocketToons mobile app.
+A free comic 'Inaccessible Removed Comic - Episode 1' is downloaded.
+Admin access to remove it from the platform.","1. Download 'Inaccessible Removed Comic - Episode 1'.
+2. Use admin tools to remove it from the online platform.
+3. Ensure device is online and app has synced.
+4. Open the PocketToons app and navigate to the 'Downloads' tab.
+5. Attempt to open 'Inaccessible Removed Comic - Episode 1'.","The downloaded comic is either removed from the 'Downloads' tab or attempting to open it results in an error (e.g., 'Content no longer available'). (This would be a failure of the feature).",P0,negative
+TC-121,REQ-047,Boundary test: Removed content remains accessible up to its 30-day expiry.,"User is logged in to the PocketToons mobile app.
+A free comic 'Removed Accessible Comic - Episode 1' is downloaded.
+Admin access to remove the comic from the platform.
+System clock manipulation is possible.","1. Download 'Removed Accessible Comic - Episode 1'. Note download date (T0).
+2. On T0 + 5 days, remove the comic from the platform via admin tools.
+3. Verify accessibility in app (should still be accessible).
+4. Advance system clock to T0 + 29 days.
+5. Verify the comic is still accessible in 'Downloads'.
+6. Advance system clock to T0 + 30 days.
+7. Verify the comic is no longer accessible/removed from 'Downloads'.","The downloaded comic, even after being removed from the platform, remains fully accessible until its 30-day expiry from the initial download date. It is then automatically removed.",P0,functional
+TC-122,REQ-047,Violation test: Removed content becomes inaccessible before its 30-day expiry.,"User is logged in to the PocketToons mobile app.
+A free comic 'Violation Removed Comic - Episode 1' is downloaded.
+Admin access to remove the comic from the platform.
+System clock manipulation is possible.","1. Download 'Violation Removed Comic - Episode 1'. Note download date (T0).
+2. On T0 + 5 days, remove the comic from the platform via admin tools.
+3. Advance system clock to T0 + 20 days (well within 30 days).
+4. Open the app and attempt to access 'Violation Removed Comic - Episode 1'.","The downloaded comic is found to be inaccessible or removed from the 'Downloads' tab, despite not having reached its 30-day expiry. (This would be a failure of the feature).",P0,negative
+TC-123,REQ-048,Happy path: User is warned before starting new downloads if available device storage is below 50 MB.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Device's available storage is 49 MB.
+A free comic 'Low Storage Warn Comic - Episode 1' is available for download.","1. Manipulate device storage to be 49 MB (below 50 MB threshold).
+2. Attempt to initiate download for 'Low Storage Warn Comic - Episode 1'.","Before the download starts, a warning message is displayed (e.g., 'Low Storage: Your device storage is low. Downloads may fail. Proceed anyway?'). The user is given an option to proceed or cancel.",P0,functional
+TC-124,REQ-048,Edge case: Warning persists across multiple download attempts when storage remains low.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Device's available storage is 30 MB.
+Two free comics 'Persistent Warn A' and 'Persistent Warn B' are available.","1. Manipulate device storage to 30 MB.
+2. Attempt to download 'Persistent Warn A', observe warning. Cancel.
+3. Attempt to download 'Persistent Warn B'.","The low storage warning is displayed again for the second download attempt, confirming consistent behavior when storage remains below the threshold.",P1,edge
+TC-125,REQ-048,"Negative case: Device storage below 50 MB, but no warning appears.","User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Device's available storage is 40 MB.
+A free comic 'No Warn Comic - Episode 1' is available for download.","1. Manipulate device storage to 40 MB.
+2. Attempt to initiate download for 'No Warn Comic - Episode 1'.",The download starts without any warning message regarding low storage. (This would be a failure of the feature).,P0,negative
+TC-126,REQ-049,Boundary test: Storage warning threshold at 50 MB - No warning at 51 MB.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Device's available storage is 51 MB.
+A free comic 'Threshold Test Comic 1 - Episode 1' is available.","1. Manipulate device storage to 51 MB.
+2. Attempt to initiate download for 'Threshold Test Comic 1 - Episode 1'.",The download starts immediately without any low storage warning. (This passes the 'no warning' side of the boundary).,P0,functional
+TC-127,REQ-049,Boundary test: Storage warning threshold at 50 MB - Warning at 49 MB.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+Device's available storage is 49 MB.
+A free comic 'Threshold Test Comic 2 - Episode 1' is available.","1. Manipulate device storage to 49 MB.
+2. Attempt to initiate download for 'Threshold Test Comic 2 - Episode 1'.",A low storage warning message is displayed before the download proceeds. (This passes the 'warning' side of the boundary).,P0,functional
+TC-128,REQ-049,Violation test: Storage warning appears at > 50 MB or doesn't appear at < 50 MB.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+A free comic 'Violation Threshold Comic - Episode 1' is available.","1. Manipulate device storage to 60 MB.
+2. Attempt to download 'Violation Threshold Comic - Episode 1'. (Violation if warning appears).
+3. Manipulate device storage to 40 MB.
+4. Attempt to download 'Violation Threshold Comic - Episode 1'. (Violation if no warning appears).","If a warning appears at 60 MB or no warning appears at 40 MB, it indicates a violation of the 50 MB threshold. This test passes if it *finds* such a violation.",P0,negative
+TC-129,REQ-050,Happy path: Downloads are prevented on metered connections by default.,"User is logged in to the PocketToons mobile app.
+Device is connected to mobile data (Wi-Fi off).
+The 'Download on mobile data' setting is OFF (default state).
+A free comic 'Metered Connection Comic - Episode 1' is available for download.","1. Ensure Wi-Fi is off and device is using mobile data.
+2. Navigate to 'Metered Connection Comic - Episode 1'.
+3. Tap the 'Download' icon/button.","The system prevents the download from starting and displays a message informing the user that downloads on mobile data are disabled by default (e.g., 'Downloads on mobile data are disabled. Please connect to Wi-Fi or enable downloads in settings.'). The download should not begin.",P0,functional
+TC-130,REQ-050,Edge case: Switching from Wi-Fi to mobile data mid-download.,"User is logged in to the PocketToons mobile app.
+Device is connected to Wi-Fi.
+The 'Download on mobile data' setting is OFF.
+A large free comic 'Mid-Download Metered Comic - Episode 1' is available.","1. Initiate download for 'Mid-Download Metered Comic - Episode 1' while on Wi-Fi.
+2. While download is in progress, disable Wi-Fi (forcing device onto mobile data).
+3. Observe download status.","The download should immediately pause or stop upon switching to mobile data. A message indicating that downloads on mobile data are disabled should appear, prompting the user to resume on Wi-Fi or enable the setting. The download should not continue on mobile data.",P1,edge
+TC-131,REQ-050,Negative case: Downloads start on metered connections by default.,"User is logged in to the PocketToons mobile app.
+Device is connected to mobile data (Wi-Fi off).
+The 'Download on mobile data' setting is OFF (default).
+A free comic 'Auto-Metered Comic - Episode 1' is available.","1. Ensure Wi-Fi is off and device is using mobile data.
+2. Navigate to 'Auto-Metered Comic - Episode 1'.
+3. Tap the 'Download' icon/button.",The download initiates and progresses on mobile data without any warning or prevention mechanism. (This would be a failure of the feature).,P0,negative
+TC-132,REQ-051,Happy path: User enables 'Download on mobile data' and downloads successfully.,"User is logged in to the PocketToons mobile app.
+Device is connected to mobile data (Wi-Fi off).
+The 'Download on mobile data' setting is OFF by default.
+A free comic 'Mobile Data Enable Comic - Episode 1' is available.","1. Ensure Wi-Fi is off and device is using mobile data.
+2. Navigate to Settings and enable the 'Download on mobile data' setting.
+3. Navigate to 'Mobile Data Enable Comic - Episode 1'.
+4. Tap the 'Download' icon/button.",The download successfully initiates and proceeds using mobile data. No warning or prevention message about metered connection appears.,P0,functional
+TC-133,REQ-051,Edge case: Disable 'Download on mobile data' setting during an active mobile data download.,"User is logged in to the PocketToons mobile app.
+Device is connected to mobile data (Wi-Fi off).
+The 'Download on mobile data' setting is ON.
+A large free comic 'Disable Mobile Data Comic - Episode 1' is actively downloading on mobile data.","1. Initiate download for 'Disable Mobile Data Comic - Episode 1' (it should be downloading on mobile data).
+2. While the download is in progress, navigate to Settings and disable the 'Download on mobile data' setting.
+3. Observe the download status.",The download should immediately pause or stop upon disabling the setting. A message indicating the download stopped due to settings change should appear. The download should not continue on mobile data.,P1,edge
+TC-134,REQ-051,Negative case: 'Download on mobile data' setting is enabled but doesn't work.,"User is logged in to the PocketToons mobile app.
+Device is connected to mobile data (Wi-Fi off).
+The 'Download on mobile data' setting is ON.
+A free comic 'Broken Mobile Data Comic - Episode 1' is available.","1. Ensure Wi-Fi is off and device is using mobile data.
+2. Navigate to Settings and enable the 'Download on mobile data' setting.
+3. Navigate to 'Broken Mobile Data Comic - Episode 1'.
+4. Tap the 'Download' icon/button.","Despite the setting being enabled, the download is still prevented, or an error message incorrectly states that downloads on mobile data are disabled. (This would be a failure of the feature).",P0,negative
+TC-135,REQ-052,Happy path: 'Download on mobile data' setting is located in the app's Settings.,User is logged in to the PocketToons mobile app.,"1. Tap on the 'Settings' icon/menu item in the app's main navigation.
+2. Browse through the settings options.","A clear toggle or checkbox labeled 'Download on mobile data' or similar is found within the app's 'Settings' section, allowing the user to enable or disable this functionality.",P0,functional
+TC-136,REQ-052,Edge case: Settings category for downloads is appropriately named.,User is logged in to the PocketToons mobile app.,"1. Navigate to the app's 'Settings'.
+2. Observe the organization of settings, specifically categories related to downloads or storage.","The 'Download on mobile data' setting is logically grouped under a category like 'Downloads', 'Storage', or 'Network Preferences' within the Settings menu, making it easy to find.",P2,edge
+TC-137,REQ-052,Negative case: 'Download on mobile data' setting is not found in Settings.,User is logged in to the PocketToons mobile app.,"1. Navigate through all available sections within the app's 'Settings'.
+2. Look for any option to control mobile data downloads.",No setting for 'Download on mobile data' or equivalent functionality is found anywhere within the app's 'Settings' section. (This would be a failure of the feature).,P0,negative
+TC-138,REQ-053,Boundary test: User downloads content bringing total storage to exactly 2 GB.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+User has 1.9 GB of content already downloaded.
+A free comic '2GB Boundary Comic - Episode 1' is available, with a size of exactly 100 MB.","1. Ensure total downloaded content is 1.9 GB.
+2. Attempt to download '2GB Boundary Comic - Episode 1' (100 MB).
+3. Observe download progress and final status.
+4. Check total storage used by downloads in Settings.",The download of '2GB Boundary Comic - Episode 1' completes successfully. The total storage used by downloads in Settings should display exactly 2 GB. No warnings about exceeding limit should appear during or after this download.,P0,functional
+TC-139,REQ-053,Violation test: User attempts to download content exceeding the 2 GB total offline storage limit.,"User is logged in to the PocketToons mobile app.
+Device has an active internet connection.
+User has 1.95 GB of content already downloaded.
+A free comic 'Over Limit Comic - Episode 1' is available, with a size of 100 MB.","1. Ensure total downloaded content is 1.95 GB.
+2. Attempt to download 'Over Limit Comic - Episode 1' (100 MB, which would bring total to 2.05 GB).
+3. Observe the outcome.","The system prevents the download from starting. A clear error message is displayed (e.g., 'Download failed: Maximum offline storage limit (2 GB) reached. Please delete existing downloads to make space.'). The existing 1.95 GB of content remains, and no additional content is downloaded.",P0,negative

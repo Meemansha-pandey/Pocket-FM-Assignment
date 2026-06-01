@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run on PRD: Offline Reading",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["sample_prds/prd_offline_reading.md"],
+      "env": {
+        "ANTHROPIC_API_KEY": "sk-ant-PASTE-YOUR-KEY-HERE"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run on PRD: Authentication",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["sample_prds/prd_authentication.md", "--output-dir", "outputs/auth"],
+      "env": {
+        "ANTHROPIC_API_KEY": "sk-ant-PASTE-YOUR-KEY-HERE"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

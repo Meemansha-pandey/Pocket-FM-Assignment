@@ -1,0 +1,285 @@
+test_case_id,requirement_id,scenario,preconditions,steps,expected_result,priority,test_type
+TC-001,REQ-001,Drag and drop an issue from the middle of a priority bucket to a new position within the same bucket.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'High' priority bucket (e.g., Issue A, Issue B, Issue C).
+Issue B is between Issue A and Issue C.","1. Identify Issue B in the 'High' priority bucket.
+2. Click and hold Issue B to initiate drag.
+3. Drag Issue B downwards past Issue C.
+4. Release Issue B, positioning it below Issue C within the 'High' priority bucket.","Issue B is visually reordered and now appears below Issue C within the 'High' priority bucket (resulting order: A, C, B). No change in the priority field of Issue B.",P0,functional
+TC-002,REQ-001,Drag and drop an issue to the very top position within a priority bucket.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'Medium' priority bucket (e.g., Issue X, Issue Y, Issue Z).
+Issue Y is between Issue X and Issue Z.","1. Identify Issue Y in the 'Medium' priority bucket.
+2. Click and hold Issue Y to initiate drag.
+3. Drag Issue Y upwards, positioning it above Issue X within the 'Medium' priority bucket.
+4. Release Issue Y.","Issue Y is visually reordered and now appears at the top of the 'Medium' priority bucket (resulting order: Y, X, Z). No change in the priority field of Issue Y.",P1,edge
+TC-003,REQ-001,Attempt to drag and drop an item that is locked or not editable within a priority bucket.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There is at least one issue (e.g., Issue L) in a priority bucket that is configured to be 'locked' or 'uneditable' for the current user (e.g., due to permissions, or being archived).
+There are other editable issues in the same bucket.","1. Identify Issue L, which is locked/uneditable.
+2. Attempt to click and drag Issue L to a new position within its priority bucket.","Issue L cannot be dragged. No visual drag feedback appears. Its position remains unchanged. An appropriate error message or visual indicator (e.g., disabled drag handle) may be displayed.",P1,negative
+TC-004,REQ-002,Verify micro-adjust order persists after logging out and logging back in for the same user.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'High' priority bucket (e.g., Issue A, Issue B, Issue C).
+Issue A, Issue B, Issue C are in an initial specific order (e.g., A, B, C).","1. Reorder issues in the 'High' priority bucket (e.g., drag Issue B to be above Issue A, resulting in B, A, C).
+2. Observe the new order: Issue B, Issue A, Issue C.
+3. Log out of the application.
+4. Log back into the application with the same user credentials.
+5. Navigate to the same backlog view, sorted by priority.","The 'High' priority bucket displays the issues in the newly established order: Issue B, Issue A, Issue C. The micro-adjust ordering has persisted across sessions.",P0,functional
+TC-005,REQ-002,Verify micro-adjust order persists after a significant time gap between sessions.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'Medium' priority bucket (e.g., Issue X, Issue Y, Issue Z).
+Issue X, Issue Y, Issue Z are in an initial specific order (e.g., X, Y, Z).","1. Reorder issues in the 'Medium' priority bucket (e.g., drag Issue Y to be above Issue Z, resulting in X, Y, Z (new order)).
+2. Observe the new order.
+3. Log out of the application.
+4. Wait for a prolonged period (e.g., 24 hours).
+5. Log back into the application with the same user credentials.
+6. Navigate to the same backlog view, sorted by priority.","The 'Medium' priority bucket displays the issues in the newly established order: X, Y, Z (new order). The micro-adjust ordering has persisted after a long session gap.",P1,edge
+TC-006,REQ-002,Verify order does NOT revert to a previous state after session persistence.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'Low' priority bucket (e.g., Issue P, Issue Q, Issue R).
+Issue P, Issue Q, Issue R are in an initial specific order (e.g., P, Q, R).","1. Reorder issues in the 'Low' priority bucket (e.g., drag Issue Q to be above Issue P, resulting in Q, P, R).
+2. Observe the new order.
+3. Log out of the application.
+4. Log back in.
+5. Navigate to the same backlog view.","The issues in the 'Low' priority bucket are displayed in the reordered sequence (Q, P, R), confirming the order did not revert to the initial state.",P0,negative
+TC-007,REQ-003,Verify micro-adjust order persists after a page refresh.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'High' priority bucket (e.g., Issue F, Issue G, Issue H).
+Issue F, Issue G, Issue H are in an initial specific order (e.g., F, G, H).","1. Reorder issues in the 'High' priority bucket (e.g., drag Issue G to be below Issue H, resulting in F, H, G).
+2. Observe the new order: Issue F, Issue H, Issue G.
+3. Refresh the browser page (F5 or browser refresh button).","The 'High' priority bucket displays the issues in the newly established order: Issue F, Issue H, Issue G. The micro-adjust ordering has persisted across page refreshes.",P0,functional
+TC-008,REQ-003,Reorder issues and immediately refresh multiple times.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'Medium' priority bucket (e.g., Issue L, Issue M, Issue N).
+Issue L, Issue M, Issue N are in an initial specific order (e.g., L, M, N).","1. Reorder issues in the 'Medium' priority bucket (e.g., drag Issue M to be above Issue L, resulting in M, L, N).
+2. Immediately refresh the browser page several times (e.g., 3-5 times) in quick succession.","The 'Medium' priority bucket consistently displays the issues in the newly established order (M, L, N) after all refreshes. No flickering or temporary reversion to the old order should occur.",P1,edge
+TC-009,REQ-003,Verify order does NOT revert to a previous state after page refresh.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 issues in the 'Low' priority bucket (e.g., Issue R, Issue S, Issue T).
+Issue R, Issue S, Issue T are in an initial specific order (e.g., R, S, T).","1. Reorder issues in the 'Low' priority bucket (e.g., drag Issue S to be above Issue T, resulting in R, S, T (new order)).
+2. Observe the new order.
+3. Refresh the browser page.","The issues in the 'Low' priority bucket are displayed in the reordered sequence (R, S, T (new order)), confirming the order did not revert to the initial state.",P0,negative
+TC-010,REQ-004,Verify micro-adjust order persists when viewed on a different device for the same user.,"User is logged in to Device A (e.g., desktop browser) and has access to a backlog view.
+User is logged in to Device B (e.g., mobile browser/app) with the same credentials and has access to the same backlog view.
+The backlog view on both devices is sorted by priority.
+There are at least 3 issues in the 'High' priority bucket (e.g., Issue J, Issue K, Issue L), in initial order J, K, L.","1. On Device A, reorder issues in the 'High' priority bucket (e.g., drag Issue K to be above Issue J, resulting in K, J, L).
+2. Observe the new order on Device A: Issue K, Issue J, Issue L.
+3. On Device B, refresh or navigate to the same backlog view.","Device B displays the 'High' priority bucket with the issues in the newly established order: Issue K, Issue J, Issue L. The micro-adjust ordering has persisted across devices.",P0,functional
+TC-011,REQ-004,Verify behavior when a user makes conflicting reorders on two different devices (Last Write Wins).,"User is logged in to Device A and Device B with the same credentials, accessing the same backlog view sorted by priority.
+There are at least 3 issues in the 'Medium' priority bucket (e.g., Issue P, Issue Q, Issue R), in initial order P, Q, R.","1. On Device A, reorder Issue Q to be above Issue P (Order: Q, P, R).
+2. *Immediately* on Device B, reorder Issue R to be above Issue Q (Order: R, Q, P).
+3. Wait for synchronization (e.g., 5 seconds).
+4. Refresh Device A and Device B.","Both devices A and B eventually converge to a consistent, final order (e.g., R, Q, P if Device B's change completed server sync last, or based on defined conflict resolution). There should be no contradictory states or data loss.",P1,edge
+TC-012,REQ-004,Verify order does NOT mismatch between devices.,"User is logged in to Device A and Device B with the same credentials, accessing the same backlog view sorted by priority.
+There are at least 3 issues in the 'Low' priority bucket (e.g., Issue S, Issue T, Issue U), in initial order S, T, U.","1. On Device A, reorder Issue T to be above Issue S (Order: T, S, U).
+2. Refresh Device B.","Device B displays the issues in the reordered sequence (T, S, U), not the original order or any other arbitrary order. The order is consistent across devices.",P0,negative
+TC-013,REQ-005,Verify micro-adjust order changes made by one user are visible to another team member in real time.,"User A is logged in and has access to a backlog view.
+User B (a different team member) is logged in to a separate browser/device and viewing the *same* backlog view.
+The backlog view for both users is sorted by priority.
+There are at least 3 issues in the 'High' priority bucket (e.g., Issue AA, Issue BB, Issue CC), in initial order AA, BB, CC.","1. On User A's screen, reorder issues in the 'High' priority bucket (e.g., drag Issue BB to be above Issue AA, resulting in BB, AA, CC).
+2. Observe User A's screen for the new order: Issue BB, Issue AA, Issue CC.
+3. Observe User B's screen simultaneously.","User B's screen updates in real time to reflect the new order: Issue BB, Issue AA, Issue CC, without needing to refresh the page.",P0,functional
+TC-014,REQ-005,Verify real-time synchronization with multiple users making changes simultaneously.,"User A, User B, and User C are logged in and viewing the *same* backlog view sorted by priority.
+There are at least 5 issues in the 'Medium' priority bucket (e.g., Issue M1-M5), in initial order M1, M2, M3, M4, M5.","1. User A drags M2 below M3 (potential order: M1, M3, M2, M4, M5).
+2. Simultaneously, User B drags M4 above M1 (potential order: M4, M1, M3, M2, M5).
+3. Simultaneously, User C drags M5 to the top of the bucket (potential order: M5, M4, M1, M3, M2).
+4. Observe the order on all three users' screens after all operations complete and synchronize.","All users' screens eventually converge to a consistent, final order that reflects all changes (e.g., M5, M4, M1, M3, M2). No issues should be lost or appear in contradictory positions across users. The order reflects the final series of adjustments.",P1,edge
+TC-015,REQ-005,Verify that changes are not significantly delayed or fail to synchronize in real time.,"User A is logged in and has access to a backlog view.
+User B is logged in to a separate browser/device and viewing the *same* backlog view.
+The backlog view for both users is sorted by priority.
+There are at least 3 issues in the 'Low' priority bucket (e.g., Issue L1, Issue L2, Issue L3), in initial order L1, L2, L3.","1. On User A's screen, reorder Issue L2 to be above Issue L1 (Order: L2, L1, L3).
+2. Immediately observe User B's screen for real-time update.","User B's screen updates to reflect the new order (L2, L1, L3) within the specified real-time threshold (see REQ-016). The update should not require a manual refresh and should not show an outdated order for more than a brief moment.",P0,negative
+TC-016,REQ-006,"Drag an issue from one priority bucket to another, verifying its priority updates.","User is logged in and has access to a backlog view sorted by priority.
+There is an issue (e.g., Issue X) in the 'High' priority bucket.
+There is a 'Medium' priority bucket with existing issues, providing a drop target.","1. Identify Issue X in the 'High' priority bucket.
+2. Click and hold Issue X to initiate drag.
+3. Drag Issue X from the 'High' bucket and drop it into the 'Medium' priority bucket, in a new micro-adjusted position.
+4. Observe the priority field of Issue X (e.g., by viewing issue details or inline display).",Issue X is now visually located in the 'Medium' priority bucket. Its priority field value is updated to 'Medium'. The micro-adjust ordering within the 'Medium' bucket accommodates its new position.,P0,functional
+TC-017,REQ-006,Drag an issue from a specific priority bucket to the 'No Priority' bucket.,"User is logged in and has access to a backlog view sorted by priority.
+There is an issue (e.g., Issue Z) in the 'Urgent' priority bucket.
+The 'No Priority' bucket exists and is visible.","1. Identify Issue Z in the 'Urgent' priority bucket.
+2. Click and hold Issue Z to initiate drag.
+3. Drag Issue Z from the 'Urgent' bucket and drop it into the 'No Priority' bucket.
+4. Observe the priority field of Issue Z.",Issue Z is now visually located in the 'No Priority' bucket. Its priority field value is updated to 'No Priority'.,P1,edge
+TC-018,REQ-006,"Drag an issue between priority buckets, but its priority field does not update.","User is logged in and has access to a backlog view sorted by priority.
+There is an issue (e.g., Issue Y) in the 'Low' priority bucket.
+There is a 'High' priority bucket with existing issues, providing a drop target.","1. Identify Issue Y in the 'Low' priority bucket.
+2. Click and hold Issue Y to initiate drag.
+3. Drag Issue Y from the 'Low' bucket and drop it into the 'High' priority bucket.
+4. Verify its visual position and check its priority field (e.g., by viewing issue details or inline display).","Issue Y is visually located in the 'High' priority bucket. Its priority field value *must* be updated to 'High'. If it remains 'Low' or any other value, this is a failure.",P0,negative
+TC-019,REQ-007,"Drag an issue upwards into the visual space *between* two priority buckets (e.g., between High and Medium). It should assume the lower priority (Medium).","User is logged in and has access to a backlog view sorted by priority.
+There are visible 'High' and 'Medium' priority buckets.
+There is an issue (e.g., Issue K) in the 'Low' priority bucket.
+Ensure visual drag-and-drop indicator clearly distinguishes drop zones within and between buckets.","1. Identify Issue K in the 'Low' priority bucket.
+2. Click and hold Issue K.
+3. Drag Issue K upwards, aiming to drop it *precisely into the visual separator space* between the 'High' and 'Medium' priority buckets.
+4. Release Issue K.
+5. Observe the final bucket and priority of Issue K.",Issue K is dropped into the 'Medium' priority bucket. Its priority field is updated to 'Medium'. Its micro-adjust position is within the 'Medium' bucket.,P1,functional
+TC-020,REQ-007,Drag an issue from 'Low' upwards to the space between 'Urgent' and 'High'. It should land in 'High'.,"User is logged in and has access to a backlog view sorted by priority.
+There are visible 'Urgent', 'High', 'Medium', 'Low' priority buckets.
+There is an issue (e.g., Issue L) in the 'Low' priority bucket.","1. Identify Issue L in the 'Low' priority bucket.
+2. Drag Issue L upwards, aiming for the visual separator between the 'Urgent' and 'High' priority buckets.
+3. Release Issue L.
+4. Observe the final bucket and priority of Issue L.",Issue L is dropped into the 'High' priority bucket. Its priority field is updated to 'High'.,P2,edge
+TC-021,REQ-007,"Dragging an issue upwards into the space between two buckets, but it incorrectly assumes the *higher* (more urgent) priority of the two.","User is logged in and has access to a backlog view sorted by priority.
+There are visible 'High' and 'Medium' priority buckets.
+There is an issue (e.g., Issue M) in the 'Low' priority bucket.","1. Identify Issue M in the 'Low' priority bucket.
+2. Drag Issue M upwards, aiming for the visual separator between the 'High' and 'Medium' priority buckets.
+3. Release Issue M.
+4. Observe the final bucket and priority of Issue M.","Issue M is dropped into the 'Medium' priority bucket. Its priority field is updated to 'Medium'. If it were incorrectly assigned 'High' priority, this would be a failure.",P1,negative
+TC-022,REQ-008,"Drag an issue downwards into the visual space *between* two priority buckets (e.g., between Urgent and High). It should assume the higher priority (Urgent).","User is logged in and has access to a backlog view sorted by priority.
+There are visible 'Urgent' and 'High' priority buckets.
+There is an issue (e.g., Issue N) in the 'Urgent' priority bucket.
+Ensure visual drag-and-drop indicator clearly distinguishes drop zones within and between buckets.","1. Identify Issue N in the 'Urgent' priority bucket.
+2. Click and hold Issue N.
+3. Drag Issue N downwards, aiming to drop it *precisely into the visual separator space* between the 'Urgent' and 'High' priority buckets.
+4. Release Issue N.
+5. Observe the final bucket and priority of Issue N.",Issue N is dropped into the 'Urgent' priority bucket. Its priority field is updated to 'Urgent'. Its micro-adjust position is within the 'Urgent' bucket.,P1,functional
+TC-023,REQ-008,Drag an issue from 'Urgent' downwards to the space between 'Low' and 'No Priority'. It should land in 'Low'.,"User is logged in and has access to a backlog view sorted by priority.
+There are visible 'Urgent', 'High', 'Medium', 'Low', 'No Priority' buckets.
+There is an issue (e.g., Issue O) in the 'Urgent' priority bucket.","1. Identify Issue O in the 'Urgent' priority bucket.
+2. Drag Issue O downwards, aiming for the visual separator between the 'Low' and 'No Priority' buckets.
+3. Release Issue O.
+4. Observe the final bucket and priority of Issue O.",Issue O is dropped into the 'Low' priority bucket. Its priority field is updated to 'Low'.,P2,edge
+TC-024,REQ-008,"Dragging an issue downwards into the space between two buckets, but it incorrectly assumes the *lower* (less urgent) priority of the two.","User is logged in and has access to a backlog view sorted by priority.
+There are visible 'High' and 'Medium' priority buckets.
+There is an issue (e.g., Issue P) in the 'Urgent' priority bucket.","1. Identify Issue P in the 'Urgent' priority bucket.
+2. Drag Issue P downwards, aiming for the visual separator between the 'High' and 'Medium' priority buckets.
+3. Release Issue P.
+4. Observe the final bucket and priority of Issue P.","Issue P is dropped into the 'High' priority bucket. Its priority field is updated to 'High'. If it were incorrectly assigned 'Medium' priority, this would be a failure.",P1,negative
+TC-025,REQ-009,Verify a user's initial micro-adjust order correctly reflects their pre-existing manual sort index upon feature release.,"User is logged in and has access to a backlog view sorted by priority.
+The feature 'Priority Micro-Adjust' has just been enabled for the first time for this user/project.
+There are at least 5 issues in the 'High' priority bucket that previously had a defined manual sort index (e.g., H1, H2, H3, H4, H5, where H1 was manually sorted highest).
+The view is showing issues sorted by priority, which implicitly uses the manual sort index as the secondary sort key before micro-adjustments.","1. Navigate to the backlog view sorted by priority.
+2. Observe the order of issues within the 'High' priority bucket.","The issues within the 'High' priority bucket are displayed in the exact order previously defined by the manual sort index (e.g., H1, then H2, then H3, etc.). This order becomes the initial micro-adjust order.",P0,functional
+TC-026,REQ-009,"Verify initial micro-adjust ordering for issues without a pre-existing manual sort index (e.g., new issues or new user).","User is a brand new user or a project without any established manual sort indexes for issues.
+The feature 'Priority Micro-Adjust' has just been enabled.
+There are at least 3 issues in a priority bucket (e.g., Issue A, Issue B, Issue C) that have never been manually sorted, e.g., created recently.","1. Navigate to the backlog view sorted by priority.
+2. Observe the order of issues within a priority bucket (e.g., 'Medium').","The issues are displayed in a deterministic, consistent order (e.g., by creation date or ID) as if a manual sort index had been implicitly set based on this order. This order should then be treated as the initial micro-adjust order.",P1,edge
+TC-027,REQ-009,Verify that the initial micro-adjust order does not contradict the existing manual sort index.,"User is logged in, and the micro-adjust feature is newly active for them.
+Issues I1, I2, I3 are in a 'High' priority bucket, which previously had a specific manual sort order (e.g., I1, then I3, then I2).","1. Navigate to the backlog view sorted by priority.
+2. Observe the order of issues within the 'High' priority bucket.","The issues are displayed in the order I1, I3, I2. If the order is any different (e.g., I1, I2, I3), it indicates a failure in bootstrapping.",P0,negative
+TC-028,REQ-010,"Verify that after bootstrapping, subsequent changes to the *old* manual sort index mechanism no longer affect the issue order.","User is logged in and has access to a backlog view sorted by priority.
+The micro-adjust feature is active and bootstrapped (TC-025 is successful).
+There are at least 3 issues in a 'High' priority bucket (e.g., M1, M2, M3), and their micro-adjust order is established (e.g., M1, M2, M3).
+Assume there's an 'admin' or 'developer' way to directly manipulate the 'manual sort index' field for issues, simulating the deprecated mechanism.","1. Note the current micro-adjust order of issues in the 'High' bucket (e.g., M1, M2, M3).
+2. Using an admin tool, *change* the manual sort index of M2 so it would theoretically appear above M1 if the old mechanism were active.
+3. Refresh the backlog view (or wait for real-time updates).","The order of issues in the 'High' bucket remains M1, M2, M3 (the micro-adjust order). The manipulation of the deprecated manual sort index has no impact on the displayed order.",P0,functional
+TC-029,REQ-010,Verify that the manual sort index field (if it was ever visible/editable to users) is now hidden or read-only.,"User is logged in and has access to issue details.
+The micro-adjust feature is active.
+Historically, there was a visible 'manual sort index' field on issue details or bulk edit.","1. Open the details view for an issue.
+2. Check for any 'manual sort index' field.
+3. Attempt to edit any such field if found.","The 'manual sort index' field is either completely absent from the UI, or it is present but displayed as read-only and cannot be altered by a user.",P1,edge
+TC-030,REQ-010,Verify that the old manual sort index does not unexpectedly override micro-adjust ordering.,"User is logged in, micro-adjust is active and bootstrapped (TC-025 successful).
+Issues X, Y, Z are in the 'High' priority bucket with micro-adjust order X, Y, Z.
+Assume there's an 'admin' or 'developer' way to directly manipulate the 'manual sort index' field for issues, and its value is changed for Y to be lower than X, which would normally place Y before X.","1. Observe the micro-adjust order (X, Y, Z).
+2. An admin changes Y's manual sort index to a value that would make it 'higher priority' than X's old manual sort index.
+3. Refresh the backlog view.","The micro-adjust order remains X, Y, Z. If the order changes to Y, X, Z, it means the manual sort index is still improperly influencing the displayed order.",P0,negative
+TC-031,REQ-011,Verify issues are always primarily grouped by their 'Urgent / High / Medium / Low / No Priority' field.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are issues with various priorities (e.g., Issue A - Urgent, Issue B - High, Issue C - Medium, Issue D - High, Issue E - Low).","1. Navigate to the backlog view sorted by priority.
+2. Observe the overall grouping of issues.","All 'Urgent' issues are grouped together at the top, followed by 'High' issues (e.g., B, D), then 'Medium' (C), 'Low' (E), and 'No Priority' issues, irrespective of micro-adjust order within those buckets. The buckets are clearly distinguishable.",P0,functional
+TC-032,REQ-011,Verify display when some priority buckets are empty.,"User is logged in and has access to a backlog view sorted by priority.
+Only 'Urgent', 'Low', and 'No Priority' buckets have issues. 'High' and 'Medium' are empty.","1. Navigate to the backlog view sorted by priority.
+2. Observe the grouping of issues.","The 'Urgent' bucket is displayed, followed by visible (possibly collapsed or explicitly empty) 'High' and 'Medium' buckets, then 'Low', then 'No Priority'. The priority bucket structure is maintained, even if some are empty.",P1,edge
+TC-033,REQ-011,"Verify issues are not primarily grouped by any other field (e.g., assignee, status) when sorted by priority.","User is logged in and has access to a backlog view sorted by priority.
+There are issues with different priorities and different assignees (e.g., Issue A - High, User X; Issue B - Medium, User X; Issue C - High, User Y).","1. Navigate to the backlog view sorted by priority.
+2. Observe the primary grouping of issues.","Issue A (High) and Issue C (High) are grouped together before Issue B (Medium), regardless of their assignees. The primary grouping is strictly by priority field.",P0,negative
+TC-034,REQ-012,"Verify that within a priority bucket, issues are sorted by their micro-adjust order.","User is logged in and has access to a backlog view sorted by priority.
+There are at least 4 issues in the 'High' priority bucket (e.g., H1, H2, H3, H4) with an established micro-adjust order (e.g., H4, H1, H3, H2).","1. Navigate to the backlog view sorted by priority.
+2. Observe the order of issues within the 'High' priority bucket.","The issues within the 'High' priority bucket are displayed in the micro-adjusted order (H4, H1, H3, H2), directly following the primary sort by priority bucket.",P0,functional
+TC-035,REQ-012,Verify behavior of micro-adjust ordering in a bucket with only one item.,"User is logged in and has access to a backlog view sorted by priority.
+The 'Medium' priority bucket contains only one issue (e.g., M1).
+Other buckets have multiple issues.","1. Navigate to the backlog view sorted by priority.
+2. Observe the 'Medium' priority bucket.",The single issue M1 is displayed correctly within its 'Medium' priority bucket. The micro-adjust ordering doesn't have an observable effect but should maintain the item's position implicitly and be ready for additional items.,P2,edge
+TC-036,REQ-012,Verify micro-adjust ordering is NOT ignored within a priority bucket.,"User is logged in and has access to a backlog view sorted by priority.
+There are at least 3 issues in the 'Low' priority bucket (e.g., L1, L2, L3) that have been micro-adjusted to the order L3, L1, L2.","1. Navigate to the backlog view sorted by priority.
+2. Observe the order of issues within the 'Low' priority bucket.","The issues within the 'Low' priority bucket are displayed in the micro-adjusted order L3, L1, L2. If they are displayed in any other order (e.g., by ID, creation date, or original manual sort index), it's a failure.",P0,negative
+TC-037,REQ-013,Verify consistency when dragging an issue to a new priority bucket and new micro-adjust position.,"User is logged in and has access to a backlog view sorted by priority.
+Issue P is in the 'High' priority bucket.
+The 'Medium' priority bucket contains multiple issues and is a valid drop target.","1. Observe Issue P's current priority: 'High'.
+2. Drag Issue P from the 'High' bucket and drop it into the 'Medium' bucket, placing it between two existing issues.
+3. Verify Issue P's visual location within the Medium bucket.
+4. Check Issue P's priority field (e.g., by opening its details or inline display).",Issue P is visually displayed within the 'Medium' priority bucket at its new micro-adjusted position. Its priority field value is consistently updated to 'Medium'. There are no visual or data inconsistencies.,P0,functional
+TC-038,REQ-013,"Verify consistency when a user quickly drags an issue out of a bucket and then back to its original bucket/priority, but a new micro-adjust position.","User is logged in and has access to a backlog view sorted by priority.
+Issue Q is in the 'High' priority bucket (initial order).
+The 'Medium' priority bucket contains issues.","1. Drag Issue Q from 'High' to 'Medium'. Observe its priority field changes to 'Medium'.
+2. Immediately drag Issue Q back from 'Medium' to 'High', placing it in a *different* micro-adjusted position within 'High' than its original spot.
+3. Verify Issue Q's visual location within the High bucket.
+4. Check Issue Q's priority field.","Issue Q is visually displayed within the 'High' priority bucket at its latest micro-adjusted position. Its priority field value is consistently 'High'. No stale data or visual cues remain, and the intermediate priority change is corrected.",P1,edge
+TC-039,REQ-013,Verify that the system does not enter a state where an issue is visually in one priority bucket but its underlying priority field value indicates another.,"User is logged in and has access to a backlog view sorted by priority.
+Issue R is in the 'Low' priority bucket.
+The 'High' priority bucket is available.","1. Drag Issue R from the 'Low' bucket and drop it into the 'High' priority bucket.
+2. Visually confirm it's in the 'High' bucket.
+3. Immediately check the priority field of Issue R (e.g., via quick edit, issue detail popup, or API call if visible).","The priority field of Issue R *must* display 'High'. If it still shows 'Low' or any other conflicting value, this is a critical failure indicating data inconsistency.",P0,negative
+TC-044,REQ-018,User can precisely insert an issue between any two existing issues within a priority bucket.,"User is logged in and has access to a backlog view sorted by priority.
+There are at least 3 issues in the 'High' priority bucket (e.g., H1, H2, H3) in that order.","1. Drag H3 from its position and attempt to drop it precisely between H1 and H2.
+2. Observe the visual drop indicator during drag, ensuring it highlights the exact insertion point.
+3. Release H3.","H3 is successfully placed between H1 and H2, resulting in the order H1, H3, H2. The drag-and-drop interaction allows for precise placement without snapping to predefined positions other than between individual items.",P0,functional
+TC-045,REQ-018,Drag an item between two items when there are only two items in the bucket.,"User is logged in and has access to a backlog view sorted by priority.
+The 'Medium' priority bucket contains exactly two issues (M1, M2) in that order.","1. Drag M2 from its position and attempt to drop it above M1.
+2. Release M2.","M2 is successfully placed above M1, resulting in the order M2, M1. The fine-grained adjustment works even with minimal items.",P2,edge
+TC-046,REQ-018,"Verify that the system does not force items to snap to large, predefined intervals or only allow movement of whole groups, preventing fine-grained control.","User is logged in and has access to a backlog view sorted by priority.
+There are 5 issues in a 'High' priority bucket (H1 to H5) in order (H1, H2, H3, H4, H5).","1. Attempt to drag H4 to be between H2 and H3.
+2. Observe the drag behavior and drop target indicators during the drag.","The system allows H4 to be dropped directly between H2 and H3, resulting in H1, H2, H4, H3, H5. It does not force H4 to be placed only at the very top or bottom of the bucket, or only in large 'chunks' of positions, confirming fine-grained adjustment.",P1,negative
+TC-047,REQ-019,Perform multiple micro-adjustments across different buckets over time and verify the overall stability of the ordering.,"User is logged in and has access to a backlog view with multiple priority buckets and many issues.
+The backlog view is sorted by priority.
+Multiple drag-and-drop reorders have been performed across various priority buckets over several days/sessions, establishing a specific user-defined order.","1. Review the current state of micro-adjusted ordering across all priority buckets.
+2. Log out and log back in.
+3. Reopen the backlog view.
+4. Verify that all previously established micro-adjust orders are maintained as expected across all buckets.
+5. (Optional) Make a few more changes, then refresh the page and verify again.","The overall backlog order, including both primary priority buckets and secondary micro-adjustments within them, remains stable and consistent with the last changes made by the user across sessions and refreshes, reflecting a stable, opinionated priority.",P0,functional
+TC-048,REQ-019,"Simulate an interruption (e.g., browser crash, network loss) during a drag operation.","User is logged in and has access to a backlog view.
+There are multiple issues in various priority buckets.
+Network proxy or browser crash simulation tool is available.","1. Start dragging an issue (e.g., from High to Medium).
+2. *Before releasing the mouse button to complete the drop*, simulate a network disconnection or browser crash.
+3. Restore network/restart browser.
+4. Re-navigate to the backlog view.",The issue should revert to its state *before* the drag operation started (no data loss for uncommitted changes). No partial or inconsistent changes should be visible. The system maintains a stable order by not committing incomplete operations.,P1,edge
+TC-049,REQ-019,Verify that the order does not spontaneously change or 'drift' from the user's defined order over time without interaction.,"User is logged in and has established a specific micro-adjust order within several priority buckets (e.g., L1, L3, L2 in Low priority).
+Observe this order over a period of time (e.g., several hours or days) without any further user interaction or new issues being added/removed.","1. Note the precise order of issues within several priority buckets.
+2. Log out and log in multiple times over a period (e.g., 24 hours).
+3. Do not perform any drag-and-drop actions or other modifications.
+4. Re-check the order of issues.","The order of issues remains exactly as the user last defined it. There are no unexpected shifts, changes, or re-sorts that deviate from the user's established micro-adjustments.",P0,negative
+TC-050,REQ-020,Verify drag-and-drop functionality for 'Task' type items.,"User is logged in and has access to a backlog view sorted by priority.
+There are at least 3 'Task' type issues in a priority bucket (e.g., T1, T2, T3) in order.","1. Drag Task T2 to be above Task T1 within its priority bucket.
+2. Observe the new order.","Tasks are successfully reordered within the bucket (T2, T1, T3). The micro-adjust functionality works for 'Task' type items.",P0,functional
+TC-051,REQ-020,Verify drag-and-drop functionality for 'Project' type items.,"User is logged in and has access to a backlog view sorted by priority.
+There are at least 3 'Project' type issues in a priority bucket (e.g., P1, P2, P3) in order.","1. Drag Project P2 to be below Project P3 within its priority bucket.
+2. Observe the new order.","Projects are successfully reordered within the bucket (P1, P3, P2). The micro-adjust functionality works for 'Project' type items.",P0,functional
+TC-052,REQ-020,Verify drag-and-drop functionality in a list containing a mix of 'Task' and 'Project' types.,"User is logged in and has access to a backlog view sorted by priority.
+A priority bucket (e.g., 'Medium') contains a mix of tasks and projects (e.g., Task T1, Project P1, Task T2, Project P2) in that order.","1. Drag Task T2 to be above Project P1 (order becomes T1, T2, P1, P2).
+2. Drag Project P2 to be above Task T1 (order becomes P2, T1, T2, P1).
+3. Observe the resulting order.","Both Task and Project items can be freely reordered relative to each other within the same priority bucket. The resulting order reflects the drag-and-drop actions (e.g., P2, T1, T2, P1).",P1,edge
+TC-053,REQ-020,"Verify that both 'Tasks' and 'Projects' are draggable, not just one type.","User is logged in and has access to a backlog view sorted by priority.
+A priority bucket contains a Task (T1) and a Project (P1).","1. Attempt to drag Task T1 to a new position.
+2. Attempt to drag Project P1 to a new position.",Both Task T1 and Project P1 can be successfully dragged and dropped to new positions. Neither type of item is prevented from being reordered.,P0,negative
+TC-054,REQ-021,Drag and drop a project from the middle of a priority bucket to a new position within the same bucket.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There are at least 3 'Project' type issues in the 'High' priority bucket (e.g., Project A, Project B, Project C).
+Project B is between Project A and Project C.","1. Identify Project B in the 'High' priority bucket.
+2. Click and hold Project B to initiate drag.
+3. Drag Project B downwards past Project C.
+4. Release Project B, positioning it below Project C within the 'High' priority bucket.","Project B is visually reordered and now appears below Project C within the 'High' priority bucket (resulting order: A, C, B). Project A remains above the original position of B. No change in the priority field of Project B.",P0,functional
+TC-055,REQ-021,Drag a project to an otherwise empty priority bucket (which implies changing its priority).,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There is a 'Project' (e.g., Project X) in the 'High' priority bucket.
+The 'Medium' priority bucket is currently empty.","1. Identify Project X in the 'High' priority bucket.
+2. Click and hold Project X to initiate drag.
+3. Drag Project X into the 'Medium' priority bucket.
+4. Release Project X.",Project X is now the sole item in the 'Medium' priority bucket. Its priority field is updated to 'Medium'.,P1,edge
+TC-056,REQ-021,Attempt to drag a project but it cannot be moved.,"User is logged in and has access to a backlog view.
+The backlog view is sorted by priority.
+There is at least one 'Project' type issue (e.g., Project D) in the 'Low' priority bucket.","1. Identify Project D.
+2. Attempt to click and drag Project D to a new position within its priority bucket.","Project D can be successfully dragged and dropped. If it cannot be dragged, this is a failure.",P0,negative
+TC-057,REQ-022,Verify that the visual display of items within a priority bucket accurately reflects their micro-adjusted order.,"User is logged in and has access to a backlog view sorted by priority.
+The 'High' priority bucket contains issues (e.g., H1, H2, H3) that have been micro-adjusted into the order H2, H1, H3.","1. Navigate to the backlog view sorted by priority.
+2. Observe the issues within the 'High' priority bucket.","The issues are visually rendered in the order H2, H1, H3, clearly indicating their relative micro-adjusted priority. Items above are visually higher priority, items below are lower priority within the bucket.",P0,functional
+TC-058,REQ-022,"Verify visual representation is consistent for a long list of items within a single bucket, including scroll behavior.","User is logged in and has access to a backlog view sorted by priority.
+A 'Medium' priority bucket contains 50+ issues with a complex micro-adjusted order.
+The list requires scrolling to see all items.","1. Navigate to the backlog view.
+2. Scroll smoothly through the entire 'Medium' priority bucket from top to bottom and back.
+3. Observe the order of issues as they appear and disappear from view.","The issues maintain their micro-adjusted relative order throughout the scrollable list. There is no visual 'jumpiness', re-ordering, or inconsistent display as new items come into view or older ones scroll out.",P1,edge
+TC-059,REQ-022,"Verify that the visual order does not contradict the internal, persisted micro-adjust order.","User is logged in and has access to a backlog view sorted by priority.
+The 'Low' priority bucket contains issues (e.g., L1, L2, L3) with a persisted micro-adjusted order of L3, L1, L2 (confirmed by data inspection if possible).","1. Navigate to the backlog view sorted by priority.
+2. Observe the issues within the 'Low' priority bucket.","The issues are visually displayed in the order L3, L1, L2. If they appear in any other order (e.g., L1, L2, L3), it's a visual mismatch and a failure.",P0,negative
