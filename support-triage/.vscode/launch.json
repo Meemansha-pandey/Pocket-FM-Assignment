@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Triage Agent (200 tickets)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["data/customer_support_tickets.csv", "--max", "200"],
+      "env": {
+        "GROQ_API_KEY": "your-gemini-key-here"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run Triage Agent (50 tickets - quick test)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": ["data/customer_support_tickets.csv", "--max", "50"],
+      "env": {
+        "GROQ_API_KEY": "your-gemini-key-here"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

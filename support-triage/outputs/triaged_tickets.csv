@@ -1,0 +1,1113 @@
+ticket_id,category,confidence,escalate,escalation_reason,suggested_reply,original_text
+4831,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Product setup
+I'm having an issue with the {product_purchased}. Please assist. I'm using xda-developer for something different. If there are issues with the {product_purchased} it's likely you are not using the I've tried clearing the cache and data for the {prod"
+7076,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99908, Requested 261. Please try again in 2m26.016s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Battery life
+I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue? I will refer to this issue I've checked for any availa"
+4716,billing_refund,5,False,,,"Ticket Type: Billing inquiry
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please give credit to: @joeyclay I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe."
+2023,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+4. Check and compare product pricing
+
+You will see that prices are based on the current prices on your credit card. If you are a resident of I've noticed a peculiar error "
+677,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+I would like my price to rise so that I can return it.
+
+Please notify me if you do not want their refund.
+
+Please do I've noticed a sudden decrease in battery life on my {p"
+2284,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Refund request
+I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them?
+
+
+I cannot verify this information though. It doesn't look very I've noticed that the is"
+5077,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99900, Requested 523. Please try again in 6m5.472s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?"
+2477,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist.
+
+If you are having trouble with your package you need to contact customer service with the following:
+
+Website
+
+P.O. Box 300 I've noticed a sudden decrease in battery life on my"
+6848,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99892, Requested 264. Please try again in 2m14.783999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Hardware issue
+I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? Will my account get frozen in order to save money? Is my password I've check"
+512,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99884, Requested 523. Please try again in 5m51.647999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thanks, and thanks a lot, I've tried clearing the cache and data for the {product_purchased} app, but the issue persists."
+5194,account_issue,4,False,,,"Ticket Type: Product inquiry
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist. Your product has now shipped to us and the seller agreed to ship to your address for you to use. Thank you
+
+
+Shipping
+
+We believe you will ship I've tried clearing the cache and data"
+8011,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Payment issue
+I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them? Thanks! <s2> (2:23) (edited 3 I'm using the original charger that came with my {pro"
+5693,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99876, Requested 522. Please try again in 5m43.872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist.
+
+The item is currently under repair. The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly."
+790,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99867, Requested 548. Please try again in 5m58.56s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Payment issue
+I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available?
+
+Not really, at least from a hardware perspective. The hardware I've tried u"
+7496,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99859, Requested 536. Please try again in 5m41.28s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+You cannot add value by spending a minimum of $20. Any changes to the {product_purchased} will violent make this purchase. I've already contacted customer support multiple times, but "
+1489,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+3. How do I switch the product from a gift?
+
+Switch the product from gift to gift.
+
+
+This tool will automatically switch the product I've tried different settings and configurati"
+2944,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99850, Requested 539. Please try again in 5m36.096s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist. #include <u> @include ""<u>{rpi}, @import {rxpi}""; }
+
+This will be the first set of functions that I've already contacted customer support multiple times, but the issue remains "
+6985,account_issue,4,False,,,"Ticket Type: Billing inquiry
+Subject: Account access
+I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+Microsoft recommends you follow these steps, on the Start menu, right-click a I've checked for any availabl"
+2128,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+""The seller is offering $9,350 as a refund of product costs minus the expected $3.50 in warranty. "" I've noticed a peculiar error message popping up on my {product_purchase"
+1056,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99842, Requested 253. Please try again in 1m22.08s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Product setup
+I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? I'm sorry! I've tried using different cables, adapters, or peripherals with my {product_purchased},"
+2572,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Delivery problem
+My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this? Thanks
+
+ReplyReply
+
+ReplyReply Balloon: I've seen this issue I've tried using differe"
+6780,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99834, Requested 252. Please try again in 1m14.304s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thanks!
+
+~Dennis
+
+A new game is available which I found to be pretty much better. All the options are in ""Create a I've already contacted customer support multiple times, but the i"
+3957,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Delivery problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+* Update, delete, or delete this item
+
+This Item is discontinued, or no longer available.
+
+Please help us keep the order order current I need assistance as soon as possible becaus"
+2988,account_issue,4,False,,,"Ticket Type: Billing inquiry
+Subject: Software bug
+I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account?
+
+There are This problem started occurring after the "
+3101,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Product setup
+I'm having an issue with the {product_purchased}. Please assist. — Mike O'Sullivan (@MikeO'Sullivan) January 9, 2015
+
+As the tweet went viral online, more and more people shared their complaints about both I've recently updated the firmware of"
+3093,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist.
+
+Note: The payment for the services are not currently paid, or they are not available for your purchases. We have received some enquiry as to whether that This problem started occ"
+2523,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99825, Requested 264. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Product setup
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please provide a valid email address which matches the ID you specified for the product in the product description and email the email address.
+
+Please show an error I've performed a"
+234,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist. Thanks! I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?"
+869,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Product compatibility
+I'm having an issue with the {product_purchased}. Please assist. Thank you.
+
+I'm having an issue with the {product_purchased}. Please assist. Thank you.
+
+I'm having an issue with I'm concerned about the security of my {product_purchase"
+2535,account_issue,4,False,,,"Ticket Type: Refund request
+Subject: Delivery problem
+I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+You can recover your login by resetting your password in the {product_p I'm experiencing this issue on mul"
+7227,billing_refund,4,False,,,"Ticket Type: Product inquiry
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. -S @david@mei_mai_ui_wu @geolphobee @geolphobee @m_mai I'm experiencing this issue on multiple devices of the same model, so it seems to be a widespread problem."
+5772,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99817, Requested 544. Please try again in 5m11.904s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thanks!
+
+Pawel
+
+
+Offline
+
+
+Activity: 112
+
+Merit: 10
+
+
+MemberActivity: 112Merit: 10 Re: The issue I'm facing is intermittent. Sometimes it works fine, but other times it ac"
+4923,technical_bug,5,False,,"I'm so sorry to hear that you're having trouble accessing your account after the recent software update. I'd like to help you troubleshoot the issue - can you please try logging out and then back in to see if that resolves the problem? If the issue persists, I'll be happy to look into this further with our technical team. Please let me know if there's anything else I can do to assist you.","Ticket Type: Technical issue
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist. This problem started occurring after the recent software update. I haven't made any other changes to the device."
+6663,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99992, Requested 334. Please try again in 4m41.664s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Delivery problem
+I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available?
+
+I'm receiving these messages frequently from the public, who have I'm co"
+4929,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99984, Requested 339. Please try again in 4m39.072s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Payment issue
+I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue? First of all, enable the I've recently updated the fi"
+6347,billing_refund,4,False,,,"Ticket Type: Product inquiry
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. I'm trying to create a ""new"" product that is new to the same company. Please help. I hope the new product I have is working out well. I've noticed that the issue occurs consistently w"
+2139,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+Product Details
+
+Dotable
+
+Available in either a white or grey.
+
+Color Information
+
+Please note that this product has been made I've already contacted customer support multiple ti"
+34,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist. We hope that every vendor takes the time it takes in to do the following: ""Remove the product from your account - notify consumers, call them, make their I'm concerned about the secur"
+4162,billing_refund,5,False,,,"Ticket Type: Billing inquiry
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. #purchase #id=1422 #product_sell #id=1421 #value@product_purchased #id=1420 #product_ I've reviewed the troubleshooting steps on the official support website, but they didn't resolve "
+5509,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist.
+
+""Products that have been purchased at that time are now out of stock. Thank you for your support. The {product_purchased} will get I'm using the original charger that came with my {p"
+4462,subscription,4,False,,,"Ticket Type: Technical issue
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+1.1.1.1 - Fix for issue #1115
+
+1.1.5.1 - Fixed some typo
+
+1. I've already contacted customer support multiple times, but the issue remains unresolved."
+4904,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Refund request
+My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this? I want to know what other people have done to this machine. Could you please I'm experiencing"
+361,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+If your account has an account holder you need to create an account. For example, if you have a 4K account, then the account holder needs access I need assistance as soon as p"
+2580,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99975, Requested 539. Please try again in 7m24.095999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Data loss
+I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue?
+
+If you've already set up your router and connected via a modem I've already contacted customer support"
+7308,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist.
+
+My question?
+
+Does the Product Purchase Policy address the current availability (if at all) of the product we provide?
+
+Please see the FAQ I've recently updated the firmware of m"
+2813,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist. - Please also help me with further problems like the {productID} has been changed.
+
+I'm having an issue with the {product_purchased I've noticed a peculiar error message popping"
+8133,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+
+I am having an issue with the {product_purchased}. Please assist. I am having an issue with the {product_purchased}. I've followed online tutorials and community forums to troubles"
+2517,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99966, Requested 335. Please try again in 4m20.064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Hardware issue
+I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account? [ edit ] I've performed a factory reset on my {pro"
+8144,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99958, Requested 339. Please try again in 4m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist. I am running the full product by the end of next week and the package says ""I received205 and 15% refund. I ordered another product on the same day I've performed a factory reset on my"
+6947,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist.
+
+You've now just charged $10. We're not sure if we'll receive it for an error or an refund. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{err"
+2949,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Network problem
+My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this? Thank you so much! <3 ------------------------- http://webdevel. I've checked the device se"
+5515,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99949, Requested 326. Please try again in 3m57.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Display issue
+I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue?
+
+Here's what you CAN do:
+
+Search for your project's { I'm worried that the issue might be hardware-related and mi"
+6994,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Display issue
+I'm having an issue with the {product_purchased}. Please assist. Thanks!
+
+I'm having an issue with the product_purchased,. Please assist. Thanks!
+
+The price is $19.00 without a I'm unable to find the option to perform the desired action in the {pro"
+1091,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99941, Requested 539. Please try again in 6m54.72s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Display issue
+I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them? Thanks! I rely heavily on my {product_purchased} for my daily tasks, and this issue is h"
+240,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+When you select the product on our site and click on the 'add to cart' button, it says: 'Sorry – no product is found. Please I'm using the original charger that came with my {pro"
+3146,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Delivery problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+Here comes the update in regards to the [v1.01] release.
+
+To make sure any errors that you see during the troubleshooting will I've checked the device settings and made sure that "
+7462,technical_bug,2,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99933, Requested 541. Please try again in 6m49.536s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Installation support
+I'm facing a problem with my {product_purchased}. The {product_purchased} is not turning on. It was working fine until yesterday, but now it doesn't respond.
+
+Solution 2) Don't use the I've tried troubleshooting steps mentioned in the u"
+1618,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+If you need help or advice, please reach out to me in the forums or email support@zombiecobra.com.
+
+We can The issue I'm facing is intermittent. Sometimes it works fine, bu"
+6634,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist.
+
+The price is at the top of our list. If you can't find where you're at, try our online store.
+
+The item in our I've tried different settings and configurations on my {product_purchased"
+6356,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Delivery problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+"" I was really curious why you didn't add the first product to your shopping cart. If you know who gave it away... I'll be happy to I'm using the original charger that came with m"
+4150,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99924, Requested 538. Please try again in 6m39.168s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Delivery problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+The product purchased can only be used with the product that it was purchased with.
+
+If there is already an item in the inventory, the items in I've checked the device settings an"
+2772,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99916, Requested 330. Please try again in 3m32.543999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Product setup
+I'm having an issue with the {product_purchased}. Please assist.
+
+You should do that as soon as you've purchased:
+
+Go to your purchase page.
+
+Tap the item information in the lower right hand corner I've noticed that the issue occurs consistently wh"
+711,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+{product_purchased}
+
+{product_id}
+
+{product_name},
+
+{product_id, product_name I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far."
+4368,content_access,4,False,,,"Ticket Type: Product inquiry
+Subject: Delivery problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+You are an approved user.
+
+You are not logged in.
+
+
+There is no ""My Account"" feature. I've followed online tutorials and community forums to troubleshoot the issue, but no luck so"
+7717,account_issue,4,False,,,"Ticket Type: Product inquiry
+Subject: Installation support
+I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account? I've entered a The issue I'm facing is inter"
+8212,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99907, Requested 330. Please try again in 3m24.768s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Software bug
+There seems to be a hardware problem with my {product_purchased}. The screen is flickering, and I'm unable to use it. What should I do? I think it Squadron 42's UI has not been changed or redesigned for this build I need assistance as soon as possib"
+3429,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you.
+
+-Mark I've checked the device settings and made sure that everything is configured correctly."
+3039,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist. If you are able to send me a refund please contact me at info@miami2g.com for any reason.
+
+In order to keep the money I've noticed a peculiar error message popping up on my {product_pur"
+5843,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Product setup
+I'm having an issue with the {product_purchased}. Please assist.
+
+We need some basic equipment to move the order of orders. Please help us and we'll work it out with you after we work that out. I've performed a factory reset on my {product_pur"
+8304,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99899, Requested 547. Please try again in 6m25.344s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist.
+
+I'm having an issue with the {product_purchased}. Please assist. Can you help?
+
+No, we're working through this issue I've performed a factory reset on my {product_purchased}, hoping it w"
+5142,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99890, Requested 333. Please try again in 3m12.672s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist.
+
+Solutions
+
+Cake and Basket, The Whole Meal:
+
+You don't need to be concerned about your eggs being in shape and tasting I've recently updated the firmware of my {product_purchased}, and t"
+1194,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist.
+
+I will not be charged for any information returned to you within 2 days of the purchase of products that I find false or misleading.
+
+I am not I've noticed a peculiar error mess"
+1560,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99882, Requested 534. Please try again in 5m59.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+In case there is confusion that might be a bad idea, please feel free to contact me in my IRC channel. Thanks I need assistance as soon as possible because it's affecting my work and "
+7186,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Data loss
+There seems to be a hardware problem with my {product_purchased}. The screen is flickering, and I'm unable to use it. What should I do?
+
+It's a pretty simple workaround, actually. I don't wish to I'm experiencing this issue on multiple devices of "
+3004,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99874, Requested 550. Please try again in 6m6.336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Battery life
+I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue?
+
+You can check the settings of every mobile device you use by using the mobile I'm concerned about the security of"
+626,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Product recommendation
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please note that the {product_purchased} number is a temporary identifier that is not used in the data of any future operations. If you can I've tried troubleshooting steps "
+3382,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please note that the product is not sold for profit and is not designed for use by the public, except when otherwise indicated in the product description. This problem st"
+5889,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Product compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please help me.
+
+Please send me your support messages.
+
+It seems my new cart works quite well, it has become possible to find a I've performed a factory reset on my {pro"
+7385,account_issue,4,False,,,"Ticket Type: Technical issue
+Subject: Product setup
+I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it?
+
+It should say this:
+
+{your_device_id}
+
+But I've checked the device settings and made sure that everything is configured cor"
+7987,billing_refund,5,False,,,"Ticket Type: Billing inquiry
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist.
+
+(I'm having an issue with the}. Please assist. My problem is a direct email for me. Please email me or PM my account. I did I've tried clearing the cache and data for the {product_pu"
+3246,content_access,4,False,,,"Ticket Type: Product inquiry
+Subject: Delivery problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+
+<div>
+
+<p><strong>No. Product Purchased: No
+
+
+<strong>Price Paid: $9.99 I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far."
+454,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist.
+
+Sell for the same amount... 2.99
+
+You now have a choice. As soon as you spend $1000... it will be back. I've tried different settings and configurations on my {product_purchased}, b"
+6379,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99865, Requested 335. Please try again in 2m52.8s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist.
+
+I have 3 devices:
+
+An iPhone, iPad, iPad, and Windows Phone 8/10.
+
+I don't have a camera, I've recently updated the firmware of my {product_purchased}, and the issue started happeni"
+3685,subscription,5,False,,,"Ticket Type: Cancellation request
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+Q8. When should the new products use the brand? Ashbrook has a range of new products, but the new products aren't that common? I've already contacted customer support multiple"
+4762,billing_refund,4,False,,,"Ticket Type: Billing inquiry
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist. Please assist. I will add your name to the product to be added. Please assist. Please assist. If you need extra help please contact me. Thank you. I've noticed a peculiar error messa"
+909,subscription,4,False,,,"Ticket Type: Cancellation request
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. (I'm just wondering: what was the price, etc.). I can't get this anywhere. If you cannot find the package with the ""product_purch I've recently updated the firmware of my {produc"
+458,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99857, Requested 334. Please try again in 2m45.024s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist. <iid=2B6A7C1a9-A2CC-4F39-9FB7-D4B49D7DA I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}."
+2150,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99848, Requested 548. Please try again in 5m42.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Network problem
+I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them? Or can I try calling your servers and asking them to recover the original I've checked"
+3756,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99840, Requested 333. Please try again in 2m29.472s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist. Thanks.
+
+Tired of my friend on Facebook talking about how he hates the fact that he doesn't get to say shit on Twitter? I had to google I've noticed a sudden decrease in ba"
+3951,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99831, Requested 319. Please try again in 2m9.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Hardware issue
+My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data? {product_id} = {product_purchased} I'm worried that the issue might be hardware-related and might require repair or replacement."
+6250,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99823, Requested 333. Please try again in 2m14.783999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist. The product item is already in stock.
+
+Please note when we sell or order a product we do not sell or transfer any customer data in-stock into your I'm using the original charger that "
+2345,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99814, Requested 515. Please try again in 4m44.256s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist. Thank you."" I'm worried that the issue might be hardware-related and might require repair or replacement."
+3796,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99806, Requested 330. Please try again in 1m57.504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Product setup
+I'm having an issue with the {product_purchased}. Please assist.
+
+This item is sold Out of stock
+
+This item is no longer available. But don't go! We have similar items in stock. I've noticed that the issue occurs consistently when I use a specific "
+1769,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99797, Requested 535. Please try again in 4m46.848s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+Product #1
+
+1 - https://goo.gl/b9DkJL
+
+2 - http://www.thingiverse.com I've already contacted customer support multiple times, but the issue remains unresolved."
+213,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99789, Requested 337. Please try again in 1m48.864s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you
+
+Mara G
+
+We're sorry, an error occurred while processing your order. Please try again in 2 to 3 hours. I've recently updated the firmware of my {product_purchased}, and t"
+430,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99781, Requested 549. Please try again in 4m45.12s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist. For questions about the product, you can contact Marketing@Gemini.com or the G.F.S. Consumer Technical Support Team by 2-3 weeks I'm concerned about the security of my {product_purchased} "
+1314,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99772, Requested 337. Please try again in 1m34.176s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Software bug
+I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? There's not really anyone left on the network until this bug is fixed I'"
+5295,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99763, Requested 545. Please try again in 4m26.111999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Delivery problem
+The {product_purchased} is unable to establish a stable internet connection. It keeps disconnecting intermittently. How can I troubleshoot this network problem?
+
+When troubleshooting your connection, you will need to follow these steps: The"
+6366,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99755, Requested 555. Please try again in 4m27.839999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. - Add a small amount of your favorite text to the product description. This is very important, and can potentially be extremely sensitive when you try to change it to change I've rece"
+5372,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99746, Requested 540. Please try again in 4m7.104s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+
+[20:37:22 PM] [Client thread/INFO] [PunisherPackManager]: Failed to connect to UnlockedPunisher package I've tried troubleshooting steps mentioned in the user manual, but the issu"
+1747,general_feedback,1,False,,"I can see that you're having trouble with your PocketToons subscription, and I'm here to help you resolve the issue as quickly as possible. It seems like there may be some confusion with your billing settings, and I'd like to look into this further with you. Could you please try resetting your billing settings to the default option and see if that resolves the issue? If you're still experiencing problems, I'd be happy to help you troubleshoot further - please let me know how I can assist you.","Ticket Type: Billing inquiry
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist. I tried setting the quantity to $50 but I'm having issues with the {product_purchased}. Please assist.
+
+
+{product_purch I need assistance as soon as possible because it's affec"
+4817,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99991, Requested 543. Please try again in 7m41.376s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. <p>All items will change into your item.
+
+</p> <p>[8.2.1] Initializing app.
+
+</p I've checked for software updates, and my {product_purchased} is already running the latest versi"
+966,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99983, Requested 546. Please try again in 7m37.056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist. If you were the seller, please add a check to that transaction to make sure you're actually paying for the merchandise. $4 USD, $2 AUD This problem started occurring after the recent"
+5481,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99974, Requested 548. Please try again in 7m31.008s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Account access
+I'm facing a problem with my {product_purchased}. The {product_purchased} is not turning on. It was working fine until yesterday, but now it doesn't respond. My {product_purchased} does I'm concerned about the security of my {product_purchased} and"
+4504,billing_refund,5,False,,,"Ticket Type: Billing inquiry
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist. The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly."
+5842,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99966, Requested 546. Please try again in 7m22.368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+I do not use this app.
+
+All Products purchased through the app include the ""All-Purchased"" feature.
+
+Note: Some I've performed a factory reset on my {product_purchased}, hopin"
+1406,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99958, Requested 353. Please try again in 4m28.704s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist.
+
+If you need a way to connect to the server and you use the URL of one of the requests, you should look into this post or a similar one I'm concerned about the security of my {"
+4648,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99949, Requested 516. Please try again in 6m41.76s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist. The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly."
+8148,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99941, Requested 548. Please try again in 7m2.496s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thanks for sending in a note of concern. I'll keep your feedback in my inbox. We'll do our best to resolve it.
+
+Kind regards I rely heavily on my {product_purchased} for my daily"
+6658,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99932, Requested 317. Please try again in 3m35.136s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist. I'm worried that the issue might be hardware-related and might require repair or replacement."
+6006,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99924, Requested 545. Please try again in 6m45.215999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Battery life
+I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+Unfortunately, if you The issue I'm facing is intermi"
+7258,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99916, Requested 541. Please try again in 6m34.848s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist.
+
+I feel like I'm on the wrong spectrum of the way to approach this. And I'm not even the first person in my situation who has tried it I've already contacted customer supp"
+2143,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99907, Requested 555. Please try again in 6m39.168s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Battery life
+I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? When do these updates happen and how do you know when they'll be I'm unable t"
+18,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99899, Requested 347. Please try again in 3m32.543999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. Thanks!""
+
+* [0] - [0] - [0] - [0]
+
+If this product is sold and you have not used any I've reviewed the troubleshooting steps on the official support website, but they didn't resolve t"
+1439,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99890, Requested 353. Please try again in 3m29.952s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Refund request
+I'm facing a problem with my {product_purchased}. The {product_purchased} is not turning on. It was working fine until yesterday, but now it doesn't respond. It's not working on the first try and I'm using the original charger that came with "
+3521,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99882, Requested 357. Please try again in 3m26.496s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Refund request
+I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. Do your researchers have your email address? What should a team do if something is found? Can I I'm concerned"
+4517,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99874, Requested 551. Please try again in 6m7.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Product recommendation
+I'm having an issue with the {product_purchased}. Please assist. I get a message saying it's okay, and I ask that you stop buying. Now here's the thing: what makes an item worth so much money? Some I'm concerned about the security of my {p"
+6845,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99866, Requested 358. Please try again in 3m13.535999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Delivery problem
+I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it? Please, go ahead and ask, but be aware that your account will automatically get locked if you I've performed a factory res"
+9,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99857, Requested 551. Please try again in 5m52.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist. Thank you.
+
+{product_purchased} is not the exact type you might prefer, they use the exact same method for different uses. Please help I've recently updated the firmware of my "
+4270,billing_refund,4,False,,,"Ticket Type: Refund request
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist. Please help us resolve this issue! I'm having an issue with the {product_purchased}. Please assist. Please help us resolve this issue! http:// I've tried troubleshooting steps mentioned"
+541,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99849, Requested 346. Please try again in 2m48.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+If you have any issues for the package, please write me [email protected]
+
+Thank you,
+
+I have to tell you that one or The issue I'm facing is intermittent. Sometimes it works fine, bu"
+3528,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99841, Requested 540. Please try again in 5m29.184s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Battery life
+There seems to be a glitch in the {product_purchased} software. It freezes frequently, making it difficult to use. Can you please provide a solution?
+
+There seems to be a glitch in the {product_purchased I've followed the troubleshooting steps menti"
+2665,subscription,4,False,,,"Ticket Type: Technical issue
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thanks
+
+Brianna D.
+
+Founder, RVA Systems, Inc
+
+Senior Designer
+
+Caitlin
+
+Senior Designer I've checked the device settings and made sure that everything is configured correctly"
+6859,account_issue,4,False,,,"Ticket Type: Product inquiry
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist. ""
+
+"" }, JSON.stringify('{'key_image': {'key_name':'Hello-World'} ); var I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_pu"
+2942,subscription,4,False,,,"Ticket Type: Billing inquiry
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+The Product Purchase Policy on this application states: ""The product purchased is the authorized reseller and/or agent of the Authorized Retailer, whose authorization I've tri"
+1551,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99832, Requested 352. Please try again in 2m38.976s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Display issue
+There seems to be a glitch in the {product_purchased} software. It freezes frequently, making it difficult to use. Can you please provide a solution?
+
+-We are looking into this and fixing it.
+
+-Have I rely heavily on my {product_purchased} for"
+5031,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99824, Requested 349. Please try again in 2m29.472s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist. Thank you.
+
+Product: Kiki
+
+Description: An apple for everyone! The Kiki apple is a delicious treat for those who are very passionate about The issue I'm facing is intermittent. Sometim"
+2178,billing_refund,5,False,,,"Ticket Type: Billing inquiry
+Subject: Refund request
+The {product_purchased} is unable to establish a stable internet connection. It keeps disconnecting intermittently. How can I troubleshoot this network problem?
+
+Network connectivity problem is a symptom of an underlying issue that is not isolated"
+8037,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99815, Requested 546. Please try again in 5m11.904s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Battery life
+I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+If you have any questions regarding your password and are seeing this message, please contact This problem st"
+6054,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99807, Requested 357. Please try again in 2m21.696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Product compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+Product ID: 230
+
+The Product ID of this Product is 00606065, which appears on our website. This Product ID may not have been I'm unable to find the option to perform the desi"
+2516,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99798, Requested 554. Please try again in 5m4.128s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist. If we can't contact your company there's nothing we can do.
+
+There's a way to update your database with the necessary data in our database, or I've recently updated the firmware"
+6743,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99790, Requested 547. Please try again in 4m51.168s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist.
+
+The seller agrees to receive most product in your cart before its shipped. If you are receiving items without your consent, do not place your order without my knowledge The issue I'"
+6286,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99782, Requested 350. Please try again in 1m54.048s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+I've purchased the product just to send me the gift.
+
+Why would you want a gift for the ""favourite person on here"" but I'm using the original charger that came with my {product"
+7129,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99774, Requested 552. Please try again in 4m41.664s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist. {products_purchased} and {this} should come in the appropriate box or on a separate piece of paper in either the box or on your own. I've performed a factory reset on my {product_pur"
+3583,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99765, Requested 342. Please try again in 1m32.448s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist. $55.00
+
+1. Add # of items to cart
+
+Add $55 (plus taxes) to cart.
+
+Add Item to Cart I've checked the device settings and made sure that everything is configured correctly."
+6136,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99757, Requested 526. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Product recommendation
+I'm having an issue with the {product_purchased}. Please assist.
+
+Add to cart: Please select a size. I've tried using different cables, adapters, or peripherals with my {product_purchased}, but the issue persists."
+6811,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99749, Requested 544. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist.
+
+}( {product_id} )
+
+$0. $product_id {product_id}. $id {product_name}. I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it "
+880,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99741, Requested 350. Please try again in 1m18.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Data loss
+I'm facing a problem with my {product_purchased}. The {product_purchased} is not turning on. It was working fine until yesterday, but now it doesn't respond.
+
+My first thought was to put it I'm experiencing this issue on multiple devices of the sa"
+3264,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99732, Requested 538. Please try again in 3m53.28s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist.
+
+If something doesn't work then try contacting us at info@cbc.ca or go to your local store.
+
+If you're so inclined click I've followed the troubleshooting steps mentioned in th"
+4536,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99724, Requested 347. Please try again in 1m1.344s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+1-4 (e) Where this term has the meaning ascribed to it in subsection 3-1-1 of Title 7 - page 504 of I've already contacted customer support multiple times, but the is"
+2717,account_issue,5,False,,,"Ticket Type: Product inquiry
+Subject: Peripheral compatibility
+I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it?
+
+Answer:
+
+Log into your account name and password.
+
+Click on the I've followed online tutorials and community for"
+5396,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99716, Requested 553. Please try again in 3m52.416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. Thanks!
+
+The video was shot on a mobile phone with a camera mounted on it. The footage was taken on March 24th (March 25th) 2015 I'm concerned about the security of my {product_purcha"
+5413,general_feedback,1,False,,"I'm so sorry to hear that you're having trouble with your device not charging properly, even with the original charger. I'd like to help you troubleshoot this issue further, can you please try resetting the charger and device, and also ensure that the charging port is free from debris? If the issue persists, we can discuss possible next steps, such as exploring alternative charging methods or device inspection. If you need any further assistance or have questions, please don't hesitate to reach out.","Ticket Type: Product inquiry
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please support my use of the products as directed by the author and/or others, and get to know my other customers. Thank you.
+
+The I'm using the original charger that came"
+7265,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99986, Requested 545. Please try again in 7m38.784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Display issue
+I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account? <br /> < I've reviewed the troubleshooting steps on"
+4950,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99978, Requested 354. Please try again in 4m46.848s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Software bug
+I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue? Open the router settings and check I've tried usi"
+1116,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99969, Requested 343. Please try again in 4m29.567999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist.
+
+Purchased $0.00 20%
+
+Bricklots
+
+You are shopping right now!
+
+B Mongolia
+
+We love This problem started occurring after the recent software update. I haven't made any other changes to t"
+1795,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99961, Requested 353. Please try again in 4m31.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Data loss
+My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this? This is the product. My {product_purchased} is making strange I'm concerned about the security of"
+1492,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99952, Requested 343. Please try again in 4m14.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Product recommendation
+I'm having an issue with the {product_purchased}. Please assist.
+
+
+""The best products for your needs.""
+
+- David. (The product purchase can be made as the request, just contact us and the payment level I've followed the troubleshooting step"
+6794,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99942, Requested 547. Please try again in 7m2.496s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Cancellation request
+I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account? {* #URLRef I've checked for any available sof"
+4429,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99934, Requested 540. Please try again in 6m49.536s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Hardware issue
+I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue?
+
+Install Java and build WebSphere from JRE and install and upgrade I need assistance as soon as po"
+1895,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99925, Requested 348. Please try again in 3m55.872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist. [20:21:45.] The [code] is '{}': $x = 0x20000000. [20:21:45.] We are I've already contacted customer support multiple times, but the issue remains unresolved."
+6861,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99916, Requested 545. Please try again in 6m38.304s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Data loss
+I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue?
+
+
+What if I can't get the app to connect to all available This problem started occurring after the rece"
+7943,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99908, Requested 539. Please try again in 6m26.208s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist. Thanks. {product_id}{product_name}
+
+}
+
+return new Product();
+
+}
+
+};
+
+template < typename I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem"
+8047,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99899, Requested 547. Please try again in 6m25.344s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist. {product_id} is not a valid key type by default {product_id} of product.product
+
+You can set {product_id} of I've noticed a sudden decrease in battery life on my {product_purcha"
+7697,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99891, Requested 357. Please try again in 3m34.272s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Cancellation request
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please note that this order will be shipped directly to
+
+the customer, not to the person who purchased your product or service, who can check the I'm unable to find the o"
+2084,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99882, Requested 347. Please try again in 3m17.856s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist.
+
+
+[0126] (Product number: 160570)
+
+Current Product Information Current Location:
+
+<store_name>I'd like to I'm concerned about the security of my {product_purchased} and would like to ensu"
+5157,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99874, Requested 551. Please try again in 6m7.2s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist. If I am required to charge you, please contact me as soon as possible. Please read my Terms of Use.
+
+Thanks!
+
+We hope you enjoyed I'm unable to find the option to perform t"
+4565,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99865, Requested 341. Please try again in 2m57.984s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist. I am very annoyed.
+
+I'm having an issue with the {product_purchased}. Please assist. I am very annoyed.
+
+10. I've tried troubleshooting steps mentioned in the user manual, but the issue p"
+624,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99857, Requested 545. Please try again in 5m47.328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Software bug
+I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account?
+
+If you I'm experiencing this issue on multiple devi"
+319,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99849, Requested 356. Please try again in 2m57.12s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist.
+
+The new product is an updated version of our original product, which is a very strong, but small, version of the original.
+
+We need money I'm unable to find the option to perform th"
+6121,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99840, Requested 553. Please try again in 5m39.552s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Payment issue
+My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data? Thanks!
+
+anon993599
+
+Post 2 My computer works great. When I try I've recently updated the firmware of my {product_purchased}, and "
+2880,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99832, Requested 340. Please try again in 2m28.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+I am using an external USB flash drive and am experiencing an issue. Please assist. I'm concerned about the security of my {product_purchased} and would like to ensure that my data "
+1202,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99823, Requested 522. Please try again in 4m58.08s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist. I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?"
+6583,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99815, Requested 319. Please try again in 1m55.776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist. The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly."
+2500,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99806, Requested 358. Please try again in 2m21.696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Product setup
+I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? - You can try sending an email with code: phreak@debian I'm unable to find the option to perfo"
+5170,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99798, Requested 526. Please try again in 4m39.936s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist. Thanks.</span> I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?"
+100,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99789, Requested 529. Please try again in 4m34.752s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you for your visit. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?"
+2808,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99781, Requested 347. Please try again in 1m50.592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist.
+
+I tried to install an installed Java EE, and it just didn't work.
+
+I tried installing an APK, and it just installed Java EE I've checked for software updates, and my {product_purcha"
+6041,technical_bug,4,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99772, Requested 350. Please try again in 1m45.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Product recommendation
+I'm having an issue with the {product_purchased}. Please assist.
+
+Please do not sell this product or the product's quality. The price is the buyer's responsibility. Please contact me with information on what the customer actually paid The "
+3413,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99764, Requested 352. Please try again in 1m40.224s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Peripheral compatibility
+I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+It would be great I rely heavily on my {p"
+4231,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99756, Requested 349. Please try again in 1m30.72s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Battery life
+I'm having an issue with the {product_purchased}. Please assist. We're able to use the customer code to ensure everyone is getting the best price possible.
+
+1.13 We're happy to work on this. I'm experiencing this issue on multiple devices of the sam"
+2861,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99747, Requested 346. Please try again in 1m20.352s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Software bug
+I'm having an issue with the {product_purchased}. Please assist. https://www.tacastyle.com/product/v-0-c-8-0-virgin-tales-4-2- The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly."
+6647,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99739, Requested 353. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Installation support
+I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it?
+
+If you are dealing with an account locked on your computer, simply enable the app by I'm concerned about the securit"
+4372,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99666, Requested 529. Please try again in 2m48.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Product compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you for your efforts. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?"
+4406,general_feedback,1,False,,"I'm so sorry to hear that you're experiencing issues with your PocketToons subscription after the recent software update. I'd be happy to help you with a refund request - could you please provide me with your subscription details, such as the date of purchase and the type of subscription you have, so I can look into this further? I'll do my best to assist you with the refund process. If you have any other questions or concerns, please don't hesitate to let me know and I'll be here to help.","Ticket Type: Refund request
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist.
+
+[email protected]
+
+[url]>Your Name>[/url] >
+
+[browsing_url]http://www.al This problem started occurring after the recent software update. I haven't made any other changes to the devi"
+3933,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99992, Requested 539. Please try again in 7m38.784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Data loss
+I'm having an issue with the {product_purchased}. Please assist. If the product you're looking for is in trouble, please contact us so we can help! ------------------------- {product_purchased} - {product_ I've already contacted customer support multip"
+1514,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99984, Requested 547. Please try again in 7m38.784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Battery life
+My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this?
+
+It's kind of difficult, but I found one in my inventory in This problem started occurrin"
+8268,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99975, Requested 546. Please try again in 7m30.144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Account access
+I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+For all products purchased using Google Play Services, you should have been notified over the This problem "
+3134,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99967, Requested 350. Please try again in 4m33.888s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+There is an error: Cannot create ProductPurchased object by passing NULL as the value of <Product_purchased> or in any other way This problem started occurring after the recen"
+2454,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99958, Requested 346. Please try again in 4m22.656s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Hardware issue
+I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account?
+
+If you I've tried troubleshooting steps ment"
+3621,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99950, Requested 545. Please try again in 7m7.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Refund request
+I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue?
+
+A couple of tests and I am able to fix it I've checked for software updates, and my {product"
+7756,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99941, Requested 352. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Delivery problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+Product purchases are sold in person at www.giftstore.com and at the participating local restaurants and bars, and are intended for a limited number of I'm using the original"
+1054,technical_bug,5,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99933, Requested 544. Please try again in 6m52.128s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Installation support
+I'm having an issue with the {product_purchased}. Please assist.
+
+I'm trying to contact a vendor so you know if there are problems.
+
+It probably has a bad name, but you should try it. I've tried clearing the cache and data for the {product_p"
+8351,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99924, Requested 324. Please try again in 3m34.272s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Product setup
+I'm having an issue with the {product_purchased}. Please assist. I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe."
+7233,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99916, Requested 539. Please try again in 6m33.12s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Product inquiry
+Subject: Account access
+I'm having an issue with the {product_purchased}. Please assist.
+
+[6:12:54 PM][00:18:39]GAME: The Lazy Caffeine Experiment announced that they had added some sweeteners I've checked the device settings and made sure that everything is configured c"
+1453,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99907, Requested 346. Please try again in 3m38.592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Product setup
+I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue?
+
+For Windows, this means using the command line utility Get-WmiObject I've already contacted customer suppo"
+2946,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99898, Requested 350. Please try again in 3m34.272s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Peripheral compatibility
+I'm having an issue with the {product_purchased}. Please assist. It's fine. {product_purchased}. Will your order be returned to us within 6 business days? {product_purchased}. Thanks. The issue I'm facing is intermittent. Sometimes it wo"
+4481,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99890, Requested 351. Please try again in 3m28.224s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Hardware issue
+I'm having an issue with the {product_purchased}. Please assist. Thank you.""
+
+[17:34:28]EMOTE: *no key*/(monkey (738)) : <b>The monkey (738)</ This problem started occurring after the recent software update. I haven't made any other changes to the"
+1374,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99881, Requested 548. Please try again in 6m10.656s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Cancellation request
+There seems to be a glitch in the {product_purchased} software. It freezes frequently, making it difficult to use. Can you please provide a solution?
+
+Thank you! Please provide a solution if there is a question - please I'm experiencing this"
+5460,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99873, Requested 546. Please try again in 6m2.016s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Battery life
+I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. Can you post the data to an email to my {product_purchased-content}. Please The issue I'm facing is intermitten"
+1692,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99865, Requested 527. Please try again in 5m38.688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist. Product is in good condition. The item is not eligible for a refund. I've tried troubleshooting steps mentioned in the user manual, but the issue persists."
+4561,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99856, Requested 349. Please try again in 2m57.12s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Product compatibility
+My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data?
+
+This issue is likely due to having too much memory allocated. I do not have time for I've followed the troubleshooting steps me"
+6608,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99847, Requested 350. Please try again in 2m50.208s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Account access
+I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue?
+
+$ ssh -o test.ssh --help
+
+Once the The issue I'm facing is intermittent. Sometimes it works fine,"
+6300,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99839, Requested 362. Please try again in 2m53.664s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Cancellation request
+Subject: Payment issue
+I'm having an issue with the {product_purchased}. Please assist. This is not a good sign. I'm getting the right product now. I don't know if the product you are about to place won't work or what type I'm unable to find the option to perform th"
+749,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99831, Requested 353. Please try again in 2m38.976s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Network problem
+I'm having an issue with the {product_purchased}. Please assist.
+
+I'm having an issue with the {product_purchased}. Please assist. The message is ""I have purchased $18.99 (USD) I rely heavily on my {product_purchased} for my daily tasks, and this"
+1384,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99822, Requested 550. Please try again in 5m21.408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Account access
+I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+We can do everything I've performed a factory reset"
+8229,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99814, Requested 354. Please try again in 2m25.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Billing inquiry
+Subject: Product setup
+My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data?
+
+I'm sorry but my database doesn't work anymore, or the system won't start. I've tried using different cables, adapters, or peripherals"
+6074,billing_refund,5,False,,,"Ticket Type: Refund request
+Subject: Product compatibility
+I'm having an issue with the {product_purchased}. Please assist.
+
+In a new account, there is no email address, and there is no confirmation of the purchase.
+
+You don't have to be the CEO of I've tried clearing the cache and data for the {pro"
+3780,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99806, Requested 360. Please try again in 2m23.424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Technical issue
+Subject: Refund request
+I'm having an issue with the {product_purchased}. Please assist.
+
+3) If you are experiencing the issue using an affected version of the product, please post your support on this thread here
+
+
+4) The issues listed I've noticed a peculiar error mess"
+1859,general_feedback,1,False,,"[Draft failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kt109h6sfqvr6ym9hh4ra2cb` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99797, Requested 553. Please try again in 5m2.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}]","Ticket Type: Refund request
+Subject: Payment issue
+I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account? {products_purchased} will not work on account 1 or more if no new I've performed a factory reset on my {produc"
